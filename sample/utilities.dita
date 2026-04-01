@@ -34,11 +34,11 @@
       <p>Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.</p>
     </section>
     <bodydiv outputclass="bd-example" deliveryTarget="html">
-      <ph outputclass="border p-3 bg-secondary-subtle text-secondary">&#xA0;border&#xA0;</ph>&#xA0;
-      <ph outputclass="border-top p-3 bg-secondary-subtle text-secondary">&#xA0;border-top</ph>&#xA0;
-      <ph outputclass="border-end p-3 bg-secondary-subtle text-secondary">&#xA0;border-end</ph>&#xA0;
-      <ph outputclass="border-bottom p-3 bg-secondary-subtle text-secondary">&#xA0;border-bottom</ph>&#xA0;
-      <ph outputclass="border-start p-3 bg-secondary-subtle text-secondary">&#xA0;border-start</ph>
+      <ph outputclass="border p-3 border-secondary">&#xA0;border&#xA0;</ph>&#xA0;
+      <ph outputclass="border-top p-3 border-secondary">&#xA0;border-top</ph>&#xA0;
+      <ph outputclass="border-end p-3 border-secondary">&#xA0;border-end</ph>&#xA0;
+      <ph outputclass="border-bottom p-3 border-secondary">&#xA0;border-bottom</ph>&#xA0;
+      <ph outputclass="border-start p-3 border-secondary">&#xA0;border-start</ph>
     </bodydiv>
     <codeblock>&lt;ph outputclass="border"&gt;...&lt;/ph&gt;
 &lt;ph outputclass="border-top"&gt;...&lt;/ph&gt;

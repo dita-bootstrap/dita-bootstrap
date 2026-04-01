@@ -1,0 +1,54 @@
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA Bootstrap Domain Entities                    -->
+<!--  DATE:      March 2026                                        -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    ELEMENT NAME ENTITIES                      -->
+<!-- ============================================================= -->
+
+<!ENTITY % accordion "accordion">
+<!ENTITY % accordion-item "accordion-item">
+<!ENTITY % alert "alert">
+<!ENTITY % badge "badge">
+<!ENTITY % button "button">
+<!ENTITY % button-group "button-group">
+<!ENTITY % button-toolbar "button-toolbar">
+<!ENTITY % card "card">
+<!ENTITY % card-header "card-header">
+<!ENTITY % card-footer "card-footer">
+<!ENTITY % carousel "carousel">
+<!ENTITY % carousel-item "carousel-item">
+<!ENTITY % collapse "collapse">
+<!ENTITY % grid-row "grid-row">
+<!ENTITY % grid-col "grid-col">
+<!ENTITY % icon "icon">
+<!ENTITY % list-group "list-group">
+<!ENTITY % offcanvas "offcanvas">
+<!ENTITY % pagination "pagination">
+<!ENTITY % popover "popover">
+<!ENTITY % picture "picture">
+<!ENTITY % tabbed-dialog "tabbed-dialog">
+<!ENTITY % thumbnail "thumbnail">
+<!ENTITY % tooltip "tooltip">
+
+<!-- ============================================================= -->
+<!--                    ELEMENT EXTENSION ENTITY DECLARATIONS      -->
+<!-- ============================================================= -->
+
+<!ENTITY % bootstrap-d-ph "badge | icon">
+<!ENTITY % bootstrap-d-xref "button | popover | tooltip">
+<!ENTITY % bootstrap-d-bodydiv "accordion | button-group | button-toolbar | collapse | grid-row | grid-col | tabbed-dialog">
+<!ENTITY % bootstrap-d-section "accordion-item | alert | card | offcanvas | pagination">
+<!ENTITY % bootstrap-d-ul "carousel | list-group">
+<!ENTITY % bootstrap-d-li "carousel-item">
+<!ENTITY % bootstrap-d-div "card-header | card-footer | picture">
+<!ENTITY % bootstrap-d-image "thumbnail">
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY bootstrap-d-att "(topic bootstrap-d)">

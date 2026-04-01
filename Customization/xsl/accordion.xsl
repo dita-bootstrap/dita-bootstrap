@@ -14,7 +14,9 @@
   <!-- Customization to add Bootstrap Accordion Component -->
   <!-- https://getbootstrap.com/docs/5.3/components/accordion/ -->
 
-  <xsl:template match="*[contains(@class,' topic/bodydiv ') and contains(@outputclass, 'accordion')]">
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/accordion ') or (contains(@class,' topic/bodydiv ') and contains(@outputclass, 'accordion'))]"
+  >
     <div>
       <xsl:attribute name="id" select="dita-ot:generate-html-id(.)"/>
       <xsl:call-template name="commonattributes"/>
@@ -23,12 +25,15 @@
   </xsl:template>
 
   <xsl:template name="expand-accordion-head">
-    <xsl:attribute name="aria-expanded" select="contains(@outputclass,'show')"/>
+    <xsl:attribute name="aria-expanded" select="contains(@outputclass,'show') or @open='yes'"/>
+    <xsl:variable name="parent-color" select="parent::*/@color"/>
     <xsl:attribute
       name="class"
       select="
-        if (contains(@outputclass,'show')) then 'accordion-button'
-        else 'accordion-button collapsed'"
+        string-join((
+          if (contains(@outputclass,'show') or @open='yes') then 'accordion-button' else 'accordion-button collapsed',
+          if ($parent-color) then concat('bg-', $parent-color) else ()
+        ), ' ')"
     />
   </xsl:template>
 
@@ -36,7 +41,7 @@
     <xsl:attribute
       name="class"
       select="
-        if (contains(@outputclass,'show')) then 'accordion-collapse collapse show'
+        if (contains(@outputclass,'show') or @open='yes') then 'accordion-collapse collapse show'
         else 'accordion-collapse collapse'"
     />
   </xsl:template>
@@ -55,6 +60,9 @@
     <xsl:variable name="parent" select="dita-ot:generate-html-id(..)"/>
 
     <div class="accordion-item">
+       <xsl:if test="parent::*/@color">
+          <xsl:attribute name="class" select="concat('accordion-item bg-', parent::*/@color, '-subtle')"/>
+       </xsl:if>
       <xsl:element name="{$headLevel}">
         <xsl:attribute name="type" select="'accordion-header'"/>
         <xsl:attribute name="id" select="concat('heading_' ,$id)"/>
@@ -70,7 +78,7 @@
         <xsl:attribute name="id" select="concat('collapse_' ,$id)"/>
         <xsl:attribute name="aria-labelledby" select="concat('heading_' ,$id)"/>
         <xsl:choose>
-          <xsl:when test="contains(../@outputclass,'accordion-open')"/>
+          <xsl:when test="contains(../@outputclass,'accordion-open') or ../@open = 'yes'"/>
           <xsl:otherwise>
             <xsl:attribute name="data-bs-parent" select="concat('#', $parent)"/>
           </xsl:otherwise>

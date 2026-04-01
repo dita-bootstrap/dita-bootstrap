@@ -209,8 +209,17 @@
     </xsl:attribute>
   </xsl:template>
 
+  <xsl:template match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/title ')]">
+    <xsl:param name="headinglevel" as="xs:integer" select="dita2html:get-heading-level(.)"/>
+    <xsl:element name="h{$headinglevel}">
+        <xsl:call-template name="commonattributes"/>
+        <xsl:attribute name="id"><xsl:apply-templates select="." mode="return-aria-label-id"/></xsl:attribute>
+        <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
   <!-- Override to add Bootstrap classes and roles -->
-  <xsl:template match="@* | node()" mode="commonattributes">
+  <xsl:template match="*" name="commonattributes" mode="commonattributes" priority="10">
     <xsl:param name="default-output-class" as="xs:string*"/>
     <xsl:apply-templates select="@xml:lang"/>
     <xsl:apply-templates select="@dir"/>
@@ -219,31 +228,11 @@
     <xsl:call-template name="bootstrap-role"/>
     <!-- ↓ Set Bidi to auto for code ↓ -->
     <xsl:call-template name="bidi-auto-code"/>
-    <!-- ↓ Add Bootstrap class attributes template ↓ -->
-    <xsl:variable name="bootstrap-class">
-      <xsl:call-template name="bootstrap-class"/>
-      <xsl:value-of select="$default-output-class"/>
-    </xsl:variable>
-    <!-- ↓ Remove DITA-OT styling from titles since Bootstrap does this ↓ -->
-    <xsl:choose>
-      <xsl:when test="starts-with($default-output-class[1] , 'topictitle')">
-        <xsl:apply-templates select="." mode="set-output-class">
-          <xsl:with-param name="default" select="replace($bootstrap-class, 'topictitle\d+', '')"/>
-        </xsl:apply-templates>
-      </xsl:when>
-      <xsl:when test="starts-with($default-output-class[1] , 'sectiontitle')">
-        <xsl:apply-templates select="." mode="set-output-class">
-          <xsl:with-param name="default" select="replace($bootstrap-class, 'sectiontitle', '')"/>
-        </xsl:apply-templates>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:apply-templates select="." mode="set-output-class">
-          <xsl:with-param name="default" select="$bootstrap-class"/>
-        </xsl:apply-templates>
-      </xsl:otherwise>
-    </xsl:choose>
     <xsl:call-template name="gen-user-bootstrap-attrs"/>
     <!-- ↑ End customization · Continue with DITA-OT defaults ↓ -->
+    <xsl:apply-templates select="." mode="set-output-class">
+      <xsl:with-param name="default" select="string-join($default-output-class, ' ')"/>
+    </xsl:apply-templates>
     <xsl:choose>
       <xsl:when test="exists($passthrough-attrs[empty(@att) and empty(@value)])">
         <xsl:variable name="specializations" as="xs:string*">
@@ -256,19 +245,13 @@
           </xsl:for-each>
         </xsl:variable>
         <xsl:for-each
-          select="@props |
-                              @audience |
-                              @platform |
-                              @product |
-                              @otherprops |
-                              @deliveryTarget |
-                              @*[local-name() = $specializations]"
+          select="@props | @audience | @platform | @product | @otherprops | @deliveryTarget | @*[local-name() = $specializations]"
         >
           <xsl:attribute name="data-{name()}" select="."/>
         </xsl:for-each>
       </xsl:when>
       <xsl:when test="exists($passthrough-attrs)">
-        <xsl:for-each select="@*">
+        <xsl:for-each select="@* except @color">
           <xsl:if
             test="$passthrough-attrs[@att = name(current()) and (empty(@val) or (some $v in tokenize(current(), '\s+') satisfies $v = @val))]"
           >
@@ -279,11 +262,35 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- Add Bootstrap CSS classes based on decoration/outputclass -->
+  <xsl:template match="*" mode="get-output-class" priority="10">
+    <xsl:variable name="bootstrap-class">
+      <xsl:call-template name="bootstrap-class"/>
+      <xsl:call-template name="bootstrap-decoration"/>
+    </xsl:variable>
+    <xsl:variable name="original-output-class">
+       <xsl:next-match/>
+    </xsl:variable>
+    <xsl:value-of select="normalize-space(string-join(($original-output-class, $bootstrap-class), ' '))"/>
+  </xsl:template>
+
   <xsl:template name="gen-user-bootstrap-attrs">
     <xsl:apply-templates select="." mode="gen-user-bootstrap-attrs"/>
   </xsl:template>
 
   <xsl:template match="/ | @* | node()" mode="gen-user-bootstrap-attrs" priority="-10"/>
+
+  <xsl:template match="*" mode="set-output-class" priority="5">
+    <xsl:param name="default" as="xs:string*"/>
+    <xsl:variable name="get-output-class-result">
+      <xsl:apply-templates select="." mode="get-output-class"/>
+    </xsl:variable>
+    <xsl:variable name="get-output-class" select="tokenize(normalize-space($get-output-class-result), '\s+')" as="xs:string*"/>
+    <xsl:variable name="output-class" select="distinct-values(($default, $get-output-class, tokenize(@outputclass, '\s+')))" as="xs:string*"/>
+    <xsl:if test="exists($output-class)">
+      <xsl:attribute name="class" select="string-join($output-class, ' ')"/>
+    </xsl:if>
+  </xsl:template>
 
   <!-- Override to add Bootstrap Alert classes and roles to Note elements -->
   <!-- https://getbootstrap.com/docs/5.3/components/alerts/ -->
@@ -302,7 +309,7 @@
     </xsl:variable>
     <div role="alert">
       <xsl:call-template name="commonattributes">
-        <xsl:with-param name="default-output-class" select="$bootstrap-class"/>
+        <xsl:with-param name="default-output-class" select="string-join($bootstrap-class, ' ')"/>
         <!--xsl:with-param name="default-output-class" select="string-join(($type, concat('note_', $type)), ' ')"/-->
       </xsl:call-template>
       <!-- ↑ End customization · Continue with DITA-OT defaults ↓ -->
@@ -329,6 +336,30 @@
       <!-- Normal end flags and revision end flags both go out after the content. -->
       <xsl:apply-templates select="*[contains(@class, ' ditaot-d/ditaval-endprop ')]" mode="out-of-line"/>
     </div>
+  </xsl:template>
+
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/alert ') or contains(@class, ' topic/note ')]/*[contains(@class, ' topic/title ')]"
+  >
+    <xsl:variable name="headCount" select="count(ancestor::*[contains(@class, ' topic/topic ')])+1"/>
+    <xsl:variable name="headLevel">
+      <xsl:choose>
+        <xsl:when test="contains(@outputclass, 'h1')">h1</xsl:when>
+        <xsl:when test="contains(@outputclass, 'h2')">h2</xsl:when>
+        <xsl:when test="contains(@outputclass, 'h3')">h3</xsl:when>
+        <xsl:when test="contains(@outputclass, 'h4')">h4</xsl:when>
+        <xsl:when test="contains(@outputclass, 'h5')">h5</xsl:when>
+        <xsl:when test="contains(@outputclass, 'h6')">h6</xsl:when>
+        <xsl:when test="$headCount > 6">h6</xsl:when>
+        <xsl:otherwise>h<xsl:value-of select="$headCount"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:element name="{$headLevel}">
+      <xsl:attribute name="class" select="concat('alert-heading ', @outputclass)"/>
+      <xsl:call-template name="commonattributes"/>
+      <xsl:call-template name="setidaname"/>
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
 
   <!-- Customization to add Bootstrap Figure Content -->
@@ -388,7 +419,7 @@
               </xsl:otherwise>
             </xsl:choose>
           </xsl:variable>
-          <xsl:apply-templates select="." mode="set-output-class">
+          <xsl:apply-templates select="./*[contains(@class, ' topic/title ')][1]" mode="set-output-class">
             <xsl:with-param
               name="default"
               select="concat($fig-caption-class, ./*[contains(@class, ' topic/title ')][1]/@outputclass)"
@@ -460,8 +491,9 @@
       <xsl:apply-templates select="*[contains(@class, ' ditaot-d/ditaval-startprop ')]" mode="out-of-line"/>
       <xsl:call-template name="spec-title-nospace"/>
       <pre>
-        <xsl:attribute name="class" select="name()"/>
-        <xsl:call-template name="commonattributes"/>
+        <xsl:call-template name="commonattributes">
+          <xsl:with-param name="default-output-class" select="if (contains(@class, ' topic/pre ')) then 'pre' else ()"/>
+        </xsl:call-template>
         <xsl:call-template name="setscale"/>
         <xsl:call-template name="setidaname"/>
         <xsl:apply-templates/>
@@ -578,7 +610,9 @@
   </xsl:template>
 
   <!-- Process a list of images as a single HTML5 Picture element. -->
-  <xsl:template match="*[contains(@class, ' topic/div ') and contains(@outputclass, 'd-picture')]">
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/picture ') or (contains(@class, ' topic/div ') and contains(@outputclass, 'd-picture'))]"
+  >
     <picture>
       <xsl:call-template name="commonattributes"/>
       <xsl:call-template name="setid"/>
@@ -590,6 +624,12 @@
           <xsl:otherwise>
             <source>
               <xsl:attribute name="srcset" select="@href"/>
+              <xsl:if test="@media">
+                <xsl:attribute name="media" select="concat('(', @media, ')')"/>
+              </xsl:if>
+              <xsl:if test="@type">
+                <xsl:attribute name="type" select="@type"/>
+              </xsl:if>
               <xsl:if test="@otherprops">
                 <xsl:apply-templates select="." mode="otherprops-attributes"/>
               </xsl:if>
@@ -616,6 +656,9 @@
       </xsl:call-template>
       <xsl:call-template name="setid"/>
       <!-- ↓ Add otherprops for lazy loading ↓ -->
+      <xsl:if test="@loading">
+        <xsl:attribute name="loading" select="@loading"/>
+      </xsl:if>
       <xsl:if test="@otherprops">
         <xsl:apply-templates select="." mode="otherprops-attributes"/>
       </xsl:if>
@@ -806,4 +849,23 @@
     <xsl:attribute name="role">navigation</xsl:attribute>
     <xsl:attribute name="id">bs-menubar-nav</xsl:attribute>
   </xsl:attribute-set>
+
+  <!-- Surpress DITA class 'sectiontitle' and 'topictitle' as they conflict with Bootstrap Typography --> 
+  <xsl:template match="*[contains(@class, ' topic/title ')]" mode="set-output-class" priority="10">
+    <xsl:param name="default"/>
+    <xsl:variable name="get-output-class">
+      <xsl:apply-templates select="." mode="get-output-class"/>
+    </xsl:variable>
+    <xsl:variable
+      name="cleaned-default"
+      select="tokenize(replace(replace($default, 'topictitle\d+', ''), 'sectiontitle', ''), '\s+')"
+    />
+    <xsl:variable
+      name="classes"
+      select="distinct-values(($cleaned-default, tokenize($get-output-class, '\s+'), tokenize(normalize-space(@outputclass), '\s+')))"
+    />
+    <xsl:if test="exists($classes[string-length(.) > 0])">
+      <xsl:attribute name="class" select="string-join($classes[string-length(.) > 0], ' ')"/>
+    </xsl:if>
+  </xsl:template>
 </xsl:stylesheet>

@@ -14,7 +14,9 @@
   <!-- Customization to add Bootstrap Offcanvas Component -->
   <!-- https://getbootstrap.com/docs/5.3/components/offcanvas/ -->
 
-  <xsl:template match="*[contains(@class,' topic/section ') and contains(@outputclass, 'offcanvas-')]">
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/offcanvas ')] | *[contains(@class,' topic/section ') and contains(@outputclass, 'offcanvas-')]"
+  >
     <xsl:param name="headLevel">
       <xsl:variable name="headCount" select="count(ancestor::*[contains(@class, ' topic/topic ')])+1"/>
       <xsl:choose>
@@ -24,13 +26,10 @@
     </xsl:param>
     <xsl:variable name="id" select="dita-ot:generate-html-id(.)"/>
     <div>
-      <xsl:attribute name="class">
-        <xsl:text>offcanvas </xsl:text>
-        <xsl:value-of select="@outputclass"/>
-      </xsl:attribute>
+      <xsl:call-template name="commonattributes"/>
       <xsl:attribute name="tabindex" select="'-1'"/>
       <xsl:attribute name="id" select="$id"/>
-      <xsl:attribute name="aria-labelledby" select="concat=('offcanvasLabel_', $id)"/>
+      <xsl:attribute name="aria-labelledby" select="concat('offcanvasLabel_', $id)"/>
       <div class="offcanvas-header">
         <xsl:element name="{$headLevel}">
           <xsl:attribute name="id" select="concat('offcanvasLabel_' ,$id)"/>

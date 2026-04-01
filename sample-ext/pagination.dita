@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<topic id="pagination">
+  <title>Pagination</title>
+  <abstract>
+    <shortdesc>Documentation and examples for showing pagination to indicate a series of related content exists across
+      multiple pages.</shortdesc>
+    <p>Bootstrap uses a large block of connected links for pagination, making links hard to miss and easily scalable—all
+      while providing large hit areas. Pagination is built with <xmlelement>ol</xmlelement> DITA elements so screen
+      readers can announce the number of available links. They are wrapped in an HTML <xmlelement>nav</xmlelement>
+      element to identify them as a navigation sections to screen readers and other assistive technologies.</p>
+    <p>In addition, as pages likely have more than one such navigation section, it’s advisable to provide a descriptive
+      aria-label by placing the <xmlelement>ol</xmlelement> within a dedicated <xmlelement>section</xmlelement> with a
+        <xmlelement>title</xmlelement> for the <xmlelement>nav</xmlelement> to reflect its purpose. For example, if the
+      pagination component is used to navigate between a set of search results, an appropriate
+        <xmlelement>title</xmlelement> could be <i>"Search results pages"</i>.</p>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Pagination</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlelement>ol</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <pagination>
+        <title>Page navigation example</title>
+        <ol>
+          <li>
+            <xref href="#">Previous</xref>
+          </li>
+          <li>
+            <xref href="#">1</xref>
+          </li>
+          <li>
+            <xref href="#">2</xref>
+          </li>
+          <li>
+            <xref href="#">3</xref>
+          </li>
+          <li>
+            <xref href="#">Next</xref>
+          </li>
+        </ol>
+      </pagination>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;pagination&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/pagination&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;section&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol outputclass="pagination"&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <section>
+      <title>Sizing</title>
+      <p>Fancy larger or smaller pagination? Use <xmlatt>size="large"</xmlatt> or
+          <xmlatt>size="small"</xmlatt> for additional sizes.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <pagination size="large">
+        <title>Page navigation example</title>
+        <ol>
+          <li>
+            <xref href="#">Previous</xref>
+          </li>
+          <li>
+            <xref href="#">1</xref>
+          </li>
+          <li>
+            <xref href="#">2</xref>
+          </li>
+          <li>
+            <xref href="#">3</xref>
+          </li>
+          <li>
+            <xref href="#">Next</xref>
+          </li>
+        </ol>
+      </pagination>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;pagination size="large"&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/pagination&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;section&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol outputclass="pagination pagination-lg"&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <pagination size="small">
+        <title>Page navigation example</title>
+        <ol>
+          <li>
+            <xref href="#">Previous</xref>
+          </li>
+          <li>
+            <xref href="#">1</xref>
+          </li>
+          <li>
+            <xref href="#">2</xref>
+          </li>
+          <li>
+            <xref href="#">3</xref>
+          </li>
+          <li>
+            <xref href="#">Next</xref>
+          </li>
+        </ol>
+      </pagination>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;pagination size="small"&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/pagination&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;section&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol outputclass="pagination pagination-sm"&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <section>
+      <title>Alignment</title>
+      <p>Change the alignment of pagination component by appending Bootstrap
+        <xref
+          href="https://getbootstrap.com/docs/5.3/utilities/flex/"
+          format="html"
+          scope="external"
+        >flexbox utility</xref> classes
+        to the <xmlatt>outputclass</xmlatt>
+      </p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <pagination outputclass="justify-content-center">
+        <title>Page navigation example</title>
+        <ol>
+          <li>
+            <xref href="#">Previous</xref>
+          </li>
+          <li>
+            <xref href="#">1</xref>
+          </li>
+          <li>
+            <xref href="#">2</xref>
+          </li>
+          <li>
+            <xref href="#">3</xref>
+          </li>
+          <li>
+            <xref href="#">Next</xref>
+          </li>
+        </ol>
+      </pagination>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;pagination outputclass="justify-content-center"&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/pagination&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;section&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol outputclass="pagination justify-content-center"&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <pagination outputclass="justify-content-end">
+        <title>Page navigation example</title>
+        <ol>
+          <li>
+            <xref href="#">Previous</xref>
+          </li>
+          <li>
+            <xref href="#">1</xref>
+          </li>
+          <li>
+            <xref href="#">2</xref>
+          </li>
+          <li>
+            <xref href="#">3</xref>
+          </li>
+          <li>
+            <xref href="#">Next</xref>
+          </li>
+        </ol>
+      </pagination>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;pagination outputclass="justify-content-end"&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/pagination&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;section&gt;
+  &lt;title&gt;Page navigation example&lt;/title&gt;
+  &lt;ol outputclass="pagination justify-content-end"&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Previous&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;1&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;2&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;3&lt;/xref&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;xref href="#"&gt;Next&lt;/xref&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/section&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+  </body>
+</topic>

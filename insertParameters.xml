@@ -60,6 +60,16 @@
     if:set="bootstrap.css.card"
   />
   <param
+    name="BOOTSTRAP_CSS_CARD_TITLE"
+    expression="${bootstrap.css.card.title}"
+    if:set="bootstrap.css.card.title"
+  />
+  <param
+    name="BOOTSTRAP_CSS_CARD_WIDTH"
+    expression="${bootstrap.css.card.width}"
+    if:set="bootstrap.css.card.width"
+  />
+  <param
     name="BOOTSTRAP_CSS_CAROUSEL"
     expression="${bootstrap.css.carousel}"
     if:set="bootstrap.css.carousel"
@@ -70,7 +80,7 @@
     if:set="bootstrap.css.carousel.indicators"
   />
   <param
-    name="BOOTSTRAP_CSS_CAPTION"
+    name="BOOTSTRAP_CSS_CAROUSEL_CAPTION"
     expression="${bootstrap.css.carousel.caption}"
     if:set="bootstrap.css.carousel.caption"
   />

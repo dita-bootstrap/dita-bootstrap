@@ -14,28 +14,13 @@
   <!-- Customization to add Bootstrap Tabbed Dialog Component -->
   <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#tabs -->
 
-  <xsl:template match="*[contains(@class,' topic/bodydiv ') and contains(@outputclass, 'nav-tabs')]">
-    <ul role="tablist">
-      <xsl:call-template name="commonattributes"/>
-      <xsl:call-template name="setid"/>
-      <xsl:apply-templates
-        mode="nav-tabs"
-        select="*[contains(@class,' topic/section ')]/*[contains(@class,' topic/title ')]"
-      />
-    </ul>
-    <div class="tab-content">
-      <xsl:apply-templates mode="nav-tabs" select="*[contains(@class,' topic/section ')]"/>
-    </div>
-  </xsl:template>
-
-  <!-- Customization to add Bootstrap Tabbed Dialog with Pills Component -->
-  <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#pills -->
-
-  <xsl:template match="*[contains(@class,' topic/bodydiv ') and contains(@outputclass, 'nav-pills')]">
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/tabbed-dialog ')] | *[contains(@class,' topic/bodydiv ') and (contains(@outputclass, 'nav-tabs') or contains(@outputclass, 'nav-pills'))]"
+  >
     <xsl:choose>
       <!-- Pills with Vertical alignment -->
       <!-- https://getbootstrap.com/docs/5.3/components/navs-tabs/#vertical -->
-      <xsl:when test="contains(@outputclass, 'nav-pills-vertical')">
+      <xsl:when test="@style = 'vertical-pills' or contains(@outputclass, 'nav-pills-vertical')">
         <div class="d-flex align-items-start">
           <div role="tablist" aria-orientation="vertical">
             <xsl:call-template name="commonattributes"/>
@@ -50,7 +35,7 @@
           </div>
         </div>
       </xsl:when>
-      <!-- Pills with Horizontal alignment -->
+      <!-- Horizontal Tabs or Pills -->
       <xsl:otherwise>
         <ul role="tablist">
           <xsl:call-template name="commonattributes"/>

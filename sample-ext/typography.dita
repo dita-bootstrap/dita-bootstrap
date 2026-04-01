@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<!-- Within the sample documentation, where necessary, the texts describing the
+   usage of each component have been copied directly from the official Bootstrap
+   5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+   markup is used throughout the examples describing how to implement these
+   components correctly using outputclass. -->
+<topic id="typography">
+  <title>Typography</title>
+  <shortdesc>Documentation and examples for Bootstrap typography, including global settings, headings, body text, lists,
+    and more.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Typography</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlatt>otherprops</xmlatt></indexterm>
+        <indexterm><xmlelement>title</xmlelement></indexterm>
+        <indexterm><xmlelement>dl</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Headings</title>
+      <p>All HTML headings, <xmlelement>h1</xmlelement> through <xmlelement>h6</xmlelement>, are available.
+          <xmlatt>outputclass="h1"</xmlatt> through <xmlatt>outputclass="h6"</xmlatt> are also available, for when you
+        want to match the font styling of a heading but cannot use the associated HTML element.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p outputclass="h1">h1. Bootstrap heading</p>
+      <p outputclass="h2">h2. Bootstrap heading</p>
+      <p outputclass="h3">h3. Bootstrap heading</p>
+      <p outputclass="h4">h4. Bootstrap heading</p>
+      <p outputclass="h5">h5. Bootstrap heading</p>
+      <p outputclass="h6">h6. Bootstrap heading</p>
+    </bodydiv>
+    <codeblock>&lt;title outputclass="h1"&gt;h1. Bootstrap heading&lt;/title&gt;
+&lt;title outputclass="h2"&gt;h2. Bootstrap heading&lt;/title&gt;
+&lt;title outputclass="h3"&gt;h3. Bootstrap heading&lt;/title&gt;
+&lt;title outputclass="h4"&gt;h4. Bootstrap heading&lt;/title&gt;
+&lt;title outputclass="h5"&gt;h5. Bootstrap heading&lt;/title&gt;
+&lt;title outputclass="h6"&gt;h6. Bootstrap heading&lt;/title&gt;</codeblock>
+    <section>
+      <title>Customizing headings</title>
+      <p>Annotate a <xmlelement>ph</xmlelement> with an <xmlatt>outputclass</xmlatt> to recreate the small secondary
+        heading text from Bootstrap 3.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p outputclass="h3">Fancy display heading <ph
+          outputclass="small text-body-secondary"
+        >with faded secondary text</ph></p>
+    </bodydiv>
+    <codeblock
+    >&lt;title&gt;Fancy display heading &lt;ph outputclass="small text-body-secondary"&gt;with faded secondary text&lt;/ph&gt;&lt;/title&gt;</codeblock>
+    <section>
+      <title>Display headings</title>
+      <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a
+        heading to stand out, consider using a display heading — a larger, slightly more opinionated heading style.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p outputclass="display-1">Display 1</p>
+      <p outputclass="display-2">Display 2</p>
+      <p outputclass="display-3">Display 3</p>
+      <p outputclass="display-4">Display 4</p>
+      <p outputclass="display-5">Display 5</p>
+      <p outputclass="display-6">Display 6</p>
+    </bodydiv>
+    <codeblock>&lt;title outputclass="display-1"&gt;Display 1&lt;/title&gt;
+&lt;title outputclass="display-2"&gt;Display 2&lt;/title&gt;
+&lt;title outputclass="display-3"&gt;Display 3&lt;/title&gt;
+&lt;title outputclass="display-4"&gt;Display 4&lt;/title&gt;
+&lt;title outputclass="display-5"&gt;Display 5&lt;/title&gt;
+&lt;title outputclass="display-6"&gt;Display 6&lt;/title&gt;</codeblock>
+    <section>
+      <title>Lead</title>
+      <p>Make a paragraph stand out by adding <xmlatt>outputclass="lead"</xmlatt> — this is automatically added to
+          <xmlelement>shortdesc</xmlelement> elements.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p outputclass="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
+    </bodydiv>
+    <codeblock>&lt;p outputclass="lead"&gt;
+  This is a lead paragraph. It stands out from regular paragraphs.
+&lt;/p&gt;</codeblock>
+    <section>
+      <title>Inline text elements</title>
+      <p>Styling for common inline HTML5 elements.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p>You can use <xmlatt>outputclass="mark"</xmlatt> to <ph outputclass="mark">highlight</ph> text.</p>
+      <p><line-through>This line of text is meant to be treated as deleted text.</line-through></p>
+      <p><u>This line of text will render as underlined.</u></p>
+      <p outputclass="small">This line of text using <xmlatt>outputclass="small"</xmlatt> is meant to be treated as fine
+        print.</p>
+      <p><b>This line rendered as bold text.</b></p>
+      <p><i>This line rendered as italicized text.</i></p>
+    </bodydiv>
+    <codeblock
+    >&lt;p&gt;You can use &lt;xmlatt&gt;outputclass="mark"&lt;/xmlatt&gt; to &lt;ph outputclass="mark"&gt;highlight&lt;/ph&gt; text.&lt;/p&gt;
+&lt;p&gt;&lt;line-through&gt;This line of text is meant to be treated as deleted
+  text.&lt;/line-through&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;This line of text will render as underlined.&lt;/u&gt;&lt;/p&gt;
+&lt;p outputclass="small"&gt;This line of text using &lt;xmlatt&gt;outputclass="small"&lt;/xmlatt&gt;
+  is meant to be treated as fine print.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;This line rendered as bold text.&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;i&gt;This line rendered as italicized text.&lt;/i&gt;&lt;/p&gt;</codeblock>
+    <section>
+      <title>Text utilities</title>
+      <p>Change text alignment, transform, style, weight, line-height, decoration and color with Bootstrap’s
+        <xref href="./color.dita" format="dita">text and color utilities</xref>.</p>
+    </section>
+
+    <section>
+      <title>Abbreviations</title>
+      <p>Stylized implementation of HTML’s <xmlelement>abbr</xmlelement> element for abbreviations and acronyms to show
+        the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide
+        additional context on hover and to users of assistive technologies. </p>
+      <p>Add <xmlatt>outputclass="initialism"</xmlatt> to an abbreviation for a slightly smaller font-size.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p>
+        <ph outputclass="abbreviation" otherprops="title(attribute)">attr</ph>
+      </p>
+      <p>
+        <ph outputclass="initialism" otherprops="title(HyperText Markup Language)">HTML</ph>
+      </p>
+    </bodydiv>
+    <codeblock>&lt;p&gt;
+  &lt;ph outputclass="abbreviation" otherprops="title(attribute)"&gt;attr&lt;/ph&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;ph outputclass="initialism" otherprops="title(HyperText Markup Language)"&gt;HTML&lt;/ph&gt;
+&lt;/p&gt;
+  </codeblock>
+    <section>
+      <title>Blockquotes</title>
+      <p>For quoting blocks of content from another source within your document, use the DITA
+          <xmlelement>lq</xmlelement> element, it is styled automatically.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <lq>
+        <p>A well-known quote, contained in a blockquote element.</p>
+      </lq>
+    </bodydiv>
+    <codeblock>&lt;lq&gt;
+  &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+&lt;/lq&gt;</codeblock>
+    <section>
+      <title>Naming a source</title>
+      <p>The HTML spec requires that blockquote attribution be placed outside the rendered HTML
+          <xmlelement>blockquote</xmlelement> element. When providing attribution, wrap your the DITA
+          <xmlelement>lq</xmlelement> in a <xmlelement>fig</xmlelement> and add a <xmlelement>title</xmlelement> to the
+          <xmlelement>fig</xmlelement>. Be sure to wrap the name of the source work in the <xmlelement>cite</xmlelement>
+        as well.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <fig>
+        <title>Someone famous in <cite>Source Title</cite></title>
+        <lq>
+          <p>A well-known quote, contained in a blockquote element.</p>
+        </lq>
+      </fig>
+    </bodydiv>
+    <codeblock>&lt;fig&gt;
+  &lt;title&gt;Someone famous in &lt;cite&gt;Source Title&lt;/cite&gt;&lt;/title&gt;
+  &lt;lq &gt;
+    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+  &lt;/lq&gt;
+&lt;/fig&gt;</codeblock>
+    <section>
+      <title>Alignment</title>
+      <p>Use text utilities such as <xmlatt>outputclass="text-center"</xmlatt> as needed to change the alignment of your
+        blockquote.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <fig outputclass="text-center">
+        <title>Someone famous in <cite>Source Title</cite></title>
+        <lq>
+          <p>A well-known quote, contained in a blockquote element.</p>
+        </lq>
+      </fig>
+    </bodydiv>
+    <codeblock>&lt;fig outputclass="text-center"&gt;
+  &lt;title&gt;Someone famous in &lt;cite&gt;Source Title&lt;/cite&gt;&lt;/title&gt;
+  &lt;lq&gt;
+    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+  &lt;/lq&gt;
+&lt;/fig&gt;</codeblock>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <fig outputclass="text-end">
+        <title>Someone famous in <cite>Source Title</cite></title>
+        <lq>
+          <p>A well-known quote, contained in a blockquote element.</p>
+        </lq>
+      </fig>
+    </bodydiv>
+    <codeblock>&lt;fig outputclass="text-end"&gt;
+  &lt;title&gt;Someone famous in &lt;cite&gt;Source Title&lt;/cite&gt;&lt;/title&gt;
+  &lt;lq&gt;
+    &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
+  &lt;/lq&gt;
+&lt;/fig&gt;</codeblock>
+
+    <div outputclass="h2">Lists</div>
+    <section>
+      <title outputclass="h3">Unstyled</title>
+      <p>Remove the default list-style and left margin on list items (immediate children only). This only applies to
+        immediate children list items, meaning you will need to add the <xmlatt>outputclass="list-unstyled"</xmlatt> for
+        any nested lists as well.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <ul outputclass="list-unstyled">
+        <li>This is a list.</li>
+        <li>It appears completely unstyled.</li>
+        <li>Structurally, it’s still a list.</li>
+        <li>However, this style <b>only applies to immediate child elements</b>.</li>
+        <li>Nested lists:
+          <ul>
+            <li>are unaffected by this style</li>
+            <li>will still show a bullet</li>
+            <li>and have appropriate left margin</li>
+          </ul>
+        </li>
+        <li>This may still come in handy in some situations.</li>
+      </ul>
+    </bodydiv>
+    <codeblock>&lt;ul outputclass="list-unstyled"&gt;
+  &lt;li&gt;This is a list.&lt;/li&gt;
+  &lt;li&gt;It appears completely unstyled.&lt;/li&gt;
+  &lt;li&gt;Structurally, it’s still a list.&lt;/li&gt;
+  &lt;li&gt;However, this style &lt;b&gt;only applies to immediate child elements&lt;/b&gt;.&lt;/li&gt;
+  &lt;li&gt;Nested lists:
+    &lt;ul&gt;
+      &lt;li&gt;are unaffected by this style&lt;/li&gt;
+      &lt;li&gt;will still show a bullet&lt;/li&gt;
+      &lt;li&gt;and have appropriate left margin&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;This may still come in handy in some situations.&lt;/li&gt;
+&lt;/ul&gt;</codeblock>
+    <section>
+      <title outputclass="h3">Inline</title>
+      <p>Remove a list’s bullets and apply some light margin using the
+        <xmlatt>outputclass="list-inline"</xmlatt> attribute.
+      </p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <ul outputclass="list-inline">
+        <li>This is a list item.</li>
+        <li>And another one.</li>
+        <li>But they're displayed inline.</li>
+      </ul>
+    </bodydiv>
+    <codeblock>&lt;ul outputclass="list-inline"&gt;
+  &lt;li&gt;This is a list item.&lt;/li&gt;
+  &lt;li&gt;And another one.&lt;/li&gt;
+  &lt;li&gt;But they're displayed inline.&lt;/li&gt;
+&lt;/ul></codeblock>
+    <section>
+      <title outputclass="h3">Description list alignment</title>
+      <p>Terms and descriptions align horizontally using Bootstrap’s grid system of predefined classes. For longer
+        terms, text is truncated with an ellipsis.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <dl>
+        <dlentry>
+          <dt>Description lists</dt>
+          <dd>A description list is perfect for defining terms.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Term</dt>
+          <dd>
+            <p>Definition for the term.</p>
+            <p>And some more placeholder definition text.</p>
+          </dd>
+        </dlentry>
+        <dlentry>
+          <dt>Another term</dt>
+          <dd>This definition is short, so no extra paragraphs or anything.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Truncated term is truncated</dt>
+          <dd>This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Nesting</dt>
+          <dd>
+            <dl>
+              <dlentry>
+                <dt>Nested definition list</dt>
+                <dd>I heard you like definition lists. Let me put a definition list inside your definition list.</dd>
+              </dlentry>
+            </dl>
+          </dd>
+        </dlentry>
+      </dl>
+    </bodydiv>
+        <codeblock>&lt;dl&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Description lists&lt;/dt&gt;
+    &lt;dd&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+  &lt;/dlentry&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;
+      &lt;p&gt;Definition for the term.&lt;/p&gt;
+      &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
+    &lt;/dd&gt;
+  &lt;/dlentry&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Another term&lt;/dt&gt;
+    &lt;dd&gt;This definition is short, so no extra paragraphs or anything.&lt;/dd&gt;
+  &lt;/dlentry&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Truncated term is truncated&lt;/dt&gt;
+    &lt;dd&gt;This can be useful when space is tight. Adds an ellipsis at the end.&lt;/dd&gt;
+  &lt;/dlentry&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Nesting&lt;/dt&gt;
+    &lt;dd&gt;
+      &lt;dl&gt;
+        &lt;dlentry&gt;
+          &lt;dt&gt;Nested definition list&lt;/dt&gt;
+          &lt;dd&gt;I heard you like definition lists. Let me put a definition list
+            inside your definition list.&lt;/dd&gt;
+        &lt;/dlentry&gt;
+      &lt;/dl&gt;
+    &lt;/dd&gt;
+  &lt;/dlentry&gt;
+&lt;/dl&gt;</codeblock>
+    <section>
+      <title outputclass="h3">Description list column width</title>
+      <p>Definitions lists use the twelve column system defined by the Bootstrap grid. By default each <xmlelement
+        >dt</xmlelement> spreads over 3 column widths and each <xmlelement
+        >dd</xmlelement> spreads over 9 column widths. Alter default width of terms by adding <xmlatt
+        >colspan</xmlatt></p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <dl colspan="2">
+        <dlentry>
+          <dt>Description lists</dt>
+          <dd>A description list is perfect for defining terms.</dd>
+        </dlentry>
+        <dlentry>
+          <dt>Term</dt>
+          <dd>
+            <p>Definition for the term.</p>
+            <p>And some more placeholder definition text.</p>
+          </dd>
+        </dlentry>
+      </dl>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;dl colspan="2"&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Description lists&lt;/dt&gt;
+    &lt;dd&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+  &lt;/dlentry&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;
+      &lt;p&gt;Definition for the term.&lt;/p&gt;
+      &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
+    &lt;/dd&gt;
+  &lt;/dlentry&gt;
+&lt;/dl&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;dl otherprops="cols(2)"&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Description lists&lt;/dt&gt;
+    &lt;dd&gt;A description list is perfect for defining terms.&lt;/dd&gt;
+  &lt;/dlentry&gt;
+  &lt;dlentry&gt;
+    &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;
+      &lt;p&gt;Definition for the term.&lt;/p&gt;
+      &lt;p&gt;And some more placeholder definition text.&lt;/p&gt;
+    &lt;/dd&gt;
+  &lt;/dlentry&gt;
+&lt;/dl&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+  </body>
+</topic>

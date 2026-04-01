@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="dark-mode">
+  <title>Dark Mode</title>
+  <shortdesc
+  >Bootstrap 5.3 supports color modes, starting with dark mode. You can implement your own color mode toggler onto a static menu bar and apply the different color modes as you see fit. Bootstrap supports a light mode (default) and now dark mode. Color modes can be toggled globally on the <xmlelement
+    >html</xmlelement> element, or on specific components and elements, thanks to the <xmlatt
+    >data-bs-theme</xmlatt> attribute.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Dark Mode</indexterm>
+        <indexterm>Nav Bar</indexterm>
+        <indexterm><xmlatt>data-bs-theme</xmlatt></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Example</title>
+      <p>To add a color mode toggler to the menu bar, add a series of <xmlelement
+        >button</xmlelement> elements with the attributes <xmlatt>data-bs-theme="light"</xmlatt> or <xmlatt
+        >data-bs-theme="dark"</xmlatt> as shown here.</p>
+      <codeblock>&lt;ul class="navbar-nav ms-auto"&gt;
+  &lt;li class="nav-item dropdown"&gt;
+    &lt;a href="#" class="nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center show"
+      id="bd-color-mode" data-bs-toggle="dropdown" aria-expanded="false"
+      data-bs-display="static"&gt;Toggle theme&lt;/a&gt;
+    &lt;ul class="dropdown-menu dropdown-menu-end"
+      aria-labelledby="bd-color-mode" style="--bs-dropdown-min-width: 6rem;"
+      data-bs-popper="static"&gt;
+      &lt;li&gt;
+        &lt;button type="button" class="dropdown-item d-flex align-items-center"
+          data-bs-theme-value="light"&gt; Light
+        &lt;/button&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;button type="button" class="dropdown-item d-flex align-items-center"
+          data-bs-theme-value="dark"&gt; Dark
+        &lt;/button&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;button type="button" class="dropdown-item d-flex align-items-center"
+          data-bs-theme-value="auto"&gt; Auto
+        &lt;/button&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</codeblock>
+    <p>The plug-in includes a sample color mode toggler in its
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap/blob/develop/includes/hdr.navbar.example.xml"
+          format="html"
+          scope="external"
+        >header navbar</xref>.</p>
+    </section>
+  </body>
+</topic>

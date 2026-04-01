@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<topic id="spacing">
+  <title>Spacing</title>
+  <shortdesc>Use margin and padding utilities to quickly control the layout of elements. The <xmlatt
+    >margin</xmlatt> and <xmlatt
+    >padding</xmlatt> attributes enable standard Bootstrap spacing across a range of DITA components.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Spacing</indexterm>
+        <indexterm>Margin</indexterm>
+        <indexterm>Padding</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlatt>margin</xmlatt></indexterm>
+        <indexterm><xmlatt>padding</xmlatt></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Margin</title>
+      <p>The <xmlatt
+        >margin</xmlatt> attribute controls the distance between elements, supporting values from 0 to 5 and <codeph
+        >auto</codeph>.</p>
+    </section>
+
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <div color="primary" margin="0" padding="2">Margin 0</div>
+      <div color="secondary" margin="1" padding="2">Margin 1</div>
+      <div color="success" margin="2" padding="2">Margin 2</div>
+      <div color="danger" margin="3" padding="2">Margin 3</div>
+      <div color="warning" margin="4" padding="2">Margin 4</div>
+      <div color="info" margin="5" padding="2">Margin 5</div>
+      <div color="light" margin="auto" padding="2" width="50">Margin Auto</div>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;div color="primary" margin="0" padding="2"&gt;Margin 0&lt;/div&gt;
+&lt;div color="secondary" margin="1" padding="2"&gt;Margin 1&lt;/div&gt;
+&lt;div color="success" margin="2" padding="2"&gt;Margin 2&lt;/div&gt;
+&lt;div color="danger" margin="3" padding="2"&gt;Margin 3&lt;/div&gt;
+&lt;div color="warning" margin="4" padding="2"&gt;Margin 4&lt;/div&gt;
+&lt;div color="info" margin="5" padding="2"&gt;Margin 5&lt;/div&gt;
+&lt;div color="light" margin="auto" padding="2" width="50"&gt;Margin Auto&lt;/div&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;div outputclass="text-bg-primary m-0 p-2"&gt;Margin 0&lt;/div&gt;
+&lt;div outputclass="text-bg-secondary m-1 p-2"&gt;Margin 1&lt;/div&gt;
+&lt;div outputclass="text-bg-success m-2 p-2"&gt;Margin 2&lt;/div&gt;
+&lt;div outputclass="text-bg-danger m-3 p-2"&gt;Margin 3&lt;/div&gt;
+&lt;div outputclass="text-bg-warning m-4 p-2"&gt;Margin 4&lt;/div&gt;
+&lt;div outputclass="text-bg-info m-5 p-2"&gt;Margin 5&lt;/div&gt;
+&lt;div outputclass="text-bg-light m-auto p-2 w-50"&gt;Margin Auto&lt;/div&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+
+    <section>
+      <title>Padding</title>
+      <p>The <xmlatt
+        >padding</xmlatt> attribute controls the internal spacing of an element, supporting values from 0 to 5.</p>
+    </section>
+
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <div color="primary" padding="0">Padding 0</div>
+      <div color="secondary" padding="1" margin="1"><div
+          outputclass="w-100 bg-secondary-subtle text-dark"
+        >Padding 1</div></div>
+      <div color="success" padding="2" margin="1"><div
+          outputclass="w-100 bg-success-subtle text-dark"
+        >Padding 2</div></div>
+      <div color="danger" padding="3" margin="1"><div
+          outputclass="w-100 bg-danger-subtle text-dark"
+        >Padding 3</div></div>
+      <div color="warning" padding="4" margin="1"><div
+          outputclass="w-100 bg-warning-subtle text-dark"
+        >Padding 4</div></div>
+      <div color="info" padding="5" margin="1"><div outputclass="w-100 bg-info-subtle text-dark">Padding 5</div></div>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;div color="primary" padding="0"&gt;Padding 0&lt;/div&gt;
+&lt;div color="secondary" padding="1" margin="1"&gt;Padding 1&lt;/div&gt;
+&lt;div color="success" padding="2" margin="1"&gt;Padding 2&lt;/div&gt;
+&lt;div color="danger" padding="3" margin="1"&gt;Padding 3&lt;/div&gt;
+&lt;div color="warning" padding="4" margin="1"&gt;Padding 4&lt;/div&gt;
+&lt;div color="info" padding="5" margin="1"&gt;Padding 5&lt;/div&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;div outputclass="text-bg-primary p-0"&gt;Padding 0&lt;/div&gt;
+&lt;div outputclass="text-bg-secondary p-1 m-1"&gt;Padding 1&lt;/div&gt;
+&lt;div outputclass="text-bg-success p-2 m-1"&gt;Padding 2&lt;/div&gt;
+&lt;div outputclass="text-bg-danger p-3 m-1"&gt;Padding 3&lt;/div&gt;
+&lt;div outputclass="text-bg-warning p-4 m-1"&gt;Padding 4&lt;/div&gt;
+&lt;div outputclass="text-bg-info p-5 m-1"&gt;Padding 5&lt;/div&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+
+    <section>
+      <title>Directional Spacing</title>
+      <p>The <xmlatt>margin</xmlatt> and <xmlatt
+        >padding</xmlatt> attributes also support directional spacing using a prefix:</p>
+      <ul>
+        <li><codeph>t</codeph> - Top</li>
+        <li><codeph>b</codeph> - Bottom</li>
+        <li><codeph>s</codeph> - Start (Left in LTR)</li>
+        <li><codeph>e</codeph> - End (Right in LTR)</li>
+        <li><codeph>x</codeph> - Horizontal (Start and End)</li>
+        <li><codeph>y</codeph> - Vertical (Top and Bottom)</li>
+      </ul>
+      <p>Multiple values can be specified as a space-separated list.</p>
+    </section>
+
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <div color="primary" margin="t5 b0">Margin Top 5, Bottom 0</div>
+      <div color="secondary" margin="x3">Margin Horizontal 3</div>
+      <div color="success" padding="y5"><div
+          outputclass="w-100 bg-success-subtle text-dark"
+        >Padding Vertical 5</div></div>
+      <div color="danger" padding="s3 e1"><div
+          outputclass="w-100 bg-danger-subtle text-dark"
+        >Padding Start 3, End 1</div></div>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;div color="primary" margin="t5 b0"&gt;Margin Top 5, Bottom 0&lt;/div&gt;
+&lt;div color="secondary" margin="x3"&gt;Margin Horizontal 3&lt;/div&gt;
+&lt;div color="success" padding="y5"&gt;Padding Vertical 5&lt;/div&gt;
+&lt;div color="danger" padding="s3 e1"&gt;Padding Start 3, End 1&lt;/div&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;div outputclass="text-bg-primary mt-5 mb-0"&gt;Margin Top 5, Bottom 0&lt;/div&gt;
+&lt;div outputclass="text-bg-secondary mx-3"&gt;Margin Horizontal 3&lt;/div&gt;
+&lt;div outputclass="text-bg-success py-5"&gt;Padding Vertical 5&lt;/div&gt;
+&lt;div outputclass="text-bg-danger ps-3 pe-1"&gt;Padding Start 3, End 1&lt;/div&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+  </body>
+</topic>

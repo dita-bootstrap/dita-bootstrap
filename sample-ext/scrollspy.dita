@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!-- Within the sample documentation, where necessary, the texts describing the
+   usage of each component have been copied directly from the official Bootstrap
+   5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+   markup is used throughout the examples describing how to implement these
+   components correctly using outputclass. -->
+<topic id="scrollspy">
+  <title>Scrollspy</title>
+  <shortdesc>Automatically update a page contents sidebar ToC using Bootstrap navigation or list group components based
+    on scroll position to indicate which link is currently active in the viewport.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Scrollspy</indexterm>
+        <indexterm><parmname>--scrollspy-toc</parmname></indexterm>
+        <indexterm><xmlelement>section</xmlelement></indexterm>
+        <indexterm><xmlelement>topic</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section id="nav-pill-example">
+      <title>Example with nested nav</title>
+      <p>Bootstrap’s Scrollspy works with nested <codeph>.navs</codeph>. If a nested <codeph>.nav</codeph> is <codeph>
+          .active</codeph>, its parents will also be <codeph>.active</codeph>. An animation of an example ToC navbar is
+        shown below.</p>
+      <fig>
+        <image scalefit="yes" href="./src/scrollspy-nav-pill.webp"/>
+      </fig>
+      <p>To use this option, embed the subtopics and add the parameters
+          <parmname>--nav-toc</parmname>=<option>nav-pill-partial</option> and
+          <parmname>--scrollspy-toc</parmname>=<option>nav-pill</option> to the <cmdname>dita</cmdname> command.</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>nav-pill-partial</option> \
+     <parmname>--scrollspy-toc</parmname>=<option>nav-pill</option></codeblock>
+    </section>
+    <section id="list-group-example">
+      <title>Example with list-group</title>
+      <p>Bootstrap’s Scrollspy component also works with
+        <xref href="./list-group.dita" format="dita">list-groups</xref>. An animation of an example ToC menu is shown
+        below.</p>
+      <fig>
+        <image scalefit="yes" href="./src/scrollspy-list-group.webp"/>
+      </fig>
+      <p>To use this option, embed the subtopics and add the parameters
+          <parmname>--nav-toc</parmname>=<option>list-group-partial</option> and
+          <parmname>--scrollspy-toc</parmname>=<option>list-group</option> to the <cmdname>dita</cmdname> command.</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>list-group-partial</option> \
+     <parmname>--scrollspy-toc</parmname>=<option>list-group</option></codeblock>
+    </section>
+    <section id="list-example">
+      <title>Example with list</title>
+      <p>Bootstrap’s Scrollspy also works with a series of simple <xmlelement>li</xmlelement> list elements.</p>
+      <fig>
+        <image scalefit="yes" href="./src/scrollspy-list.webp"/>
+      </fig>
+      <p>To use this option, embed the subtopics and add the parameters
+          <parmname>--nav-toc</parmname>=<option>collapsible</option> and
+          <parmname>--scrollspy-toc</parmname>=<option>list</option> to the <cmdname>dita</cmdname> command.</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>collapsible</option> \
+     <parmname>--scrollspy-toc</parmname>=<option>list</option></codeblock>
+    </section>
+
+    <section id="including-topics-sections">
+      <title>Including <xmlelement>topic</xmlelement> and <xmlelement
+        >section</xmlelement> elements in the navigation</title>
+        <p>
+          To ensure that a heading is listed in the scrollspy navigation, make sure that every <xmlelement
+        >topic</xmlelement>
+          and every <xmlelement>section</xmlelement> element has an <xmlatt>id</xmlatt> and <xmlelement
+        >title</xmlelement>.
+        </p>
+        <codeblock>&lt;topic&gt;
+  &lt;title&gt;Topic&lt;/title&gt;
+  ...
+  &lt;section id="section-1"&gt;
+    &lt;title&gt;Section 1&lt;/title&gt;
+  &lt;/section&gt;
+  &lt;section id="section-2"&gt;
+    &lt;title&gt;Section 2&lt;/title&gt;
+  &lt;/section&gt;
+  &lt;topic id="sub-topic-1"&gt;
+    &lt;title&gt;Embedded Topic 1&lt;/title&gt;
+    ...
+    &lt;topic id="sub-topic-1-A" conref="..."&gt;
+      &lt;title&gt;Embedded Sub-Topic 1.A&lt;/title&gt;
+    &lt;/topic&gt;
+    &lt;topic id="sub-topic-1-B" conref="..."&gt;
+      &lt;title&gt;Embedded Sub-Topic 1.B&lt;/title&gt;
+    &lt;/topic&gt;
+  &lt;/topic&gt;
+  &lt;topic id="sub-topic-2" conref="..."&gt;
+    &lt;title&gt;Embedded Topic 2&lt;/title&gt;
+    ...
+  &lt;/topic&gt;
+&lt;/topic&gt;</codeblock>
+    </section>
+    <section id="excluding-sections">
+      <title>Excluding <xmlelement>section</xmlelement> elements from the navigation</title>
+      <p>
+        Omit the <xmlatt>id</xmlatt> to ignore a <xmlelement>section</xmlelement>, or wrap the <xmlelement
+        >section</xmlelement> in a <xmlelement>bodydiv</xmlelement> element. Any <xref
+          href="./offcanvas.dita"
+          format="dita"
+        >offcanvas components</xref> are ignored automatically.
+      </p>
+      <codeblock>&lt;bodydiv&gt;
+  &lt;section id="section-1"&gt;
+    &lt;title&gt;Section 1&lt;/title&gt;
+  &lt;/section&gt;
+&lt;/bodydiv&gt;</codeblock>
+    </section>
+  </body>
+</topic>

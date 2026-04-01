@@ -4,6 +4,7 @@
 <!-- See the accompanying LICENSE file for applicable license -->
 <plugin id="net.infotexture.dita-bootstrap">
   <feature extension="package.version" value="5.3.8"/>
+  <feature extension="dita.specialization.catalog.relative" file="catalog.xml"/>
   <require plugin="org.dita.html5"/>
   <require plugin="fox.jason.extend.css"/>
   <!-- extension points -->
@@ -145,6 +146,16 @@
       name="bootstrap.css.card"
       type="string"
       desc="Bootstrap classes for card components"
+    />
+    <param
+      name="bootstrap.css.card.title"
+      type="string"
+      desc="Common Bootstrap classes for DITA &lt;title&gt; elements within &lt;card&gt; elements"
+    />
+    <param
+      name="bootstrap.css.card.width"
+      type="string"
+      desc="Default Bootstrap width class for card components"
     />
     <param
       name="bootstrap.css.carousel"

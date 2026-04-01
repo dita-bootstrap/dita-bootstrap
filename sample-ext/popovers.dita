@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<topic id="popovers">
+  <title>Popovers</title>
+  <shortdesc>Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your
+    site.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm><codeph>--popovers.include</codeph></indexterm>
+        <indexterm>Popovers</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlelement>desc</xmlelement></indexterm>
+        <indexterm><xmlelement>title</xmlelement></indexterm>
+        <indexterm><xmlelement>data</xmlelement></indexterm>
+        <indexterm><xmlelement>xref</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Overview</title>
+      <p>Things to know when using the tooltip plugin:</p>
+      <ul>
+        <li>Popovers rely on the third-party library
+          <xref href="https://popper.js.org" format="html" scope="external">Popper</xref> for positioning.</li>
+        <li>Popovers with a zero-length <xmlelement>desc</xmlelement> element are never displayed.</li>
+        <li>Triggering popovers on hidden elements will not work.</li>
+        <li>Popovers for <xmlatt>outputclass="disabled"</xmlatt> elements must be triggered on a wrapper element.</li>
+        <li>Popovers must be hidden before their corresponding elements have been removed from the DOM.</li>
+        <li>Popovers can be triggered thanks to an element inside a shadow DOM.</li>
+        <li>Popovers are include by default, but for performance reasons, <b
+          >you may exclude them yourself</b> by setting
+            <codeph>--popovers.include</codeph>=<i>no</i>
+        </li>
+      </ul>
+    </section>
+
+    <section deliveryTarget="html">
+      <title>Examples</title>
+      <p>Keep reading to see how popovers work with some examples.</p>
+    </section>
+
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <popover outputclass="btn-lg btn-danger">
+        <data name="title">Popover title</data>
+        <desc>And here’s some amazing content. It’s very engaging. Right?</desc> Click to toggle popover </popover>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock> &lt;popover outputclass="btn-lg btn-danger"&gt;
+  &lt;data name="title"&gt;Popover title&lt;/data&gt;
+  &lt;desc&gt;And here’s some amazing content. It’s very engaging. Right?&lt;/desc&gt;
+  Click to toggle popover
+&lt;/popover&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock> &lt;xref href="#" outputclass="btn-lg btn-danger popover-top"&gt;
+  &lt;data name="title"&gt;Popover title&lt;/data&gt;
+  &lt;desc&gt;And here’s some amazing content. It’s very engaging. Right?&lt;/desc&gt;
+  Click to toggle popover
+&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+
+    <section>
+      <title>Four directions</title>
+      <p>Four options are available: <codeph>top</codeph>, <codeph>right</codeph>, <codeph>bottom</codeph>, and
+          <codeph>left</codeph> aligned. Directions are mirrored when using Bootstrap in RTL. To enable popovers, add
+          <xmlatt>output-class="popover-*"</xmlatt> to the enclosing <xmlelement>xref</xmlelement>. For the <xmlelement
+        >popover</xmlelement> element use the <xmlatt>position</xmlatt> attribute. The direction of the
+        popover is appended to the <xmlatt>output-class</xmlatt> or taken from the attribute.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <popover outputclass="btn-secondary" position="top">
+        <desc>Top popover</desc> Popover on top </popover>
+      <popover outputclass="btn-secondary" position="right">
+        <desc>Right Popover</desc> Popover on right </popover>
+      <popover outputclass="btn-secondary" position="bottom">
+        <desc>Bottom popover</desc> Popover on bottom </popover>
+      <popover outputclass="btn-secondary" position="left">
+        <desc>Left popover</desc> Popover on left </popover>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;popover outputclass="btn-secondary" position="top"&gt;
+  &lt;desc&gt;Top popover&lt;/desc&gt;
+  Popover on top
+&lt;/popover&gt;
+&lt;popover outputclass="btn-secondary" position="right"&gt;
+  &lt;desc&gt;Right Popover&lt;/desc&gt;
+  Popover on right
+&lt;/popover&gt;
+&lt;popover outputclass="btn-secondary" position="bottom"&gt;
+  &lt;desc&gt;Bottom popover&lt;/desc&gt;
+  Popover on bottom
+&lt;/popover&gt;
+&lt;popover outputclass="btn-secondary" position="left"&gt;
+  &lt;desc&gt;Left popover&lt;/desc&gt;
+  Popover on left
+&lt;/popover&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-secondary popover-top"&gt;
+  &lt;desc&gt;Top popover&lt;/desc&gt;
+  Popover on top
+&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary popover-right"&gt;
+  &lt;desc&gt;Right Popover&lt;/desc&gt;
+  Popover on right
+&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary popover-bottom"&gt;
+  &lt;desc&gt;Bottom popover&lt;/desc&gt;
+  Popover on bottom
+&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary popover-left"&gt;
+  &lt;desc&gt;Left popover&lt;/desc&gt;
+  Popover on left
+&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <section>
+      <title>Custom popovers</title>
+      <p>You can customize the appearance of popovers using CSS variables.
+        We set a custom class with <codeph
+        >&lt;data name="class"&gt;custom-popover&lt;data&gt;</codeph> to scope our custom
+        appearance and use it to override some of the local CSS variables.</p>
+      <codeblock outputclass="language-css">.custom-popover {
+  --bs-popover-max-width: 200px;
+  --bs-popover-border-color: var(--bs-primary);
+  --bs-popover-header-bg: var(--bs-primary);
+  --bs-popover-header-color: var(--bs-white);
+  --bs-popover-body-padding-x: 1rem;
+  --bs-popover-body-padding-y: .5rem;
+}</codeblock>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+        <popover outputclass="btn-lg btn-danger">
+          <data name="title">Popover title</data>
+          <data name="class">custom-popover</data>
+          <desc>And here’s some amazing content. It’s very engaging. Right?</desc>Custom popover</popover>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;popover outputclass="btn-lg btn-danger"&gt;
+  &lt;data name="title"&gt;Popover title&lt;/data&gt;
+  &lt;data name="class"&gt;custom-popover&lt;/data&gt;
+  &lt;desc&gt;And here’s some amazing content. It’s very engaging. Right?&lt;/desc&gt;
+  Custom popover
+&lt;/popover&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-lg btn-danger popover-top"&gt;
+  &lt;data name="title"&gt;Popover title&lt;/data&gt;
+  &lt;data name="class"&gt;custom-popover&lt;/data&gt;
+  &lt;desc&gt;And here’s some amazing content. It’s very engaging. Right?&lt;/desc&gt;
+  Custom popover
+&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+  </body>
+</topic>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <public
+    publicId="-//Infotexture//DTD DITA Bootstrap Topic//EN"
+    uri="base/bootstrap-topic.dtd"
+  />
+  <public
+    publicId="-//Infotexture//ENTITIES DITA Bootstrap Domain//EN"
+    uri="base/bootstrapDomain.ent"
+  />
+  <public
+    publicId="-//Infotexture//ELEMENTS DITA Bootstrap Domain//EN"
+    uri="base/bootstrapDomain.mod"
+  />
+  <system systemId="bootstrap-topic.dtd" uri="base/bootstrap-topic.dtd"/>
+</catalog>

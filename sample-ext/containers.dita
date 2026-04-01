@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="containers">
+  <title>Containers</title>
+  <shortdesc>Bootstrap containers determine the width of the content area within a given device or viewport.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Containers</indexterm>
+        <indexterm>
+          <parmname>--bootstrap.css.container.size</parmname>
+        </indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>How they work</title>
+      <p>Containers are the most basic layout element in Bootstrap and are required when using the default grid system.
+        Containers are used to contain, pad, and (sometimes) center the content within them. While containers can be
+        nested, most layouts do not require a nested container.</p>
+      <p>DITA Bootstrap comes with three different container styles:</p>
+      <ul>
+        <li>
+          <option>container</option>, which sets a <codeph>max-width</codeph> at each responsive breakpoint
+        </li>
+        <li>
+          <option>container-{breakpoint}</option>, which is <codeph>width: 100%</codeph> until the specified breakpoint
+        </li>
+        <li>
+          <option>container-fluid</option>, which is <codeph>width: 100%</codeph> at all breakpoints
+        </li>
+      </ul>
+      <p>
+        The table below illustrates how each container’s <codeph>max-width</codeph> compares to the original
+        <option>container</option> and
+        <option>container-fluid</option> across each breakpoint.
+      </p>
+    </section>
+    <table>
+      <tgroup cols="7">
+        <colspec colname="COLSPEC0" colwidth="2*"/>
+        <colspec colname="COLSPEC1" colwidth="1*"/>
+        <colspec colname="COLSPEC2" colwidth="1*"/>
+        <colspec colname="COLSPEC3" colwidth="1*"/>
+        <colspec colname="COLSPEC4" colwidth="1*"/>
+        <colspec colname="COLSPEC5" colwidth="1*"/>
+        <colspec colname="COLSPEC6" colwidth="1*"/>
+        <thead>
+          <row>
+            <entry colname="COLSPEC0" valign="top"/>
+            <entry colname="COLSPEC1" valign="top">Extra small
+              <div outputclass="fw-normal">&lt;576px</div>
+            </entry>
+            <entry colname="COLSPEC2" valign="top">Small
+              <div outputclass="fw-normal">≥576px</div>
+            </entry>
+            <entry colname="COLSPEC3" valign="top">Medium
+              <div outputclass="fw-normal">≥768px</div>
+            </entry>
+            <entry colname="COLSPEC4" valign="top">Large
+              <div outputclass="fw-normal">≥992px</div>
+            </entry>
+            <entry colname="COLSPEC5" valign="top">X-Large
+              <div outputclass="fw-normal">≥1200px</div>
+            </entry>
+            <entry colname="COLSPEC6" valign="top">XX-Large
+              <div outputclass="fw-normal">≥1400px</div>
+            </entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <option>container</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>540px</entry>
+            <entry>720px</entry>
+            <entry>960px</entry>
+            <entry>1140px</entry>
+            <entry>1320px</entry>
+          </row>
+          <row>
+            <entry>
+              <option>container-sm</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>540px</entry>
+            <entry>720px</entry>
+            <entry>960px</entry>
+            <entry>1140px</entry>
+            <entry>1320px</entry>
+          </row>
+          <row>
+            <entry>
+              <option>container-md</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>720px</entry>
+            <entry>960px</entry>
+            <entry>1140px</entry>
+            <entry>1320px</entry>
+          </row>
+          <row>
+            <entry>
+              <option>container-lg</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>960px</entry>
+            <entry>1140px</entry>
+            <entry>1320px</entry>
+          </row>
+          <row>
+            <entry>
+              <option>container-xl</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>1140px</entry>
+            <entry>1320px</entry>
+          </row>
+          <row>
+            <entry>
+              <option>container-xxl</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>1320px</entry>
+          </row>
+          <row>
+            <entry>
+              <option>container-fluid</option>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+            <entry>
+              <ph outputclass="text-body-secondary">100%</ph>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <note type="note">The DITA Bootstrap plug-in uses the responsive <option>container-xxl</option> by default to fill
+      the viewport width with page content up to the extra extra large breakpoint. At 1400px or wider, content width is
+      constrained to 1320px to ensure lines remain readable.</note>
+    <p>To use different size, pass the desired value to the <cmdname>dita</cmdname> command via the
+        <parmname>--bootstrap.css.container.size</parmname> parameter: </p>
+    <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+      >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--bootstrap.css.container.size</parmname>=<option>&lt;container-style&gt;</option></codeblock>
+  </body>
+</topic>

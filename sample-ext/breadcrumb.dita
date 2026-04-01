@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="breadcrumb">
+  <title>Breadcrumb</title>
+  <shortdesc>Indicate the current page’s location within a navigational hierarchy that automatically adds separators via
+    CSS.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Breadcrumb</indexterm>
+        <indexterm><parmname>--args.breadcrumbs</parmname></indexterm>
+        <indexterm><parmname>--bootstrap.breadcrumb.divider</parmname></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <fig>
+      <image scalefit="yes" href="./src/breadcrumb.png"/>
+    </fig>
+    <section>
+      <title>Adding breadcrumbs</title>
+      <p>Breadcrumbs are not included by default. You can add a breadcrumb component to each page by setting the
+        parameter <parmname>--args.breadcrumbs</parmname>=<option>yes</option>
+      </p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--args.breadcrumbs</parmname>=<option>yes</option></codeblock>
+    </section>
+    <section>
+      <title>Dividers</title>
+      <p>Dividers are automatically added via CSS. They can be changed by setting the parameter
+          <parmname>--bootstrap.breadcrumb.divider</parmname>. </p>
+      <fig>
+        <image scalefit="yes" href="./src/breadcrumb-divider.png"/>
+      </fig>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--args.breadcrumbs</parmname>=<option>yes</option> \
+     <parmname>--bootstrap.breadcrumb.divider</parmname>=<option>'>'</option></codeblock>
+    </section>
+  </body>
+</topic>

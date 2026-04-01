@@ -128,7 +128,7 @@
   </xsl:template>
 
   <xsl:template
-    match="*[contains(@class,' topic/section ') and contains(@outputclass, 'offcanvas-')]"
+    match="*[contains(@class, ' bootstrap-d/offcanvas ')] | *[contains(@class,' topic/section ') and contains(@outputclass, 'offcanvas-')]"
     mode="scrollspy"
     priority="5"
   />

@@ -22,7 +22,9 @@
     </nav>
   </xsl:template>
 
-  <xsl:template match="*[ contains(@class, ' topic/section ') and contains(@outputclass, 'pagination')]">
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/pagination ') or (contains(@class, ' topic/section ') and contains(@outputclass, 'pagination'))]"
+  >
     <nav>
       <xsl:attribute name="aria-label">
         <xsl:value-of select="*[contains(@class, ' topic/title ')]"/>

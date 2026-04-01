@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<topic id="buttons">
+  <title>Buttons</title>
+  <shortdesc>Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple
+    sizes, states, and more.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Buttons</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlelement>xref</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Example</title>
+      <p>Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras
+        thrown in for more control.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <button href="#">Primary</button>
+      <button href="#" color="secondary">Secondary</button>
+      <button href="#" color="success">Success</button>
+      <button href="#" color="danger">Danger</button>
+      <button href="#" color="warning">Warning</button>
+      <button href="#" color="info">Info</button>
+      <button href="#" color="light">Light</button>
+      <button href="#" color="dark">Dark</button>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+        <section>
+          <title>Specialization</title>
+          <codeblock>&lt;button href="#"&gt;Primary&lt;/button&gt;
+&lt;button href="#" color="secondary"&gt;Secondary&lt;/button&gt;
+&lt;button href="#" color="success"&gt;Success&lt;/button&gt;
+&lt;button href="#" color="danger"&gt;Danger&lt;/button&gt;
+&lt;button href="#" color="warning"&gt;Warning&lt;/button&gt;
+&lt;button href="#" color="info"&gt;Info&lt;/button&gt;
+&lt;button href="#" color="light"&gt;Light&lt;/button&gt;
+&lt;button href="#" color="dark"&gt;Dark&lt;/button&gt;</codeblock>
+        </section>
+          <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-primary"&gt;Primary&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary"&gt;Secondary&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-success"&gt;Success&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-danger"&gt;Danger&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-warning"&gt;Warning&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-info"&gt;Info&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-light"&gt;Light&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-dark"&gt;Dark&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+
+    <section>
+      <title>Outline buttons</title>
+      <p>In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with
+        the <xmlatt>outputclass</xmlatt> and a value of <codeph>btn-outline-*</codeph> to remove all background images
+        and colors on any button.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <button href="#" outline="yes">Primary</button>
+      <button href="#" color="secondary" outline="yes">Secondary</button>
+      <button href="#" color="success" outline="yes">Success</button>
+      <button href="#" color="danger" outline="yes">Danger</button>
+      <button href="#" color="warning" outline="yes">Warning</button>
+      <button href="#" color="info" outline="yes">Info</button>
+      <button href="#" color="light" outline="yes">Light</button>
+      <button href="#" color="dark" outline="yes">Dark</button>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;button href="#" outline="yes"&gt;Primary&lt;/button&gt;
+&lt;button href="#" color="secondary" outline="yes"&gt;Secondary&lt;/button&gt;
+&lt;button href="#" color="success" outline="yes"&gt;Success&lt;/button&gt;
+&lt;button href="#" color="danger" outline="yes"&gt;Danger&lt;/button&gt;
+&lt;button href="#" color="warning" outline="yes"&gt;Warning&lt;/button&gt;
+&lt;button href="#" color="info" outline="yes"&gt;Info&lt;/button&gt;
+&lt;button href="#" color="light" outline="yes"&gt;Light&lt;/button&gt;
+&lt;button href="#" color="dark" outline="yes"&gt;Dark&lt;/button&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-outline-primary"&gt;Primary&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-secondary"&gt;Secondary&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-success"&gt;Success&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-danger"&gt;Danger&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-warning"&gt;Warning&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-info"&gt;Info&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-light"&gt;Light&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-outline-dark"&gt;Dark&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <section>
+      <title>Sizing</title>
+      <p>Fancy larger or smaller buttons? Use <xmlatt>size="large"</xmlatt> or
+          <xmlatt>size="small"</xmlatt> for additional sizes.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <button href="#" size="large">Large button</button>
+      <button href="#" color="secondary" size="large">Large button</button>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;button href="#" size="large"&gt;Large button&lt;/button&gt;
+&lt;button href="#" color="secondary" size="large"&gt;Large button&lt;/button&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-primary btn-lg"&gt;Large button&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary btn-lg"&gt;Large button&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <button href="#" size="small">Small button</button>
+      <button href="#" color="secondary" size="small">Small button</button>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;button href="#" size="small"&gt;Small button&lt;/button&gt;
+&lt;button href="#" color="secondary" size="small"&gt;Small button&lt;/button&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-primary btn-sm"&gt;Small button&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary btn-sm"&gt;Small button&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+  </body>
+
+
+</topic>

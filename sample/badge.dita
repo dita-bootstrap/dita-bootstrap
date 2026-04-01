@@ -30,16 +30,16 @@
     </section>
     <bodydiv outputclass="bd-example" deliveryTarget="html">
       <section>
-        <p outputclass="h1">Example heading <ph outputclass="bg-secondary">New</ph></p>
-        <p outputclass="h2">Example heading <ph outputclass="bg-secondary">New</ph></p>
-        <p outputclass="h3">Example heading <ph outputclass="bg-secondary">New</ph></p>
-        <p outputclass="h4">Example heading <ph outputclass="bg-secondary">New</ph></p>
-        <p outputclass="h5">Example heading <ph outputclass="bg-secondary">New</ph></p>
-        <p outputclass="h6">Example heading <ph outputclass="bg-secondary">New</ph></p>
+        <p outputclass="h1">Example heading <ph outputclass="badge bg-secondary">New</ph></p>
+        <p outputclass="h2">Example heading <ph outputclass="badge bg-secondary">New</ph></p>
+        <p outputclass="h3">Example heading <ph outputclass="badge bg-secondary">New</ph></p>
+        <p outputclass="h4">Example heading <ph outputclass="badge bg-secondary">New</ph></p>
+        <p outputclass="h5">Example heading <ph outputclass="badge bg-secondary">New</ph></p>
+        <p outputclass="h6">Example heading <ph outputclass="badge bg-secondary">New</ph></p>
       </section>
     </bodydiv>
-    <codeblock>&lt;title&gt;Example Heading &lt;ph outputclass="bg-secondary"&gt;New&lt;/ph&gt;&lt;/title&gt;
-&lt;p&gt;Example Text &lt;ph outputclass="bg-secondary"&gt;New&lt;/ph&gt;&lt;/p&gt;</codeblock>
+    <codeblock>&lt;title&gt;Example Heading &lt;ph outputclass="badge bg-secondary"&gt;New&lt;/ph&gt;&lt;/title&gt;
+&lt;p&gt;Example Text &lt;ph outputclass="badge bg-secondary"&gt;New&lt;/ph&gt;&lt;/p&gt;</codeblock>
     <section>
       <title>Background colors</title>
       <p>Set a background-color with contrasting foreground color with Bootstrap’s <codeph
@@ -48,22 +48,22 @@
         >bg-{color}</codeph> utilities for styling, which you still may use if you prefer.</p>
     </section>
     <bodydiv outputclass="bd-example" deliveryTarget="html">
-      <ph outputclass="text-bg-primary">Primary</ph>
-      <ph outputclass="text-bg-secondary">Secondary</ph>
-      <ph outputclass="text-bg-success">Success</ph>
-      <ph outputclass="text-bg-danger">Danger</ph>
-      <ph outputclass="text-bg-warning">Warning</ph>
-      <ph outputclass="text-bg-info">Info</ph>
-      <ph outputclass="text-bg-light">Light</ph>
-      <ph outputclass="text-bg-dark">Dark</ph>
+      <ph outputclass="badge text-bg-primary">Primary</ph>
+      <ph outputclass="badge text-bg-secondary">Secondary</ph>
+      <ph outputclass="badge text-bg-success">Success</ph>
+      <ph outputclass="badge text-bg-danger">Danger</ph>
+      <ph outputclass="badge text-bg-warning">Warning</ph>
+      <ph outputclass="badge text-bg-info">Info</ph>
+      <ph outputclass="badge text-bg-light">Light</ph>
+      <ph outputclass="badge text-bg-dark">Dark</ph>
     </bodydiv>
-    <codeblock>&lt;ph outputclass="text-bg-primary"&gt;Primary&lt;/ph&gt;
-&lt;ph outputclass="text-bg-secondary"&gt;Secondary&lt;/ph&gt;
-&lt;ph outputclass="text-bg-success"&gt;Success&lt;/ph&gt;
-&lt;ph outputclass="text-bg-danger"&gt;Danger&lt;/ph&gt;
-&lt;ph outputclass="text-bg-warning"&gt;Warning&lt;/ph&gt;
-&lt;ph outputclass="text-bg-info"&gt;Info&lt;/ph&gt;
-&lt;ph outputclass="text-bg-light"&gt;Light&lt;/ph&gt;
-&lt;ph outputclass="text-bg-dark"&gt;Dark&lt;/ph&gt;</codeblock>
+    <codeblock>&lt;ph outputclass="badge text-bg-primary"&gt;Primary&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-secondary"&gt;Secondary&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-success"&gt;Success&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-danger"&gt;Danger&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-warning"&gt;Warning&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-info"&gt;Info&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-light"&gt;Light&lt;/ph&gt;
+&lt;ph outputclass="badge text-bg-dark"&gt;Dark&lt;/ph&gt;</codeblock>
   </body>
 </topic>

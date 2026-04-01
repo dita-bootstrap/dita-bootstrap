@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="alerts">
+  <title>Alerts</title>
+  <shortdesc>Provide contextual feedback messages for typical user actions with the handful of available and flexible
+    alert messages.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Alerts</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlatt>otherprops</xmlatt></indexterm>
+        <indexterm><xmlelement>note</xmlelement></indexterm>
+        <indexterm><xmlelement>section</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Example</title>
+      <p>Alerts are available for any length of text, as well as an optional close button. For proper styling, use one
+        of the eight required contextual classes (e.g., set <xmlatt>outputclass</xmlatt> to
+          <codeph>alert-success</codeph>).</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <alert color="primary">A simple primary alert—check it out!</alert>
+      <alert color="secondary">A simple secondary alert—check it out!</alert>
+      <alert color="success">A simple success alert—check it out!</alert>
+      <alert color="danger">A simple danger alert—check it out!</alert>
+      <alert color="warning">A simple warning alert—check it out!</alert>
+      <alert color="info">A simple info alert—check it out!</alert>
+      <alert color="light">A simple light alert—check it out!</alert>
+      <alert color="dark">A simple dark alert—check it out!</alert>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;alert color="primary"&gt;
+  A simple primary alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="secondary"&gt;
+  A simple secondary alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="success"&gt;
+  A simple success alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="danger"&gt;
+  A simple danger alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="warning"&gt;
+  A simple warning alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="info"&gt;
+  A simple info alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="light"&gt;
+  A simple light alert—check it out!
+&lt;/alert&gt;
+&lt;alert color="dark"&gt;
+  A simple dark alert—check it out!
+&lt;/alert&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+            <codeblock>&lt;section outputclass="alert-primary"&gt;
+  A simple primary alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-secondary"&gt;
+  A simple secondary alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-success"&gt;
+  A simple success alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-danger"&gt;
+  A simple danger alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-warning"&gt;
+  A simple warning alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-info"&gt;
+  A simple info alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-light"&gt;
+  A simple light alert—check it out!
+&lt;/section&gt;
+&lt;section outputclass="alert-dark"&gt;
+  A simple dark alert—check it out!
+&lt;/section&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+
+    <section>
+      <title>Additional content</title>
+      <p>Alerts can also contain additional HTML elements like headings, paragraphs, icons and links.</p>
+    </section>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <alert color="success">
+        <title><i outputclass="bi bi-emoji-smile pe-2"/>Well done!</title>
+        <p>Aww yeah, you successfully read this important alert message. This example text with a
+          <xref href="#">link</xref> is going to run a bit longer so that you can see how spacing within an alert works
+          with this kind of content.</p>
+        <p>Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </alert>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;alert color="success"&gt;
+  &lt;title&gt;&lt;i outputclass="bi bi-emoji-smile pe-2"/&gt;Well done!&lt;/title&gt;
+  &lt;p&gt;
+    Aww yeah, you successfully read this important alert message. This example text with a
+    &lt;xref href="#"&gt;link&lt;/xref&gt; is going to run a bit longer so that you can see
+    how spacing within an alert works with this kind of content.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+  &lt;/p&gt;
+&lt;/alert&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;section outputclass="alert alert-success"&gt;
+  &lt;title&gt;&lt;i outputclass="bi bi-emoji-smile pe-2"/&gt;Well done!&lt;/title&gt;
+  &lt;p&gt;
+    Aww yeah, you successfully read this important alert message. This example text with a
+    &lt;xref href="#"&gt;link&lt;/xref&gt; is going to run a bit longer so that you can see
+    how spacing within an alert works with this kind of content.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+  &lt;/p&gt;
+&lt;/section&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+
+    <section>
+      <title>Notes</title>
+      <p>DITA <xmlelement>note</xmlelement> elements are displayed as alerts according to the <xmlatt>type</xmlatt>
+        attribute. With the exception <xmlatt>type="othertype"</xmlatt>, an icon is added if <xmlatt
+        >type</xmlatt> is present.</p>
+    </section>
+    <div outputclass="bd-example" deliveryTarget="html">
+      <note type="note">This is just a note.</note>
+      <note type="notice">Notice this piece of information.</note>
+      <note type="fastpath">This note will speed you on your way.</note>
+      <note type="remember">Don't forget to do what this note says.</note>
+      <note type="tip">This is a fine little tip.</note>
+      <note type="attention">Please pay extra attention to this note.</note>
+      <note type="caution">Care is required when proceeding.</note>
+      <note type="important">This note is important.</note>
+      <note type="restriction">You can't do what this note says.</note>
+      <note type="danger">You may hurt yourself!</note>
+      <note type="other" othertype="Another note">This is something other than a normal note.</note>
+    </div>
+    <codeblock>&lt;note type="note"&gt;
+  This is just a note.
+&lt;/note&gt;
+&lt;note type="notice"&gt;
+  Notice this piece of information.
+&lt;/note&gt;
+&lt;note type="fastpath"&gt;
+  This note will speed you on your way.
+&lt;/note&gt;
+&lt;note type="remember"&gt;
+  Don't forget to do what this note says.
+&lt;/note&gt;
+&lt;note type="tip"&gt;
+  This is a fine little tip.
+&lt;/note&gt;
+&lt;note type="attention"&gt;
+  Please pay extra attention to this note.
+&lt;/note&gt;
+&lt;note type="caution"&gt;
+  Care is required when proceeding.
+&lt;/note&gt;
+&lt;note type="important"&gt;
+  This note is important.
+&lt;/note&gt;
+&lt;note type="restriction"&gt;
+  You can't do what this note says.
+&lt;/note&gt;
+&lt;note type="danger"&gt;
+  You may hurt yourself!
+&lt;/note&gt;
+&lt;note type="other" othertype="Another note"&gt;
+  This is something other than a normal note.
+&lt;/note&gt;</codeblock>
+    <p>The default colors can be overridden by using a <xmlatt>color</xmlatt> attribute or an <xmlatt
+      >outputclass</xmlatt>.</p>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <note color="primary">This is a primary note.</note>
+      <note color="secondary">This is a secondary note.</note>
+      <note color="light">This is light note.</note>
+      <note color="dark">This is dark note.</note>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;note color="primary"&gt;
+  This is a primary note.
+&lt;/note&gt;
+&lt;note color="secondary"&gt;
+  This is a secondary note.
+&lt;/note&gt;
+&lt;note color="light"&gt;
+  This is light note.
+&lt;/note&gt;
+&lt;note color="dark"&gt;
+  This is dark note.
+&lt;/note&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;note type="note" outputclass="alert-primary"&gt;
+  This is a primary note.&lt;/note&gt;
+&lt;note type="note" outputclass="alert-secondary"&gt;
+  This is a secondary note.&lt;/note&gt;
+&lt;note type="note" outputclass="alert-light"&gt;
+  This is light note.
+&lt;/note&gt;
+&lt;note type="note" outputclass="alert-dark"&gt;
+  This is dark note.
+&lt;/note&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+
+    <p>Use an additional <xmlatt>icon</xmlatt> attribute or <xmlatt>otherprops</xmlatt> to alter the default icon.</p>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <note icon="bi-search" type="other" othertype="Search">This note has a search icon.</note>
+      <note
+        icon="bi bi-emoji-smile"
+        style="font-size: 2rem; color: cornflowerblue;"
+        type="note"
+      >This note uses a styled smile emoji.</note>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;note icon="bi-search" type="other" othertype="Search"&gt;
+  This note has a search icon.
+&lt;/note&gt;
+&lt;note icon="bi bi-emoji-smile" style="font-size: 2rem; color: cornflowerblue;" type="note"&gt;
+  This note uses a styled smile emoji.
+&lt;/note&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;note otherprops="icon(bi-search)" type="other" othertype="Search"&gt;
+  This note has a search icon.
+&lt;/note&gt;
+&lt;note otherprops="icon(bi-emoji-smile), style(font-size: 2rem; color: cornflowerblue;)" type="note" othertype="Another note"&gt;
+  This note uses a styled smile emoji.
+&lt;/note&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+  </body>
+</topic>

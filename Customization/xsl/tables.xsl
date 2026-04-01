@@ -8,37 +8,55 @@
   xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:table="http://dita-ot.sourceforge.net/ns/201007/dita-ot/table"
+  xmlns:simpletable="http://dita-ot.sourceforge.net/ns/201007/dita-ot/simpletable"
   version="2.0"
-  exclude-result-prefixes="xs dita-ot table"
+  exclude-result-prefixes="xs dita-ot table simpletable"
 >
   <!--override row processing - remove DITA row CSS class -->
   <xsl:template match="*[contains(@class, ' topic/row ')]" name="topic.row">
     <tr>
-      <xsl:choose>
-        <xsl:when test="@valign">
-          <xsl:attribute name="class">
-            <xsl:value-of select="concat('align-', @valign)"/>
-            <xsl:value-of select="concat(' ', @outputclass)"/>
-          </xsl:attribute>
-        </xsl:when>
-        <xsl:when test="@outputclass">
-          <xsl:attribute name="class" select="@outputclass"/>
-        </xsl:when>
-      </xsl:choose>
-      <xsl:apply-templates select="@xml:lang"/>
-      <xsl:apply-templates select="@dir"/>
-      <xsl:apply-templates
-        select="*[contains(@class, ' ditaot-d/ditaval-startprop ')]/@style"
-        mode="add-ditaval-style"
-      />
+      <xsl:call-template name="commonattributes">
+        <xsl:with-param name="default-output-class" select="if (@valign) then concat('align-', @valign) else ()"/>
+      </xsl:call-template>
       <xsl:call-template name="setid"/>
       <xsl:apply-templates/>
     </tr>
   </xsl:template>
 
+  <xsl:template match="*[contains(@class, ' topic/strow ')]" name="topic.strow">
+    <tr>
+      <xsl:call-template name="commonattributes"/>
+      <xsl:call-template name="setid"/>
+      <xsl:apply-templates/>
+    </tr>
+  </xsl:template>
+
+  <xsl:template match="*[contains(@class, ' topic/entry ')]" name="topic.entry">
+    <xsl:variable name="tag" select="if (ancestor::*[contains(@class, ' topic/thead ')]) then 'th' else 'td'"/>
+    <xsl:element name="{$tag}">
+      <xsl:call-template name="commonattributes"/>
+      <xsl:call-template name="setid"/>
+      <xsl:apply-templates select="." mode="headers"/>
+      <xsl:apply-templates select="@morerows, @dita-ot:morecols"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="*[contains(@class, ' topic/stentry ')]" name="topic.stentry">
+    <xsl:variable name="tag" select="if (ancestor::*[contains(@class, ' topic/sthead ')]) then 'th' else 'td'"/>
+    <xsl:element name="{$tag}">
+      <xsl:call-template name="commonattributes"/>
+      <xsl:call-template name="setid"/>
+      <xsl:apply-templates select="." mode="simpletable:headers"/>
+      <xsl:apply-templates select="@colspan | @rowspan | @scope"/>
+      <xsl:apply-templates/>
+    </xsl:element>
+  </xsl:template>
+
   <!--override table CSS processing - remove DITA frame CSS processing -->
   <xsl:template match="*[contains(@class, ' topic/table ')]" mode="css-class">
     <xsl:apply-templates select="@pgwide, @scale" mode="#current"/>
+    <xsl:next-match/>
   </xsl:template>
 
   <xsl:template match="*" mode="frame-processing">

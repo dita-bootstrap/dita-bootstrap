@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!-- Within the sample documentation, where necessary, the texts describing the
+   usage of each component have been copied directly from the official Bootstrap
+   5.0 documentation (found at https://getbootstrap.com/docs/5.0), however DITA
+   markup is used throughout the examples describing how to implement these
+   components correctly using outputclass.
+
+   This work, is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc.
+   and the Bootstrap Authors, and used under CC BY 3.0. See the accompanying LICENSE
+   file for applicable licenses.-->
+<topic id="figures">
+  <title>Figures</title>
+  <abstract>
+    <shortdesc>Documentation and examples for displaying related images and text with the figure component in
+      Bootstrap.</shortdesc>
+    <p>Anytime you need to display a piece of content—like an image with an optional caption, consider using a DITA
+        <xmlelement>fig</xmlelement> element. Bootstrap CSS classes <xmlatt>class="figure"</xmlatt>,
+        <xmlatt>class="figure-img"</xmlatt>, and <xmlatt>class="figure-caption"</xmlatt> are automatically included to
+      the output to provide some baseline styles for the HTML5 <xmlelement>figure</xmlelement> and
+        <xmlelement>figcaption</xmlelement> elements. </p>
+  </abstract>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Figure</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlelement>fig</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Example</title>
+      <p>By default <xmlelement>figure</xmlelement> elements are styled as shown: </p>
+    </section>
+    <bodydiv outputclass="bd-example" deliveryTarget="html">
+      <fig>
+        <title>A caption for the image.</title>
+        <image scope="external" href="https://picsum.photos/1200/600?a"/>
+      </fig>
+    </bodydiv>
+    <codeblock>&lt;fig&gt;
+  &lt;title&gt;A caption for the image.&lt;/title&gt;
+  &lt;image href="..."/&gt;
+&lt;/fig&gt;</codeblock>
+    <section>
+      <title>Aligning text</title>
+      <p>The figure’s caption can be aligned using the Bootstrap
+        <xref href="./color.dita" format="dita">text utilities</xref>.</p>
+    </section>
+    <bodydiv outputclass="bd-example" deliveryTarget="html">
+      <fig>
+        <title outputclass="text-end">A caption for the image.</title>
+        <image scope="external" href="https://picsum.photos/1200/600?b"/>
+      </fig>
+    </bodydiv>
+    <codeblock>&lt;fig&gt;
+  &lt;title outputclass="text-end"&gt;A caption for the image.&lt;/title&gt;
+  &lt;image href="..."/&gt;
+&lt;/fig&gt;</codeblock>
+
+    <section>
+      <title>Adding borders</title>
+      <p>Use the DITA <xmlatt>frame</xmlatt> attribute to add
+        <xref href="./borders.dita" format="dita">borders</xref> to a <xmlelement
+        >fig</xmlelement>.</p>
+    </section>
+    <bodydiv outputclass="bd-example" deliveryTarget="html">
+      <fig frame="all">
+        <title>All Borders</title>
+        <codeblock>frame="all"</codeblock>
+      </fig>
+      <p/>
+      <fig frame="topbot">
+        <title>Top and Bottom Borders</title>
+        <codeblock>frame="topbot"</codeblock>
+      </fig>
+      <p/>
+      <fig frame="sides">
+        <title>Side Borders</title>
+        <codeblock>frame="sides"</codeblock>
+      </fig>
+      <p/>
+      <fig frame="top">
+        <title>Top Border only</title>
+        <codeblock>frame="top"</codeblock>
+      </fig>
+      <p/>
+      <fig frame="bottom">
+        <title>Bottom Border Only</title>
+        <codeblock>frame="bottom"</codeblock>
+      </fig>
+    </bodydiv>
+    <codeblock>&lt;fig frame="all"&gt;
+  ...
+&lt;/fig&gt;
+&lt;fig frame="topbot"&gt;
+  ...
+&lt;/fig&gt;
+&lt;fig frame="sides"&gt;
+  ...
+&lt;/fig&gt;
+&lt;fig frame="top"&gt;
+  ...
+&lt;/fig&gt;
+&lt;fig frame="bottom"&gt;
+  ...
+&lt;/fig&gt;
+    </codeblock>
+  </body>
+</topic>

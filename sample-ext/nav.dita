@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="navigation">
+  <title>Navigation Menus</title>
+  <shortdesc>Add a responsive Bootstrap-styled table of contents to your HTML output.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Sidebar</indexterm>
+        <indexterm>Menu</indexterm>
+        <indexterm><parmname>--nav-toc</parmname></indexterm>
+        <indexterm><parmname>--menubar-toc.include</parmname></indexterm>
+        <indexterm><xmlelement>othermeta</xmlelement></indexterm>
+        <indexterm><parmname>--bootstrap.sidebar.hdr</parmname></indexterm>
+        <indexterm><parmname>--bootstrap.sidebar.ftr</parmname></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Sidebar</title>
+      <p>The plug-in extends the standard HTML5 table of contents (ToC)
+        <xref
+          href="https://www.dita-ot.org/dev/parameters/parameters-html5.html#html5__nav-toc"
+          format="html"
+          scope="external"
+        >navigation parameter</xref>
+        <parmname
+        >--nav-toc</parmname> to add table of contents items to the navigation sidebar. (The navigation is rendered as
+        a sidebar in desktop browsers and collapsible  on smaller devices.)</p>
+      <p>By default, the plug-in uses the <option>partial</option> option to include the current topic in the ToC along
+        with its parents, siblings and children. As with the default HTML5 plug-in, the <option>full</option> option can
+        also be used to generate a complete ToC for the entire map, or <option>none</option> to disable the table of
+        contents entirely.</p>
+      <p>As of version 5.3.1, the plug-in provides five new options to style the table of contents navigation with
+        either the Bootstrap
+        <xref href="https://getbootstrap.com/docs/5.3/components/list-group/" format="html" scope="external">list
+          group</xref> component,
+        <xref
+          href="https://getbootstrap.com/docs/5.3/components/navs-tabs/#pills"
+          format="html"
+          scope="external"
+        >nav-pills</xref>, or
+         <xref
+          href="https://getbootstrap.com/docs/5.3/components/collapse/"
+          format="html"
+          scope="external"
+        >collapsible</xref> menus.
+      </p>
+      <ul>
+        <li>
+          <option>list-group-full</option> – Styled full ToC within a Bootstrap list group </li>
+        <li>
+          <option>list-group-partial</option> – Partial ToC with the current topic, parents, siblings, and children in a
+          list group </li>
+        <li>
+          <option>nav-pill-full</option> – Styled full ToC using Bootstrap nav-pills </li>
+        <li>
+          <option>nav-pill-partial</option> – Partial ToC with the current topic, parents, siblings, and children using
+          Bootstrap nav-pills </li>
+        <li>
+          <option>collapsible</option> – Styled full ToC using collapsible list elements </li>
+      </ul>
+      <p>To use these options, pass the desired value to the <cmdname>dita</cmdname> command via the
+          <parmname>--nav-toc</parmname> parameter:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>&lt;sidebar-style&gt;</option></codeblock>
+      <ol outputclass="carousel pt-2" otherprops="indicators(true)">
+        <li>
+          <fig>
+            <title><option>full</option> – DITA-OT default unstyled full ToC</title>
+            <image href="./src/full.png"/>
+          </fig>
+        </li>
+        <li>
+          <fig>
+            <title><option>partial</option> – DITA-OT default unstyled partial ToC</title>
+            <image href="./src/partial.png"/>
+          </fig>
+        </li>
+        <li>
+          <fig>
+            <title><option>nav-pill-full</option> – Styled full ToC using nav-pills</title>
+            <image href="./src/nav-pill-full.png"/>
+          </fig>
+        </li>
+        <li>
+          <fig>
+            <title><option>nav-pill-partial</option> – Styled partial ToC using nav-pills</title>
+            <image href="./src/nav-pill-partial.png"/>
+          </fig>
+        </li>
+        <li>
+          <fig>
+            <title><option>list-group-full</option> – Styled full ToC within a list group</title>
+            <image href="./src/list-group-full.png"/>
+          </fig>
+        </li>
+        <li>
+          <fig>
+            <title><option>list-group-partial</option> – Styled partial ToC within a list group</title>
+            <image href="./src/list-group-partial.png"/>
+          </fig>
+        </li>
+        <li>
+          <fig>
+            <title><option>collapsible</option> – Styled full ToC with collapsible elements</title>
+            <image href="./src/collapsible.png"/>
+          </fig>
+        </li>
+      </ol>
+
+      <p>
+        The sidebar is hidden by default on mobile. To ensure that the sidebar content can be accessed, the header file must include the following toggle with <xmlatt
+        >data-bs-target="#bdSidebar"</xmlatt>
+        and <xmlatt>data-bs-toggle="offcanvas"</xmlatt>:
+      </p>
+      <codeblock outputclass="language-xml">&lt;div class="bd-navbar-toggle"&gt;
+  &lt;button class="navbar-toggler p-2" type="button"
+    data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
+    aria-controls="bdSidebar" aria-label="Toggle docs navigation"&gt;
+    &lt;i class="bi bi-list"/&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</codeblock>
+
+      <p>The look and feel of the mobile sidebar header can be altered using the <parmname
+        >--bootstrap.sidebar.hdr</parmname> parameter and supplying an HTML header file:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+  <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+  <parmname>--nav-toc</parmname>=<option>&lt;sidebar-style&gt;</option> \
+  <parmname>--bootstrap.sidebar.hdr</parmname>=<filepath>path/to/your.header</filepath></codeblock>
+
+      <p>The plug-in includes a sample
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap/blob/develop/includes/hdr.sidebar.example.xml"
+          format="html"
+          scope="external"
+        >header</xref>.</p>
+
+      <p>No footer is added to the sidebar by default, but a custom sidebar footer can be added using the <parmname
+        >--bootstrap.sidebar.ftr</parmname> parameter and supplying an HTML footer file:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+  <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+  <parmname>--nav-toc</parmname>=<option>&lt;sidebar-style&gt;</option> \
+  <parmname>--bootstrap.sidebar.footer</parmname>=<filepath>path/to/your.footer</filepath></codeblock>
+
+      <p>The plug-in also includes a sample
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap/blob/develop/includes/ftr.sidebar.example.xml"
+          format="html"
+          scope="external"
+        >custom footer</xref>.</p>
+
+
+    </section>
+    <section>
+      <title>Menu bar</title>
+      <p>Additionally, the first-level navigation menu can be switched to a horizontal Bootstrap navbar to reduce the
+        depth of the ToC. To use this option, add the <parmname>--menubar-toc.include</parmname>=<option
+        >yes</option> parameter to the
+          <cmdname>dita</cmdname> command:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>list-group-partial</option> \
+     <parmname>--menubar-toc.include</parmname>=<option>yes</option></codeblock>
+      <fig>
+        <image scalefit="yes" href="./src/menubar-toc.png"/>
+      </fig>
+    </section>
+    <section>
+      <title>Top bar</title>
+      <p>A collapsible menu placed above the main menu can be included
+        by adding the <parmname>--bootstrap.topbar.hdr</parmname> parameter to the
+          <cmdname>dita</cmdname> command:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>&lt;sidebar-style&gt;</option> \
+     <parmname>--bootstrap.topbar.hdr</parmname>=<filepath>path/to/your.header</filepath></codeblock>
+      <fig>
+        <image scalefit="yes" href="./src/topbar.png"/>
+      </fig>
+      <p>The plug-in also includes a sample
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap/blob/develop/includes/hdr.topbar.example.xml"
+          format="html"
+          scope="external"
+        >custom header</xref>.</p>
+    </section>
+    <section>
+      <title>Dividers</title>
+      <p>
+        <xref
+          href="https://getbootstrap.com/docs/5.3/components/dropdowns/#dividers"
+          format="html"
+          scope="external"
+        >Dividers</xref> can be added to items rendered in collapsible sidebars and menus by adding the
+         <xmlelement>othermeta name="divider"</xmlelement> element to the <xmlelement
+        >topicmeta</xmlelement> element in the DITA map topic reference. You can specify a label for the divider via the
+         <xmlatt>content</xmlatt> attribute on the <xmlelement>othermeta</xmlelement> element.
+      </p>
+    </section>
+    <codeblock
+      outputclass="language-xml"
+    >&lt;topicref navtitle="Search Box" format="dita" type="topic" href="search-box.dita">
+  &lt;topicmeta&gt;
+    &lt;othermeta name="divider" content="Additional Plug-ins"/&gt;
+  &lt;/topicmeta&gt;
+&lt;/topicref&gt;</codeblock>
+  </body>
+</topic>

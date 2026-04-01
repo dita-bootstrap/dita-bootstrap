@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <meta>
+        <filters directoryPatterns="" filePatterns="\Qdita-bootstrap.xpr\E" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options>
+            <serialized xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>editor.detect.indent.on.open</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
+                        <String>editor.format.break.line.elements</String>
+                        <breakLineElement-array>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>ol</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>p</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>ul</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>xref</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>dl</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>parml</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>title</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>0</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>section</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>0</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>indexterm</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>index-see</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                            <breakLineElement>
+                                <field name="elementExpression">
+                                    <String>index-see-also</String>
+                                </field>
+                                <field name="breakPolicy">
+                                    <Integer>1</Integer>
+                                </field>
+                            </breakLineElement>
+                        </breakLineElement-array>
+                    </entry>
+                    <entry>
+                        <String>editor.format.preserve.spaces.elements.v11</String>
+                        <String-array>
+                            <String>xsl:text</String>
+                            <String>address</String>
+                            <String>literallayout</String>
+                            <String>programlisting</String>
+                            <String>screen</String>
+                            <String>synopsis</String>
+                            <String>pre</String>
+                            <String>xd:pre</String>
+                            <String>codeblock</String>
+                            <String>msgblock</String>
+                            <String>lines</String>
+                        </String-array>
+                    </entry>
+                    <entry>
+                        <String>editor.hard.line.wrap</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>editor.indent.in.preserve.space.elements</String>
+                        <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
+                        <String>editor.indent.size.v9.2</String>
+                        <Integer>2</Integer>
+                    </entry>
+                    <entry>
+                        <String>editor.line.width</String>
+                        <Integer>120</Integer>
+                    </entry>
+                    <entry>
+                        <String>key.editor.format.option.pane.group</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
+                        <String>key.editor.format.xml.option.pane</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
+    </meta>
+    <projectTree name="dita-bootstrap.xpr">
+        <folder path="."/>
+    </projectTree>
+</project>

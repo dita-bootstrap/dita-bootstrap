@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="index">
+  <title>DITA Bootstrap</title>
+  <shortdesc>A plug-in for
+    <xref href="http://www.dita-ot.org" format="html" scope="external">DITA Open Toolkit</xref> that extends the default
+    HTML5 output with a
+    <xref href="https://getbootstrap.com/docs/5.3" format="html" scope="external">Bootstrap 5.3</xref> template and
+    components.
+  </shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Bootstrap 5.3</indexterm>
+        <indexterm>DITA</indexterm>
+        <indexterm>installing</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <section>
+      <title>Installing</title>
+      <p>Use the <cmdname>dita</cmdname> command to add this plug-in to your DITA Open Toolkit installation:</p>
+    </section>
+    <bodydiv outputclass="nav-tabs">
+      <section>
+        <title>DITA-OT 3.5 and newer:</title>
+          <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname
+          >install</parmname> fox.jason.extend.css
+<cmdname>dita</cmdname> <parmname>install</parmname> net.infotexture.dita-bootstrap</codeblock>
+      </section>
+      <section>
+        <title>DITA-OT 3.3 and newer:</title>
+          <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname
+          >--install</parmname> fox.jason.extend.css
+<cmdname>dita</cmdname> <parmname>--install</parmname> net.infotexture.dita-bootstrap</codeblock>
+      </section>
+      <section>
+        <title>DITA-OT 3.2 and older:</title>
+        <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname
+          >--install</parmname> https://github.com/jason-fox/fox.jason.extend.css/archive/master.zip
+<cmdname>dita</cmdname> <parmname
+          >--install</parmname> https://github.com/infotexture/dita-bootstrap/archive/master.zip</codeblock>
+      </section>
+    </bodydiv>
+    <section>
+      <title>Using</title>
+      <p>Specify the <option>html5-bootstrap</option> format when building output with the <cmdname>dita</cmdname>
+        command:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname
+        >--input</parmname>=path/to/your.ditamap <parmname>--format</parmname>=html5-bootstrap</codeblock>
+    </section>
+    <section>
+      <title>Bootswatch themes</title>
+      <indexterm><parmname>--bootstrap.theme</parmname></indexterm>
+      <p>Alternate Bootstrap themes can be downloaded directly from
+        <xref href="https://bootswatch.com/" format="html" scope="external">Bootswatch</xref>.
+        To override the default appearance with a Bootswatch theme, pass a theme name to the <cmdname
+        >dita</cmdname> command via the <parmname>--bootstrap.theme</parmname> parameter:
+      </p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--args.hdr</parmname>=<filepath>path/to/your-header.xml</filepath> \
+     <parmname>--bootstrap.theme</parmname>=<option>&lt;theme-name&gt;</option></codeblock>
+
+      <ol outputclass="carousel pt-2" deliveryTarget="html" otherprops="indicators(true)">
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/brite/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/brite/"
+                    format="html"
+                    scope="external"
+                  ><option>brite</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image
+                  outputclass="card-img-top"
+                  scope="external"
+                  href="https://bootswatch.com/cerulean/thumbnail.png"
+                />
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/cerulean/"
+                    format="html"
+                    scope="external"
+                  ><option>cerulean</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/cosmo/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/cosmo/"
+                    format="html"
+                    scope="external"
+                  ><option>cosmo</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/cyborg/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/cyborg/"
+                    format="html"
+                    scope="external"
+                  ><option>cyborg</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/darkly/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/darkly/"
+                    format="html"
+                    scope="external"
+                  ><option>darkly</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/flatly/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/flatly/"
+                    format="html"
+                    scope="external"
+                  ><option>flatly</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/journal/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/journal/"
+                    format="html"
+                    scope="external"
+                  ><option>journal</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/litera/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/litera/"
+                    format="html"
+                    scope="external"
+                  ><option>litera</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/lumen/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/lumen/"
+                    format="html"
+                    scope="external"
+                  ><option>lumen</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/lux/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/lux/"
+                    format="html"
+                    scope="external"
+                  ><option>lux</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/materia/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/materia/"
+                    format="html"
+                    scope="external"
+                  ><option>materia</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/minty/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/minty/"
+                    format="html"
+                    scope="external"
+                  ><option>minty</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/morph/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/morph/"
+                    format="html"
+                    scope="external"
+                  ><option>morph</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/pulse/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/pulse/"
+                    format="html"
+                    scope="external"
+                  ><option>pulse</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/quartz/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/quartz/"
+                    format="html"
+                    scope="external"
+                  ><option>quartz</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image
+                  outputclass="card-img-top"
+                  scope="external"
+                  href="https://bootswatch.com/sandstone/thumbnail.png"
+                />
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/sandstone/"
+                    format="html"
+                    scope="external"
+                  ><option>sandstone</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/simplex/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/simplex/"
+                    format="html"
+                    scope="external"
+                  ><option>simplex</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/sketchy/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/sketchy/"
+                    format="html"
+                    scope="external"
+                  ><option>sketchy</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/slate/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/slate/"
+                    format="html"
+                    scope="external"
+                  ><option>slate</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/solar/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/solar/"
+                    format="html"
+                    scope="external"
+                  ><option>solar</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image
+                  outputclass="card-img-top"
+                  scope="external"
+                  href="https://bootswatch.com/spacelab/thumbnail.png"
+                />
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/spacelab/"
+                    format="html"
+                    scope="external"
+                  ><option>spacelab</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image
+                  outputclass="card-img-top"
+                  scope="external"
+                  href="https://bootswatch.com/superhero/thumbnail.png"
+                />
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/superhero/"
+                    format="html"
+                    scope="external"
+                  ><option>superhero</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/united/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/united/"
+                    format="html"
+                    scope="external"
+                  ><option>united</option></xref>
+                </p>
+              </div>
+            </div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/vapor/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/vapor/"
+                    format="html"
+                    scope="external"
+                  ><option>vapor</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div outputclass="col-4">
+              <div outputclass="card w-100">
+                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/yeti/thumbnail.png"/>
+                <p outputclass="text-center">
+                  <xref
+                    outputclass="link stretched-link link-underline link-underline-opacity-0"
+                    href="https://bootswatch.com/yeti/"
+                    format="html"
+                    scope="external"
+                  ><option>yeti</option></xref>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+      <note type="note">You can switch between the available themes via the CSS dropdown in the menu bar at
+        <xref
+          href="https://infotexture.github.io/dita-bootstrap/"
+          format="html"
+          scope="external"
+        >infotexture.github.io/dita-bootstrap</xref>.
+      </note>
+    </section>
+    <section>
+      <title>Custom CSS</title>
+      <indexterm><parmname>--args.css</parmname></indexterm>
+      <indexterm><parmname>--args.copycss</parmname></indexterm>
+      <indexterm><parmname>--args.csspath</parmname></indexterm>
+      <indexterm><parmname>--args.cssroot</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.theme</parmname></indexterm>
+      <p>To extend the chosen theme, pass a custom CSS file to the <cmdname>dita</cmdname> command via the
+          <parmname>--args.css</parmname> parameter. For a complete override of the theme where the default Bootstrap
+        CSS is no longer required, you can disable it by setting
+          <parmname>--bootstrap.theme</parmname>=<option>none</option>:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--bootstrap.theme</parmname>=<option>none</option> \
+     <parmname>--args.hdr</parmname>=<filepath>path/to/your-header.xml</filepath> \
+     <parmname>--args.css</parmname>=&lt;name-of-css&gt;.css \
+     <parmname>--args.copycss</parmname>=<option>yes</option> \
+     <parmname>--args.csspath</parmname>=<option>css</option> \
+     <parmname>--args.cssroot</parmname>=<filepath>path/to/your/theme</filepath></codeblock>
+      <note type="tip">For more extensive customizations with
+        <xref href="https://sass-lang.com" format="html" scope="external">Sass</xref>, you may want to install the
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap.sass"
+          format="html"
+          scope="external"
+        >dita-bootstrap.sass</xref> plug-in.</note>
+    </section>
+    <section>
+      <title>Customizing headers, footers and sidebars</title>
+      <indexterm><parmname>--args.hdr</parmname></indexterm>
+      <indexterm><parmname>--args.ftr</parmname></indexterm>
+      <p>The plug-in includes a default static navigation menu with a project name and global link placeholders.</p>
+      <p>The default header file <filepath>includes/hdr.navbar.default.xml</filepath> uses the Bootstrap primary
+        (blue) background color for the
+        <xref href="https://getbootstrap.com/docs/5.3/examples/navbars/" format="html" scope="external">navbar
+          component</xref>, and provides a theme menu to toggle <xref
+          href="./dark-mode.dita"
+        >dark mode</xref>.  Bootstrap itself offers additional <xref
+          href="https://getbootstrap.com/docs/5.3/examples/headers/"
+          format="html"
+          scope="external"
+        >header examples</xref>.</p>
+      <p>You can edit a copy of this file to adjust the content of the global navigation. To override the global
+        navigation with your own header, pass a custom header file to the <cmdname>dita</cmdname> command via the
+          <parmname>--args.hdr</parmname> parameter:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--args.hdr</parmname>=<filepath>path/to/your-header.xml</filepath></codeblock>
+      <p>The plug-in includes a sample
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap/blob/develop/includes/hdr.navbar.example.xml"
+          format="html"
+          scope="external"
+        >header alternative with a light navbar</xref>.</p>
+      <p>No footer is added by default, but the plug-in also includes a sample
+        <xref
+          href="https://github.com/infotexture/dita-bootstrap/blob/develop/includes/ftr.content.example.xml"
+          format="html"
+          scope="external"
+        >footer file</xref> and Bootstrap also offers additional <xref
+          href="https://getbootstrap.com/docs/5.3/examples/footers/"
+          format="html"
+          scope="external"
+        >examples</xref>. To add a footer to the generated output, pass a custom
+        footer file to the <cmdname>dita</cmdname> command via the <parmname>--args.ftr</parmname> parameter:</p>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--args.ftr</parmname>=<filepath>path/to/your-footer.xml</filepath></codeblock>
+
+      <p>
+        The plug-in extends the standard HTML5 table of contents (ToC)
+        <xref
+          href="https://www.dita-ot.org/dev/parameters/parameters-html5.html#html5__nav-toc"
+          format="html"
+          scope="external"
+        >navigation parameter</xref>
+        <parmname>--nav-toc</parmname> to add a styled navigation <xref
+          href="./nav.dita"
+          format="dita"
+        > sidebar</xref> to the output.
+      </p>
+      <p>As of version 5.3.1, the plug-in provides five new <parmname
+        >--nav-toc</parmname> options to style the table of contents navigation with
+        either the Bootstrap
+        <xref href="https://getbootstrap.com/docs/5.3/components/list-group/" format="html" scope="external">list
+          group</xref> component,
+        <xref
+          href="https://getbootstrap.com/docs/5.3/components/navs-tabs/#pills"
+          format="html"
+          scope="external"
+        >nav-pills</xref>, or
+         <xref
+          href="https://getbootstrap.com/docs/5.3/components/collapse/"
+          format="html"
+          scope="external"
+        >collapsible</xref> menus. The following new options are available:
+      </p>
+      <parml>
+        <plentry>
+          <pt><option>nav-pill-full</option></pt>
+          <pd>Styled full ToC using nav-pills</pd>
+        </plentry>
+        <plentry>
+          <pt><option>nav-pill-partial</option></pt>
+          <pd>Styled partial ToC using nav-pills</pd>
+        </plentry>
+        <plentry>
+          <pt><option>list-group-full</option></pt>
+          <pd>Styled full ToC within a list group</pd>
+        </plentry>
+        <plentry>
+          <pt><option>list-group-partial</option></pt>
+          <pd>Styled partial ToC within a list group</pd>
+        </plentry>
+        <plentry>
+          <pt><option>collapsible</option></pt>
+          <pd>Styled full ToC with collapsible elements</pd>
+        </plentry>
+      </parml>
+      <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname>--input</parmname>=<filepath
+        >path/to/your.ditamap</filepath> \
+     <parmname>--format</parmname>=<option>html5-bootstrap</option> \
+     <parmname>--nav-toc</parmname>=<option>&lt;sidebar-style&gt;</option></codeblock>
+
+       <note type="note">For an example of <option>collapsible</option> styling, see the output at
+        <xref
+          href="https://infotexture.github.io/dita-bootstrap/"
+          format="html"
+          scope="external"
+        >infotexture.github.io/dita-bootstrap</xref>. </note>
+    </section>
+    <section>
+      <title>Common Bootstrap utility classes</title>
+      <indexterm><parmname>--bootstrap.css.shortdesc</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.codeblock</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.topic.title</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.section.title</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.card</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.carousel</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.carousel.caption</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.carousel.indicators</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.footer</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.table</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.tabs</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.tabs.vertical</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.thead</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.accordion</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.accessibility.nav</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.accessibility.link</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.figure</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.figure.caption</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.figure.image</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.dl</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.dt</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.dd</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.css.nav.parent</parmname></indexterm>
+      <p>The HTML output for the following DITA elements can be annotated with common Bootstrap utility classes for
+        <xref href="https://getbootstrap.com/docs/5.3/utilities/borders" format="html" scope="external">borders</xref>,
+        <xref
+          href="https://getbootstrap.com/docs/5.3/utilities/background"
+          format="html"
+          scope="external"
+        >background</xref>,
+        <xref href="https://getbootstrap.com/docs/5.3/utilities/text" format="html" scope="external">text</xref>,
+        <xref href="https://getbootstrap.com/docs/5.3/utilities/spacing" format="html" scope="external">spacing</xref>,
+        etc. using additional command line parameters:</p>
+      <parml otherprops="cols(4)">
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.accessibility&#8203;.link</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for accessibility links
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.accessibility&#8203;.nav</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for accessibility navigation
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.accordion</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./accordion.dita" format="dita">accordion components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.card</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./card.dita" format="dita">card components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.card.title</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./card.dita" format="dita">card</xref> titles
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.card.width</parmname>
+          </pt>
+          <pd>
+            Default width for Bootstrap
+            <xref href="./card.dita" format="dita">card components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.carousel</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./carousel.dita" format="dita">carousel components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.carousel&#8203;.caption</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./carousel.dita" format="dita">carousel captions</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.carousel&#8203;.indicators</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./carousel.dita" format="dita">carousel indicators</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.codeblock</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>codeblock</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.container&#8203;.size</parmname>
+          </pt>
+          <pd>
+            Bootstrap <xref
+              href="./containers.dita"
+              format="dita"
+            >container class</xref> for main layout and menubar-TOC
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.dd</parmname>
+          </pt>
+          <pd>Common Bootstrap utility classes for DITA
+            <xmlelement>dd</xmlelement> definition description elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.dl</parmname>
+          </pt>
+          <pd>Common Bootstrap utility classes for DITA
+            <xmlelement>dl</xmlelement> definition list elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.dt</parmname>
+          </pt>
+          <pd>Common Bootstrap utility classes for DITA
+            <xmlelement>dt</xmlelement> definition term elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.figure</parmname>
+          </pt>
+          <pd>Common Bootstrap utility classes for DITA
+            <xmlelement>fig</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.figure&#8203;.caption</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>title</xmlelement> elements within <xmlelement>fig</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.figure&#8203;.image</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>image</xmlelement> elements within <xmlelement>fig</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.footer</parmname>
+          </pt>
+          <pd>
+            Common utility classes for the HTML
+            <xmlelement>footer</xmlelement> element
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.nav&#8203;.parent</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for ancestors of active nav-pill elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.pagination</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./pagination.dita" format="dita">pagination components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.section&#8203;.title</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>title</xmlelement> elements within <xmlelement>section</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.shortdesc</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>shortdesc</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.table</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>table</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.tabs</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./tabs.dita" format="dita">tabbed dialog components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.tabs&#8203;.vertical</parmname>
+          </pt>
+          <pd>
+            Common utility classes for Bootstrap
+            <xref href="./tabs.dita" format="dita">vertical tabbed dialog components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.thead</parmname>
+          </pt>
+          <pd>Common Bootstrap utility classes for DITA
+            <xmlelement>thead</xmlelement> elements
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.css&#8203;.topic&#8203;.title</parmname>
+          </pt>
+          <pd>
+            Common Bootstrap utility classes for DITA
+            <xmlelement>title</xmlelement> elements within <xmlelement>topic</xmlelement> elements
+          </pd>
+        </plentry>
+      </parml>
+    </section>
+    <section>
+      <title>Bootstrap icons for DITA notes</title>
+      <indexterm><parmname>--bootstrap.icon.note</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.attention</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.caution</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.danger</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.fastpath</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.important</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.notice</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.remember</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.restriction</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.tip</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.trouble</parmname></indexterm>
+      <indexterm><parmname>--bootstrap.icon.warning</parmname></indexterm>
+      <p>The default Bootstrap icons used for DITA <xmlelement
+        >note</xmlelement> elements can be overridden using additional command line parameters:</p>
+      <parml otherprops="cols(4)">
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.note</parmname>
+          </pt>
+          <pd>
+            Icon for standard notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.attention</parmname>
+          </pt>
+          <pd>
+            Icon for attention notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.caution</parmname>
+          </pt>
+          <pd>
+            Icon for caution notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.danger</parmname>
+          </pt>
+          <pd>
+            Icon for danger notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.fastpath</parmname>
+          </pt>
+          <pd>
+            Icon for fastpath notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.important</parmname>
+          </pt>
+          <pd>
+            Icon for important notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.notice</parmname>
+          </pt>
+          <pd>
+            Icon for notice notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.remember</parmname>
+          </pt>
+          <pd>
+            Icon for remember notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.restriction</parmname>
+          </pt>
+          <pd>
+            Icon for restriction notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.tip</parmname>
+          </pt>
+          <pd>
+            Icon for tips
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.trouble</parmname>
+          </pt>
+          <pd>
+            Icon for trouble notes
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bootstrap.icon&#8203;.warning</parmname>
+          </pt>
+          <pd>
+            Icon for warning notes
+          </pd>
+        </plentry>
+      </parml>
+    </section>
+    <section>
+      <title>Optional elements</title>
+      <indexterm><parmname>--args.breadcrumbs</parmname></indexterm>
+      <indexterm><parmname>--icons.include</parmname></indexterm>
+      <indexterm><parmname>--popovers.include</parmname></indexterm>
+      <indexterm><parmname>--dark.mode.include</parmname></indexterm>
+      <indexterm><parmname>--menubar-toc.include</parmname></indexterm>
+      <indexterm><parmname>--bidi.include</parmname></indexterm>
+      <indexterm><parmname>--toc-spacer.padding</parmname></indexterm>
+      <p>Bootstrap <xref href="./icons.dita" format="dita">icons</xref>,
+        <xref href="./popovers.dita" format="dita">popovers</xref>,
+        <xref href="./tooltips.dita" format="dita">tooltips</xref> and the <xref
+          href="./dark-mode.dita"
+          format="dita"
+        >dark mode toggler</xref> are enabled by default, but for performance reasons they can be disabled by setting
+        the following command line parameters to <option>no</option>:</p>
+      <parml otherprops="cols(4)">
+        <plentry>
+          <pt>
+            <parmname>--icons.include</parmname>
+          </pt>
+          <pd>Enable Bootstrap
+            <xref href="./icons.dita" format="dita">icons</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--popovers.include</parmname>
+          </pt>
+          <pd>
+            Enable Bootstrap
+            <xref href="./popovers.dita" format="dita">popover components</xref> and
+            <xref href="./tooltips.dita" format="dita">tooltip components</xref>
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--dark.mode.include</parmname>
+          </pt>
+          <pd>
+            Whether to include support for a
+            <xref
+              href="https://getbootstrap.com/docs/5.3/customize/color-modes/#dark-mode"
+              format="html"
+              scope="external"
+            >dark mode</xref> toggler
+          </pd>
+        </plentry>
+      </parml>
+      <p>Opt-in breadcrumbs and menu bars and other modifiers can be enabled by
+      setting the following command line parameters to <option>yes</option>:</p>
+      <parml otherprops="cols(4)">
+        <plentry>
+          <pt>
+            <parmname>--args.breadcrumbs</parmname>
+          </pt>
+          <pd>Enable Bootstrap
+          <xref href="./breadcrumb.dita" format="dita">breadcrumb components</xref>
+        </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--menubar-toc.include</parmname>
+          </pt>
+          <pd>
+            Add a Bootstrap menubar
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--bidi.include</parmname>
+          </pt>
+          <pd>
+            Whether to force included support for
+            <xref href="./rtl.dita" format="dita">RTL languages</xref>
+          </pd>
+        </plentry>
+      </parml>
+      <p>The following additional command line parameters are also available and described in more detail within
+        the documentation:</p>
+      <parml otherprops="cols(4)">
+        <plentry>
+          <pt>
+            <parmname>--scrollspy-toc</parmname>
+          </pt>
+          <pd>
+            Add a Bootstrap <xref href="./scrollspy.dita" format="dita">scrollspy</xref> navigator
+          </pd>
+        </plentry>
+        <plentry>
+          <pt>
+            <parmname>--toc-spacer.padding</parmname>
+          </pt>
+          <pd>
+            Vertical padding to add to the side menu
+          </pd>
+        </plentry>
+      </parml>
+    </section>
+    <section>
+      <note type="note">Within the sample documentation, the texts describing the usage of each component have been
+        copied directly from the
+        <xref href="https://getbootstrap.com/docs/5.3" format="html" scope="external">official Bootstrap 5.3
+          documentation</xref>, however DITA markup is used throughout the examples describing how to implement these
+        components correctly using the DITA <xmlatt>outputclass</xmlatt> attribute. This text is therefore a derivative
+        of <cite>Bootstrap 5 docs</cite> by Twitter, Inc. and the Bootstrap Authors, and used under
+        <xref href="https://creativecommons.org/licenses/by/3.0/" format="html" scope="external">CC BY 3.0.</xref>
+      </note>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="extension-points">
+  <title>Extension Points</title>
+  <shortdesc
+  >These extension points enable you to extend DITA Bootstrap. You can add Ant targets or override XSLT processing steps within the <option
+    >html5-bootstrap</option> transformation.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm><parmname>bootstrap.process.pre</parmname></indexterm>
+        <indexterm><parmname>bootstrap.process.post</parmname></indexterm>
+        <indexterm><parmname>dita.xsl.html5-bootstrap</parmname></indexterm>
+        <indexterm><parmname>extend.css.process.pre</parmname></indexterm>
+        <indexterm><parmname>extend.css.process</parmname></indexterm>
+        <indexterm><parmname>extend.css.process.post</parmname></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <section>
+      <title>Extending Bootstrap</title>
+      <p>Bootstrap is designed to be extensible. Additional CSS and JavaScript libraries can be added to the generated
+        HTML pages to allow for new Bootstrap components and extend Bootstrap classes. Similarly, the <term>DITA
+          Bootstrap</term> plug-in itself can be extended to process DITA files to create valid Bootstrap HTML to drive
+        these custom components.</p>
+    </section>
+    <p>The Bootstrap <ph
+        outputclass="initialism"
+        otherprops="title(HyperText Markup Language)"
+      >HTML</ph> can be altered using the following extension points:</p>
+    <parml otherprops="cols(4)">
+      <plentry>
+        <pt><parmname>bootstrap.process.pre</parmname></pt>
+        <pd>Runs an Ant target before the Bootstrap HTML generation process</pd>
+    </plentry>
+     <plentry>
+        <pt><parmname>bootstrap.process.post</parmname></pt>
+        <pd>Runs an Ant target after the Bootstrap HTML generation process</pd>
+      </plentry>
+     <plentry>
+        <pt><parmname>dita.xsl.html5-bootstrap</parmname></pt>
+        <pd
+        >Overrides the default DITA Bootstrap transformation. The referenced file is integrated directly into the XSLT step that generates the HTML.</pd>
+      </plentry>
+    </parml>
+    <p>Additionally the Bootstrap <ph
+        outputclass="initialism"
+        otherprops="title(Cascading Style Sheet)"
+      >CSS</ph> can be augmented using the following extension points:</p>
+    <parml otherprops="cols(4)">
+     <plentry>
+        <pt><parmname>extend.css.process.pre</parmname></pt>
+        <pd>Runs an Ant target before the Bootstrap CSS generation process allowing a
+          user to append additional CSS.</pd>
+      </plentry>
+     <plentry>
+        <pt><parmname>extend.css.process</parmname></pt>
+        <pd>
+          Runs an Ant target immediately before the Bootstrap CSS generation process, allowing a user to append additional CSS which overrides the previous step.
+        </pd>
+      </plentry>
+      <plentry>
+        <pt><parmname>extend.css.process.post</parmname></pt>
+        <pd>Runs an Ant target after the Bootstrap CSS generation process.</pd>
+      </plentry>
+    </parml>
+  </body>
+</topic>

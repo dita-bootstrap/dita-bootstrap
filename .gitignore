@@ -70,3 +70,5 @@ build_dita2html5-bootstrap.xml
 xsl/dita2html5-bootstrapImpl.xsl
 xsl/dita2html5-legacy-3.0.xsl
 node_modules
+
+out

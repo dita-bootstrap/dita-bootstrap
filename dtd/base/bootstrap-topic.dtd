@@ -1,0 +1,179 @@
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    DITA Bootstrap Topic Shell DTD                    -->
+<!--  DATE:      March 2026                                        -->
+<!--  PURPOSE:   Topic shell with Bootstrap accordion domain       -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--              TOPIC ENTITY DECLARATIONS                        -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--             DOMAIN ENTITY DECLARATIONS                        -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Highlight Domain//EN"
+         "highlightDomain.ent"
+>%hi-d-dec;
+
+<!ENTITY % ut-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Utilities Domain//EN"
+         "utilitiesDomain.ent"
+>%ut-d-dec;
+
+<!ENTITY % indexing-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Indexing Domain//EN"
+         "indexingDomain.ent"
+>%indexing-d-dec;
+
+<!ENTITY % hazard-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Hazard Statement Domain//EN"
+         "hazardstatementDomain.ent"
+>%hazard-d-dec;
+
+<!ENTITY % xml-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 XML Domain//EN"
+         "xmlDomain.ent"
+>%xml-d-dec;
+
+<!ENTITY % pr-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Programming Domain//EN"
+         "programmingDomain.ent"
+>%pr-d-dec;
+
+<!ENTITY % sw-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Software Domain//EN"
+         "softwareDomain.ent"
+>%sw-d-dec;
+
+<!ENTITY % ui-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 User Interface Domain//EN"
+         "uiDomain.ent"
+>%ui-d-dec;
+
+<!ENTITY % bootstrap-d-dec
+  PUBLIC "-//Infotexture//ENTITIES DITA Bootstrap Domain//EN"
+         "bootstrapDomain.ent"
+>%bootstrap-d-dec;
+
+<!-- ============================================================= -->
+<!--             DOMAIN ATTRIBUTES DECLARATIONS                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % deliveryTargetAtt-d-dec
+  PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN"
+         "deliveryTargetAttDomain.ent"
+>%deliveryTargetAtt-d-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+
+<!ENTITY % div          "div | %bootstrap-d-div;">
+<!ENTITY % ph           "ph | %hi-d-ph; | %pr-d-ph; | %bootstrap-d-ph; | %sw-d-ph; | %ui-d-ph;">
+<!ENTITY % xref "xref | %bootstrap-d-xref;">
+<!ENTITY % ul "ul | %bootstrap-d-ul;">
+<!ENTITY % li "li | %bootstrap-d-li;">
+<!ENTITY % image         "image | %bootstrap-d-image;">
+<!ENTITY % fig          "fig |
+                         %ut-d-fig; |
+                         %pr-d-fig;
+                        ">
+<!ENTITY % data         "data |
+                         %ut-d-data;
+                        ">
+<!ENTITY % index-base   "index-base |
+                         %indexing-d-index-base;
+                        ">
+<!ENTITY % note         "note |
+                         %hazard-d-note;
+                        ">
+<!ENTITY % keyword      "keyword |
+                         %xml-d-keyword; |
+                         %pr-d-keyword; | %sw-d-keyword; | %ui-d-keyword;
+                        ">
+<!ENTITY % pre          "pre |
+                         %pr-d-pre; | %sw-d-pre; | %ui-d-pre;
+                        ">
+<!ENTITY % dl           "dl |
+                         %pr-d-dl;
+                        ">
+<!ENTITY % bodydiv      "bodydiv | %bootstrap-d-bodydiv;">
+<!ENTITY % section      "section | %bootstrap-d-section;">
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+
+<!ENTITY % props-attribute-extensions
+  "%deliveryTargetAtt-d-attribute;"
+>
+
+
+<!-- ============================================================= -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % topic-type
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Topic//EN"
+         "topic.mod"
+>%topic-type;
+
+<!ENTITY % commonElements-def
+  PUBLIC "-//Infotexture//ELEMENTS DITA Bootstrap Common Overrides//EN"
+         "commonElements.mod"
+>%commonElements-def;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % bootstrap-d-def
+  PUBLIC "-//Infotexture//ELEMENTS DITA Bootstrap Domain//EN"
+         "bootstrapDomain.mod"
+>%bootstrap-d-def;
+
+<!ENTITY % hi-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Highlight Domain//EN"
+         "highlightDomain.mod"
+>%hi-d-def;
+
+<!ENTITY % ut-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Utilities Domain//EN"
+         "utilitiesDomain.mod"
+>%ut-d-def;
+
+<!ENTITY % indexing-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Indexing Domain//EN"
+         "indexingDomain.mod"
+>%indexing-d-def;
+
+<!ENTITY % hazard-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Hazard Statement Domain//EN"
+         "hazardstatementDomain.mod"
+>%hazard-d-def;
+
+<!ENTITY % xml-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 XML Domain//EN"
+         "xmlDomain.mod"
+>%xml-d-def;
+
+<!ENTITY % pr-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Programming Domain//EN"
+         "programmingDomain.mod"
+>%pr-d-def;
+
+<!ENTITY % sw-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Software Domain//EN"
+         "softwareDomain.mod"
+>%sw-d-def;
+
+<!ENTITY % ui-d-def
+  PUBLIC "-//OASIS//ELEMENTS DITA 1.3 User Interface Domain//EN"
+         "uiDomain.mod"
+>%ui-d-def;
+
+<!-- ================= End of DITA Bootstrap Topic Shell ========== -->

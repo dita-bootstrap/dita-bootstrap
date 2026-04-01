@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
+<topic id="tooltips">
+  <title>Tooltips</title>
+  <shortdesc>Documentation and examples for adding custom Bootstrap tooltips with CSS and JavaScript using CSS3 for
+    animations and <codeph>data-bs-attributes</codeph> for local title storage.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm><codeph>--popovers.include</codeph></indexterm>
+        <indexterm>Tooltips</indexterm>
+        <indexterm>CSS
+          <indexterm><xmlatt>outputclass</xmlatt></indexterm>
+        </indexterm>
+        <indexterm><xmlelement>desc</xmlelement></indexterm>
+        <indexterm><xmlelement>xref</xmlelement></indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <section>
+      <title>Overview</title>
+      <p>Things to know when using the tooltip plugin:</p>
+      <ul>
+        <li>Tooltips rely on the third-party library
+          <xref href="https://popper.js.org" format="html" scope="external">Popper</xref> for positioning.</li>
+        <li>Tooltips with a zero-length <xmlelement>desc</xmlelement> element are never displayed.</li>
+        <li>Triggering tooltips on hidden elements will not work.</li>
+        <li>Tooltips for <xmlatt>outputclass="disabled"</xmlatt> elements must be triggered on a wrapper element.</li>
+        <li>Tooltips must be hidden before their corresponding elements have been removed from the DOM.</li>
+        <li>Tooltips can be triggered thanks to an element inside a shadow DOM.</li>
+        <li>Tooltips are included by default, but for performance reasons, <b
+          >you may exclude them yourself</b> by setting
+            <codeph>--popovers.include</codeph>=<i>no</i>.</li>
+      </ul>
+    </section>
+
+    <section deliveryTarget="html">
+      <title>Examples</title>
+      <p>Hover over the links below to see tooltips:</p>
+    </section>
+
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <p>Placeholder text to demonstrate some
+        <tooltip> inline links <desc>Default tooltip</desc></tooltip> with tooltips. This is
+        now just filler, no killer. Content placed here just to mimic the presence of
+        <tooltip> real text<desc>Another tooltip</desc></tooltip>. And all that just to give
+        you an idea of how tooltips would look when used in real-world situations. So hopefully you've now seen how
+        <tooltip> these tooltips on links<desc>Another one here too</desc></tooltip> can
+        work in practice, once you use them on
+        <tooltip> your own<desc>The last tip!</desc></tooltip> site or project.</p>
+    </bodydiv>
+
+    <p>To enable tooltips, add <xmlatt>output-class="tooltip-*"</xmlatt> to the enclosing
+      <xmlelement>xref</xmlelement>. For the <xmlelement>tooltip</xmlelement> element use the <xmlatt
+      >position</xmlatt> attribute. The direction of the tooltip is appended to the <xmlatt
+      >output-class</xmlatt> or taken from the attribute.</p>
+    <p>Hover over the buttons below to see the four tooltips directions: <codeph>top</codeph>, <codeph>right</codeph>,
+        <codeph>bottom</codeph>, and <codeph>left</codeph>. Directions are mirrored when using Bootstrap in RTL.</p>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <tooltip outputclass="btn-secondary" position="top">
+        <desc>Tooltip on top</desc> Tooltip on top </tooltip>
+      <tooltip outputclass="btn-secondary" position="right">
+        <desc>Tooltip on right</desc> Tooltip on right </tooltip>
+      <tooltip outputclass="btn-secondary" position="bottom">
+        <desc>Tooltip on bottom</desc> Tooltip on bottom </tooltip>
+      <tooltip outputclass="btn-secondary" position="left">
+        <desc>Tooltip on left</desc> Tooltip on left </tooltip>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;tooltip outputclass="btn-secondary" position="top"&gt;
+  &lt;desc&gt;Tooltip on top&lt;/desc&gt;
+  Tooltip on top
+&lt;/tooltip&gt;
+&lt;tooltip outputclass="btn-secondary" position="right"&gt;
+  &lt;desc&gt;Tooltip on right&lt;/desc&gt;
+  Tooltip on right
+&lt;/tooltip&gt;
+&lt;tooltip outputclass="btn-secondary" position="bottom"&gt;
+  &lt;desc&gt;Tooltip on bottom&lt;/desc&gt;
+  Tooltip on bottom
+&lt;/tooltip&gt;
+&lt;tooltip outputclass="btn-secondary" position="left"&gt;
+  &lt;desc&gt;Tooltip on left&lt;/desc&gt;
+  Tooltip on left
+&lt;/tooltip&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-secondary tooltip-top"&gt;
+  &lt;desc&gt;Tooltip on top&lt;/desc&gt;
+  Tooltip on top
+&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary tooltip-right"&gt;
+  &lt;desc&gt;Tooltip on right&lt;/desc&gt;
+  Tooltip on right
+&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary tooltip-bottom"&gt;
+  &lt;desc&gt;Tooltip on bottom&lt;/desc&gt;
+  Tooltip on bottom
+&lt;/xref&gt;
+&lt;xref href="#" outputclass="btn-secondary tooltip-left"&gt;
+  &lt;desc&gt;Tooltip on left&lt;/desc&gt;
+  Tooltip on left
+&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+      <p>Custom HTML can be added to tooltips using additional DITA elements within the <xmlelement>desc</xmlelement>
+      </p>
+      <tooltip outputclass="btn-secondary">
+        <desc><b>Tooltip</b>
+          <u>with</u>
+          <b>DITA</b> elements</desc> Tooltip with embedded DITA </tooltip>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;tooltip outputclass="btn-secondary"&gt;
+  &lt;desc&gt;&lt;b&gt;Tooltip&lt;/b&gt; &lt;u&gt;with&amp;lt;/u&gt; &lt;b&gt;DITA&lt;/b&gt; elements&lt;/desc&gt;
+  Tooltip with embedded DITA
+&lt;/tooltip&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-secondary tooltip-top"&gt;
+  &lt;desc&gt;&lt;b&gt;Tooltip&lt;/b&gt; &lt;u&gt;with&amp;lt;/u&gt; &lt;b&gt;DITA&lt;/b&gt; elements&lt;/desc&gt;
+  Tooltip with embedded DITA
+&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+    <section>
+      <title>Custom tooltips</title>
+      <p>You can customize the appearance of tooltips using CSS variables. We set a custom class with <codeph
+        >&lt;data name="class"&gt;custom-tooltip&lt;data&gt;</codeph>  to scope our custom appearance and use it to override a local CSS variable.</p>
+    </section>
+    <codeblock outputclass="language-css">.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-primary);
+}</codeblock>
+    <bodydiv border="yes" padding="3" deliveryTarget="html">
+      <tooltip outputclass="btn-secondary">
+        <data name="class">custom-tooltip</data>
+        <desc>This top tooltip is themed via CSS variables.</desc>
+        Custom tooltip
+      </tooltip>
+    </bodydiv>
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+          <codeblock>&lt;tooltip outputclass="btn-secondary"&gt;
+  &lt;data name="class"&gt;custom-tooltip&lt;/data&gt;
+  &lt;desc&gt;This top tooltip is themed via CSS variables.&lt;/desc&gt;
+  Custom tooltip
+&lt;/tooltip&gt;</codeblock>
+        </section>
+         <section>
+          <title><xmlatt>outputclass</xmlatt></title>
+          <codeblock>&lt;xref href="#" outputclass="btn-secondary tooltip-top"&gt;
+  &lt;data name="class"&gt;custom-tooltip&lt;/data&gt;
+  &lt;desc&gt;This top tooltip is themed via CSS variables.&lt;/desc&gt;
+  Custom tooltip
+&lt;/xref&gt;</codeblock>
+        </section>
+      </tabbed-dialog>
+  </body>
+</topic>

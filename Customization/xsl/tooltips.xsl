@@ -21,7 +21,8 @@
     <xsl:attribute
       name="data-bs-placement"
       select="
-        if (contains(@outputclass, 'tooltip-left')) then 'left'
+        if (@position) then @position
+        else if (contains(@outputclass, 'tooltip-left')) then 'left'
         else if (contains(@outputclass, 'tooltip-right')) then 'right'
         else if (contains(@outputclass, 'tooltip-bottom')) then 'bottom'
         else 'top'"
@@ -89,7 +90,9 @@
   </xsl:template>
 
   <!--template for xref-->
-  <xsl:template match="*[contains(@class, ' topic/xref ') and contains(@outputclass, 'tooltip-')]">
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/tooltip ')] | *[contains(@class, ' topic/xref ') and contains(@outputclass, 'tooltip-')]"
+  >
     <xsl:choose>
       <xsl:when test="@href and normalize-space(@href)">
         <a>
@@ -141,5 +144,61 @@
         </span>
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+
+  <xsl:template match="*[contains(@class, ' bootstrap-d/tooltip ')]" mode="set-output-class">
+    <xsl:param name="default"/>
+    <xsl:variable name="output-class">
+      <xsl:apply-templates select="." mode="get-output-class"/>
+    </xsl:variable>
+    <xsl:variable name="draft-revs" as="xs:string*">
+      <!-- If draft is on, add revisions to default class. Simplifies processing in DITA-OT 1.6 and earlier
+           that created an extra div or span around revised content, just to hold @class with revs. -->
+      <xsl:if test="$DRAFT = 'yes'">
+        <xsl:sequence select="*[contains(@class, ' ditaot-d/ditaval-startprop ')]/revprop/@val"/>
+      </xsl:if>
+    </xsl:variable>
+    <xsl:variable
+      name="flag-outputclass"
+      as="xs:string*"
+      select="tokenize(normalize-space(*[contains(@class, ' ditaot-d/ditaval-startprop ')]/@outputclass), '\s+')"
+    />
+    <xsl:variable name="using-output-class" as="xs:string*">
+     <xsl:choose>
+       <xsl:when test="string-length(normalize-space($output-class)) > 0">
+         <xsl:value-of select="tokenize(normalize-space($output-class), '\s+')"/>
+       </xsl:when>
+       <xsl:when test="string-length(normalize-space(string-join($default, ' '))) > 0">
+         <xsl:value-of select="tokenize(normalize-space(string-join($default, ' ')), '\s+')"/>
+       </xsl:when>
+     </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="ancestry" as="xs:string?">
+      <xsl:if test="$PRESERVE-DITA-CLASS = 'yes'">
+        <xsl:value-of>
+          <xsl:apply-templates select="." mode="get-element-ancestry"/>
+        </xsl:value-of>
+      </xsl:if>
+    </xsl:variable>
+    <xsl:variable name="outputclass-attribute" as="xs:string">
+      <xsl:value-of>
+        <xsl:apply-templates select="@outputclass" mode="get-value-for-class"/>
+      </xsl:value-of>
+    </xsl:variable>
+    <!-- Revised design with DITA-OT 1.5: include class ancestry if requested; 
+         combine user output class with element default, giving priority to the user value. -->
+    <xsl:variable
+      name="classes"
+      as="xs:string*"
+      select="tokenize($ancestry, '\s+'),
+                          $using-output-class,
+                          $draft-revs, 
+                          tokenize($outputclass-attribute, '\s+'),
+                          $flag-outputclass"
+    />
+    <xsl:if test="exists($classes)">
+      <xsl:attribute name="class" select="distinct-values($classes)[. != 'tooltip']" separator=" "/>
+    </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
