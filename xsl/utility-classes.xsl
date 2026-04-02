@@ -69,8 +69,8 @@
 
     <xsl:value-of
       select="
-        if (@colsep='1' and @rowsep='1') then ' table-bordered'
-        else if (@colsep='0' and @rowsep='0') then ' table-borderless'
+        if (@colsep='1' and @rowsep='1') then ' table-bordered '
+        else if (@colsep='0' and @rowsep='0') then ' table-borderless '
         else ''"
     />
     <xsl:next-match/>
@@ -95,6 +95,10 @@
     <xsl:value-of select="$BOOTSTRAP_CSS_TOPIC_TITLE"/>
     <xsl:next-match/>
   </xsl:template>
+
+  <xsl:template match="*[contains(@class, ' bootstrap-d/tabbed-dialog ')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-output-class" priority="20"/>
+  <xsl:template match="*[contains(@outputclass, 'nav-tabs')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-output-class" priority="20"/>
+  <xsl:template match="*[contains(@outputclass, 'nav-pills')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-output-class" priority="20"/>
 
   <xsl:template
     match="*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]"
@@ -659,6 +663,7 @@
   <!-- Process decorations (color, border, rounded, width, margin, padding, shadow) on any element -->
   <xsl:template name="bootstrap-decoration">
     <xsl:if test="contains(@class, ' topic/table ')">
+       <xsl:text> table </xsl:text>
        <xsl:if test="@striped='yes'">
           <xsl:text>table-striped </xsl:text>
        </xsl:if>
@@ -677,15 +682,15 @@
     <xsl:if test="@color">
        <xsl:choose>
           <xsl:when
-          test="contains(@class, '/table ') or 
-                          contains(@class, '/tbody ') or 
-                          contains(@class, '/tfoot ') or 
-                          contains(@class, '/row ') or 
-                          contains(@class, '/entry ') or 
-                          contains(@class, '/strow ') or 
-                          contains(@class, '/stentry ') or 
-                          contains(@class, '/thead ') or 
-                          contains(@class, '/sthead ') or
+          test="contains(@class, ' topic/table ') or 
+                          contains(@class, ' topic/tbody ') or 
+                          contains(@class, ' topic/tfoot ') or 
+                          contains(@class, ' topic/row ') or 
+                          contains(@class, ' topic/entry ') or 
+                          contains(@class, ' topic/strow ') or 
+                          contains(@class, ' topic/stentry ') or 
+                          contains(@class, ' topic/thead ') or 
+                          contains(@class, ' topic/sthead ') or
                           local-name() = 'thead' or
                           local-name() = 'sthead' or
                           local-name() = 'tbody' or

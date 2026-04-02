@@ -38,7 +38,9 @@
       <!-- Horizontal Tabs or Pills -->
       <xsl:otherwise>
         <ul role="tablist">
-          <xsl:call-template name="commonattributes"/>
+          <xsl:call-template name="commonattributes">
+            <xsl:with-param name="default-output-class" select="'ul'"/>
+          </xsl:call-template>
           <xsl:call-template name="setid"/>
           <xsl:apply-templates
             mode="nav-tabs"
@@ -58,7 +60,10 @@
     <xsl:variable name="title" select="."/>
     <xsl:variable name="index" select="count(../preceding-sibling::*[contains(@class, ' topic/section ')])"/>
 
-    <li class="nav-item" role="presentation">
+    <li>
+      <xsl:call-template name="commonattributes">
+        <xsl:with-param name="default-output-class" select="'li nav-item'"/>
+      </xsl:call-template>
       <button data-bs-toggle="tab" type="button" role="tab">
         <xsl:attribute name="id" select="concat('heading_' ,$parent)"/>
         <xsl:attribute name="data-bs-target" select="concat('#tab_' ,$parent)"/>

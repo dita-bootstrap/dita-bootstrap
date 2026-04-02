@@ -67,7 +67,7 @@
       </table>
     </bodydiv>
 
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table&gt;
@@ -141,7 +141,7 @@
       </table>
     </bodydiv>
 
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table color="primary" padding="1" width="100"&gt;
@@ -242,7 +242,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table striped="yes"&gt;
@@ -293,7 +293,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table striped-columns="yes"&gt;
@@ -344,7 +344,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table rowsep="1" colsep="1"&gt;
@@ -394,7 +394,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table rowsep="0" colsep="0"&gt;
@@ -445,7 +445,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table compact="yes"&gt;
@@ -496,7 +496,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table divider="yes"&gt;
@@ -565,7 +565,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table outputclass="align-middle"&gt;
@@ -663,7 +663,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table&gt;
@@ -717,7 +717,7 @@
         </tgroup>
       </table>
     </bodydiv>
-    <tabbed-dialog style="pills">
+    <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;table&gt;
