@@ -134,7 +134,7 @@
 &lt;ph border="5"&gt;Width 5&lt;/ph&gt;</codeblock>
       </section>
       <section>
-        <title>Output class</title>
+        <title><xmlatt>outputclass</xmlatt></title>
         <codeblock>&lt;ph outputclass="border border-1"&gt;Width 1&lt;/ph&gt;
 &lt;ph outputclass="border border-2"&gt;Width 2&lt;/ph&gt;
 &lt;ph outputclass="border border-3"&gt;Width 3&lt;/ph&gt;
@@ -151,7 +151,7 @@
         <ph bordercolor="danger" padding="2" margin="e2">Danger</ph>
       </div>
     </bodydiv>
-    <tabbed-dialog margin="t3">
+    <tabbed-dialog margin="t3" style="pills" >
       <section>
         <title>Specialization</title>
         <codeblock>&lt;ph bordercolor="primary"&gt;Primary&lt;/ph&gt;
@@ -160,7 +160,7 @@
 &lt;ph bordercolor="danger"&gt;Danger&lt;/ph&gt;</codeblock>
       </section>
       <section>
-        <title>Output class</title>
+        <title><xmlatt>outputclass</xmlatt></title>
         <codeblock>&lt;ph outputclass="border border-primary"&gt;Primary&lt;/ph&gt;
 &lt;ph outputclass="border border-primary-subtle"&gt;Primary subtle&lt;/ph&gt;
 &lt;ph outputclass="border border-success"&gt;Success&lt;/ph&gt;
@@ -189,7 +189,7 @@
 &lt;ph border="yes" rounded="5"&gt;Rounded 5&lt;/ph&gt;</codeblock>
       </section>
       <section>
-        <title>Output class</title>
+        <title><xmlatt>outputclass</xmlatt></title>
         <codeblock>&lt;ph outputclass="border rounded-0"&gt;Rounded 0&lt;/ph&gt;
 &lt;ph outputclass="border rounded-1"&gt;Rounded 1&lt;/ph&gt;
 &lt;ph outputclass="border rounded-2"&gt;Rounded 2&lt;/ph&gt;
@@ -212,7 +212,7 @@
 &lt;ph border="yes" rounded="pill" bordercolor="dark"&gt;Pill&lt;/ph&gt;</codeblock>
       </section>
       <section>
-        <title>Output class</title>
+        <title><xmlatt>outputclass</xmlatt></title>
         <codeblock>&lt;ph outputclass="border rounded-circle border-info"&gt;Circle&lt;/ph&gt;
 &lt;ph outputclass="border rounded-pill border-dark"&gt;Pill&lt;/ph&gt;</codeblock>
       </section>

@@ -76,6 +76,16 @@
   overflow-wrap: break-word;
 }
 
+.nav-pills .nav-link.active>.numcharref,
+.nav-pills .nav-link.active>.parameterentity,
+.nav-pills .nav-link.active>.textentity,
+.nav-pills .nav-link.active>.xmlatt,
+.nav-pills .nav-link.active>.xmlelement,
+.nav-pills .nav-link.active>.xmlnsname,
+.nav-pills .nav-link.active>.xmlpi {
+  color: var(--bs-nav-pills-link-active-color);
+}
+
 .cmdname,
 .codeph,
 .filepath,
@@ -86,10 +96,23 @@
   overflow-wrap: break-word;
 }
 
+.nav-pills .nav-link.active>.cmdname,
+.nav-pills .nav-link.active>.codeph,
+.nav-pills .nav-link.active>.filepath,
+.nav-pills .nav-link.active>.option,
+.nav-pills .nav-link.active>.parmname {
+  color: var(--bs-nav-pills-link-active-color);
+}
+
 .cmdname,
 .parmname {
   font-weight: 700;
   color: var(--dita-prussian-blue);
+}
+
+.nav-pills .nav-link.active>.cmdname,
+.nav-pills .nav-link.active>.parmname {
+  color: var(--bs-nav-pills-link-active-color);
 }
 
 .boolean {
