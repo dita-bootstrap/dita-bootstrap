@@ -110,7 +110,8 @@
     </tabbed-dialog>
     <section>
       <title>Border Styling</title>
-      <p>The <xmlatt>border</xmlatt> attribute also accepts numeric values 1-5 for width. The <xmlatt>rounded</xmlatt> attribute 
+      <p>The <xmlatt>border</xmlatt> attribute also accepts numeric values 1-5 for width. The <xmlatt
+        >rounded</xmlatt> attribute 
         supports values 0-5, <codeph>circle</codeph> and <codeph>pill</codeph>.
         The <xmlatt>bordercolor</xmlatt> attribute can be used to set the color of the border.</p>
     </section>
@@ -143,7 +144,7 @@
       </section>
     </tabbed-dialog>
 
-    <bodydiv border="yes" padding="3"  margin="t3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3" margin="t3" deliveryTarget="html">
       <div margin="b3">
         <ph bordercolor="primary" padding="2" margin="e2">Primary</ph>
         <ph bordercolor="primary-subtle" padding="2" margin="e2">Primary subtle</ph>
@@ -151,7 +152,7 @@
         <ph bordercolor="danger" padding="2" margin="e2">Danger</ph>
       </div>
     </bodydiv>
-    <tabbed-dialog margin="t3" style="pills" >
+    <tabbed-dialog margin="t3" style="pills">
       <section>
         <title>Specialization</title>
         <codeblock>&lt;ph bordercolor="primary"&gt;Primary&lt;/ph&gt;

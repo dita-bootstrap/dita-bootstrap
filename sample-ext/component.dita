@@ -10,7 +10,8 @@
 -->
 <topic id="component">
   <title>Custom Components</title>
-  <shortdesc>Extend the Bootstrap plugin by creating specialized DITA elements that map to specific Bootstrap components, such as Callouts.</shortdesc>
+  <shortdesc
+  >Extend the Bootstrap plugin by creating specialized DITA elements that map to specific Bootstrap components, such as Callouts.</shortdesc>
   <prolog>
     <metadata>
       <keywords>
@@ -63,7 +64,9 @@
           <p>Define the specialization module in <filepath>bootstrapCustomDomain.mod</filepath>:</p>
           <fig>
             <title>Sample <filepath>bootstrapCustomDomain.mod</filepath> file</title>
-            <codeblock outputclass="language-xml">&lt;!-- ============================================================= --&gt;
+            <codeblock
+              outputclass="language-xml"
+            >&lt;!-- ============================================================= --&gt;
 &lt;!--                   BOOTSTRAP CUSTOM DOMAIN                     --&gt;
 &lt;!-- ============================================================= --&gt;
 
@@ -90,12 +93,15 @@
         </li>
         <li>
           <p>Create a DTD Shell (<filepath>bootstrap-custom-topic.dtd</filepath>) to integrate the domain. 
-          The order of declarations is critical due to the XML DTD <b>"First-Win" rule</b>, which specifies that only the first definition of a parameter entity is authoritative.</p>
+          The order of declarations is critical due to the XML DTD <b
+            >"First-Win" rule</b>, which specifies that only the first definition of a parameter entity is authoritative.</p>
           <p>The DTD shell must follow this specific sequence to ensure specializations are correctly recognized:</p>
           <ol>
             <li><b>Domain Entities</b>: Declare the entities for your custom domain.</li>
-            <li><b>Domain Extensions</b>: Redefine the base content models (e.g., <parameterentity>section</parameterentity>) to include your new elements. This MUST happen before structural modules are loaded.</li>
-            <li><b>Structural Modules</b>: Finally, import the base <filepath>topic.mod</filepath> and your custom <filepath>.mod</filepath> file.</li>
+            <li><b>Domain Extensions</b>: Redefine the base content models (e.g., <parameterentity
+              >section</parameterentity>) to include your new elements. This MUST happen before structural modules are loaded.</li>
+            <li><b>Structural Modules</b>: Finally, import the base <filepath
+              >topic.mod</filepath> and your custom <filepath>.mod</filepath> file.</li>
           </ol>
           <fig>
             <title>Sample <filepath>bootstrap-custom-topic.dtd</filepath> file</title>
@@ -208,7 +214,8 @@
           </fig>
         </li>
         <li>
-          <p>Register the plugin hub in <filepath>plugin.xml</filepath> using the <option>dita.xsl.html5-bootstrap</option> extension point:</p>
+          <p>Register the plugin hub in <filepath>plugin.xml</filepath> using the <option
+            >dita.xsl.html5-bootstrap</option> extension point:</p>
           <fig>
             <title>Sample <filepath>plugin.xml</filepath> file</title>
             <codeblock outputclass="language-xml">&lt;plugin id="com.example.bootstrap-component"&gt;

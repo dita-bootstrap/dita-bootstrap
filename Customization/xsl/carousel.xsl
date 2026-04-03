@@ -213,7 +213,10 @@
 
   <!-- Slide Caption -->
   <xsl:template match="*[contains(@class,' topic/title ')]" mode="carousel">
-    <xsl:variable name="carousel" select="ancestor::*[contains(@class, ' bootstrap-d/carousel ') or contains(@outputclass, 'carousel')][1]"/>
+    <xsl:variable
+      name="carousel"
+      select="ancestor::*[contains(@class, ' bootstrap-d/carousel ') or contains(@outputclass, 'carousel')][1]"
+    />
     <xsl:variable name="color" select="($carousel/@color, 'primary')[1]"/>
     <div class="carousel-caption d-none d-md-block">
       <p>

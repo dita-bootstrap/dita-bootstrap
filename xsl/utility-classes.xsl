@@ -96,9 +96,21 @@
     <xsl:next-match/>
   </xsl:template>
 
-  <xsl:template match="*[contains(@class, ' bootstrap-d/tabbed-dialog ')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-output-class" priority="20"/>
-  <xsl:template match="*[contains(@outputclass, 'nav-tabs')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-output-class" priority="20"/>
-  <xsl:template match="*[contains(@outputclass, 'nav-pills')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-output-class" priority="20"/>
+  <xsl:template
+    match="*[contains(@class, ' bootstrap-d/tabbed-dialog ')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]"
+    mode="get-output-class"
+    priority="20"
+  />
+  <xsl:template
+    match="*[contains(@outputclass, 'nav-tabs')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]"
+    mode="get-output-class"
+    priority="20"
+  />
+  <xsl:template
+    match="*[contains(@outputclass, 'nav-pills')]/*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]"
+    mode="get-output-class"
+    priority="20"
+  />
 
   <xsl:template
     match="*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]"
@@ -718,7 +730,10 @@
           </xsl:when>
        </xsl:choose>
     </xsl:if>
-    <xsl:variable name="has-directional-border" select="contains(@outputclass, 'border-top') or contains(@outputclass, 'border-bottom') or contains(@outputclass, 'border-start') or contains(@outputclass, 'border-end')"/>
+    <xsl:variable
+      name="has-directional-border"
+      select="contains(@outputclass, 'border-top') or contains(@outputclass, 'border-bottom') or contains(@outputclass, 'border-start') or contains(@outputclass, 'border-end')"
+    />
     <xsl:if test="@border">
        <xsl:choose>
           <xsl:when test="@border='yes'">

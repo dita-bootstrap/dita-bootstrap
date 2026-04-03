@@ -285,23 +285,40 @@
     <xsl:variable name="get-output-class-result">
       <xsl:apply-templates select="." mode="get-output-class"/>
     </xsl:variable>
-    <xsl:variable name="get-output-class" select="tokenize(normalize-space($get-output-class-result), '\s+')" as="xs:string*"/>
+    <xsl:variable
+      name="get-output-class"
+      select="tokenize(normalize-space($get-output-class-result), '\s+')"
+      as="xs:string*"
+    />
     <xsl:variable name="ancestry">
       <xsl:value-of>
         <xsl:apply-templates select="." mode="get-element-ancestry"/>
       </xsl:value-of>
     </xsl:variable>
-    <xsl:variable name="output-class" select="distinct-values(($default, tokenize($ancestry, '\s+'), $get-output-class, tokenize(@outputclass, '\s+')))[normalize-space(.)]" as="xs:string*"/>
+    <xsl:variable
+      name="output-class"
+      select="distinct-values(($default, tokenize($ancestry, '\s+'), $get-output-class, tokenize(@outputclass, '\s+')))[normalize-space(.)]"
+      as="xs:string*"
+    />
     <xsl:if test="exists($output-class)">
       <xsl:attribute name="class" select="normalize-space(string-join($output-class, ' '))"/>
     </xsl:if>
   </xsl:template>
 
   <!-- Surpress DITA class 'title' for Topic/Section titles as it is replaced by Bootstrap equivalents -->
-  <xsl:template match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/title ')]" mode="get-element-ancestry"/>
-  <xsl:template match="*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]" mode="get-element-ancestry"/>
+  <xsl:template
+    match="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/title ')]"
+    mode="get-element-ancestry"
+  />
+  <xsl:template
+    match="*[contains(@class, ' topic/section ')]/*[contains(@class, ' topic/title ')]"
+    mode="get-element-ancestry"
+  />
   <xsl:template match="*[contains(@class, ' bootstrap-d/tabbed-dialog ')]" mode="get-element-ancestry"/>
-  <xsl:template match="*[ (contains(@class,' topic/bodydiv ') or contains(@class,' topic/div ')) and (contains(@outputclass, 'nav-tabs') or contains(@outputclass, 'nav-pills'))]" mode="get-element-ancestry"/>
+  <xsl:template
+    match="*[ (contains(@class,' topic/bodydiv ') or contains(@class,' topic/div ')) and (contains(@outputclass, 'nav-tabs') or contains(@outputclass, 'nav-pills'))]"
+    mode="get-element-ancestry"
+  />
 
 
   <!-- Override to add Bootstrap Alert classes and roles to Note elements -->

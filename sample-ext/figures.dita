@@ -65,8 +65,7 @@
     <section>
       <title>Adding borders</title>
       <p>Use the DITA <xmlatt>frame</xmlatt> attribute to add
-        <xref href="./borders.dita" format="dita">borders</xref> to a <xmlelement
-        >fig</xmlelement>.</p>
+        <xref href="./borders.dita" format="dita">borders</xref> to a <xmlelement>fig</xmlelement>.</p>
     </section>
     <bodydiv outputclass="bd-example" deliveryTarget="html">
       <fig frame="all">

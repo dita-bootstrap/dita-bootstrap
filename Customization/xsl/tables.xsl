@@ -54,7 +54,10 @@
   </xsl:template>
 
   <!--override table CSS processing - remove DITA frame CSS processing -->
-  <xsl:template match="*[contains(@class, ' topic/table ') or contains(@class, ' topic/simpletable ')]" mode="css-class">
+  <xsl:template
+    match="*[contains(@class, ' topic/table ') or contains(@class, ' topic/simpletable ')]"
+    mode="css-class"
+  >
     <xsl:apply-templates select="@pgwide, @expanse, @scale" mode="#current"/>
   </xsl:template>
 
