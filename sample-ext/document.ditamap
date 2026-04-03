@@ -103,6 +103,11 @@
         <othermeta name="icon" content="bi-wifi-off"/>
       </topicmeta>
     </topicref>
+    <topicref href="component.dita">
+      <topicmeta>
+        <othermeta name="icon" content="bi-puzzle"/>
+      </topicmeta>
+    </topicref>
     <topicref href="sass.dita">
       <topicmeta>
         <othermeta name="icon" content="bi-filetype-sass"/>

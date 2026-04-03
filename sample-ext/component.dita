@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!--
+  Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
+  directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
+  markup is used throughout the examples describing how to implement these components correctly using outputclass.
+
+  This work is a derivative of "Bootstrap 5.3 docs" by Twitter, Inc. and the Bootstrap Authors,
+  and used under CC BY 3.0. See the accompanying LICENSE file for applicable licenses.
+-->
+<topic id="component">
+  <title>Custom Components</title>
+  <shortdesc>Extend the Bootstrap plugin by creating specialized DITA elements that map to specific Bootstrap components, such as Callouts.</shortdesc>
+  <prolog>
+    <metadata>
+      <keywords>
+        <indexterm>Components</indexterm>
+        <indexterm>Specialization</indexterm>
+        <indexterm>Callout</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body outputclass="language-markup">
+    <p>This scenario walks through the process of creating a custom component plug-in
+        (<codeph>com.example.bootstrap-component</codeph>) that defines a new <xmlelement>callout</xmlelement> element. 
+        This specialized element automatically applies Bootstrap utility classes.</p>
+    
+    <section>
+      <title>Procedure</title>
+      <ol>
+        <li>
+          <p>In the <filepath>plugins</filepath> directory, create a directory structure like the following:</p>
+          <fig>
+            <title>Plugin directory structure</title>
+            <codeblock outputclass="language-bash">com.example.bootstrap-component
+├── Customization
+│   └── xsl
+│       └── callout.xsl
+├── dtd
+│   └── base
+│       ├── bootstrap-custom-topic.dtd
+│       ├── bootstrapCustomDomain.ent
+│       └── bootstrapCustomDomain.mod
+├── catalog.xml
+├── plugin.xml
+└── xsl
+    └── xhtml.xsl</codeblock>
+          </fig>
+        </li>
+        <li>
+          <p>Define the specialization entities in <filepath>bootstrapCustomDomain.ent</filepath>:</p>
+          <fig>
+            <title>Sample <filepath>bootstrapCustomDomain.ent</filepath> file</title>
+            <codeblock outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- MODULE: DITA Bootstrap Custom Domain Entities --&gt;
+
+&lt;!ENTITY % callout "callout"&gt;
+&lt;!ENTITY % bootstrapCustom-d-section "callout"&gt;
+&lt;!ENTITY bootstrapCustom-d-att "(topic bootstrapCustom-d)"&gt;</codeblock>
+          </fig>
+        </li>
+        <li>
+          <p>Define the specialization module in <filepath>bootstrapCustomDomain.mod</filepath>:</p>
+          <fig>
+            <title>Sample <filepath>bootstrapCustomDomain.mod</filepath> file</title>
+            <codeblock outputclass="language-xml">&lt;!-- ============================================================= --&gt;
+&lt;!--                   BOOTSTRAP CUSTOM DOMAIN                     --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!-- ============================================================= --&gt;
+&lt;!--                    ELEMENT DECLARATIONS                       --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!ENTITY % callout.content "(%section.cnt;)*"&gt;
+&lt;!ENTITY % callout.attributes
+  "spectitle CDATA #IMPLIED
+   color CDATA #IMPLIED
+   rounded (yes | no | 0 | 1 | 2 | 3 | 4 | 5 | circle | pill) #IMPLIED
+   outputclass CDATA #IMPLIED
+   %univ-atts;"&gt;
+&lt;!ELEMENT callout %callout.content;&gt;
+&lt;!ATTLIST callout %callout.attributes;&gt;
+
+&lt;!-- ============================================================= --&gt;
+&lt;!--                    SPECIALIZATION ATTRIBUTE DECLARATIONS      --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!ATTLIST callout class CDATA "+ topic/section bootstrapCustom-d/callout "&gt;</codeblock>
+          </fig>
+        </li>
+        <li>
+          <p>Create a DTD Shell (<filepath>bootstrap-custom-topic.dtd</filepath>) to integrate the domain. 
+          The order of declarations is critical due to the XML DTD <b>"First-Win" rule</b>, which specifies that only the first definition of a parameter entity is authoritative.</p>
+          <p>The DTD shell must follow this specific sequence to ensure specializations are correctly recognized:</p>
+          <ol>
+            <li><b>Domain Entities</b>: Declare the entities for your custom domain.</li>
+            <li><b>Domain Extensions</b>: Redefine the base content models (e.g., <parameterentity>section</parameterentity>) to include your new elements. This MUST happen before structural modules are loaded.</li>
+            <li><b>Structural Modules</b>: Finally, import the base <filepath>topic.mod</filepath> and your custom <filepath>.mod</filepath> file.</li>
+          </ol>
+          <fig>
+            <title>Sample <filepath>bootstrap-custom-topic.dtd</filepath> file</title>
+            <codeblock outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- ============================================================= --&gt;
+&lt;!--                    BOOTSTRAP CUSTOM TOPIC DTD SHELL           --&gt;
+&lt;!-- ============================================================= --&gt;
+
+&lt;!-- 1. ELEMENT NAME ENTITIES --&gt;
+&lt;!ENTITY % callout "callout"&gt;
+
+&lt;!-- 2. DOMAIN ENTITY DECLARATIONS --&gt;
+&lt;!ENTITY % hi-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Highlight Domain//EN" "highlightDomain.ent"&gt;%hi-d-dec;
+&lt;!ENTITY % ut-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Utilities Domain//EN" "utilitiesDomain.ent"&gt;%ut-d-dec;
+&lt;!ENTITY % indexing-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Indexing Domain//EN" "indexingDomain.ent"&gt;%indexing-d-dec;
+&lt;!ENTITY % hazard-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Hazard Statement Domain//EN" "hazardstatementDomain.ent"&gt;%hazard-d-dec;
+&lt;!ENTITY % sw-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Software Domain//EN" "softwareDomain.ent"&gt;%sw-d-dec;
+&lt;!ENTITY % pr-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Programming Domain//EN" "programmingDomain.ent"&gt;%pr-d-dec;
+&lt;!ENTITY % ui-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 User Interface Domain//EN" "uiDomain.ent"&gt;%ui-d-dec;
+&lt;!ENTITY % xml-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 XML Domain//EN" "xmlDomain.ent"&gt;%xml-d-dec;
+
+&lt;!-- Bootstrap and Custom Callout entities --&gt;
+&lt;!ENTITY % bootstrap-d-dec PUBLIC "-//Infotexture//ENTITIES DITA Bootstrap Domain//EN" "bootstrapDomain.ent"&gt;%bootstrap-d-dec;
+&lt;!ENTITY % bootstrapCustom-d-dec PUBLIC "//Example//ENTITIES DITA Bootstrap Custom Domain//EN" "bootstrapCustomDomain.ent"&gt;%bootstrapCustom-d-dec;
+
+&lt;!-- 3. DOMAIN ATTRIBUTES DECLARATIONS --&gt;
+&lt;!ENTITY % deliveryTargetAtt-d-dec PUBLIC "-//OASIS//ENTITIES DITA 1.3 Delivery Target Attribute Domain//EN" "deliveryTargetAttDomain.ent"&gt;%deliveryTargetAtt-d-dec;
+
+&lt;!-- 4. DOMAIN EXTENSIONS - TOP DEFINTIONS WIN --&gt;
+&lt;!ENTITY % div          "div | %bootstrap-d-div;"&gt;
+&lt;!ENTITY % ph           "ph | %hi-d-ph; | %pr-d-ph; | %bootstrap-d-ph; | %sw-d-ph; | %ui-d-ph;"&gt;
+&lt;!ENTITY % xref         "xref | %bootstrap-d-xref;"&gt;
+&lt;!ENTITY % ul           "ul | %bootstrap-d-ul;"&gt;
+&lt;!ENTITY % li           "li | %bootstrap-d-li;"&gt;
+&lt;!ENTITY % image        "image | %bootstrap-d-image;"&gt;
+&lt;!ENTITY % fig          "fig | %ut-d-fig; | %pr-d-fig;"&gt;
+&lt;!ENTITY % keyword      "keyword | %xml-d-keyword; | %pr-d-keyword; | %sw-d-keyword; | %ui-d-keyword;"&gt;
+&lt;!ENTITY % pre          "pre | %pr-d-pre; | %sw-d-pre; | %ui-d-pre;"&gt;
+&lt;!ENTITY % dl           "dl | %pr-d-dl;"&gt;
+&lt;!ENTITY % bodydiv      "bodydiv | %bootstrap-d-bodydiv;"&gt;
+&lt;!ENTITY % section      "section | %bootstrap-d-section; | %bootstrapCustom-d-section;"&gt;
+
+&lt;!-- 5. DOMAIN ATTRIBUTE EXTENSIONS --&gt;
+&lt;!ENTITY % props-attribute-extensions "%deliveryTargetAtt-d-attribute;"&gt;
+
+&lt;!-- 6. TOPIC ELEMENT INTEGRATION --&gt;
+&lt;!ENTITY % topic-mod-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Topic//EN" "topic.mod"&gt;%topic-mod-def;
+
+&lt;!-- 7. DOMAIN ELEMENT INTEGRATION --&gt;
+&lt;!ENTITY % bootstrap-d-def PUBLIC "-//Infotexture//ELEMENTS DITA Bootstrap Domain//EN" "bootstrapDomain.mod"&gt;%bootstrap-d-def;
+&lt;!ENTITY % bootstrapCustom-d-def PUBLIC "//Example//ELEMENTS DITA Bootstrap Custom Domain//EN" "bootstrapCustomDomain.mod"&gt;%bootstrapCustom-d-def;
+
+&lt;!ENTITY % hi-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Highlight Domain//EN" "highlightDomain.mod"&gt;%hi-d-def;
+&lt;!ENTITY % ut-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Utilities Domain//EN" "utilitiesDomain.mod"&gt;%ut-d-def;
+&lt;!ENTITY % indexing-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Indexing Domain//EN" "indexingDomain.mod"&gt;%indexing-d-def;
+&lt;!ENTITY % hazard-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Hazard Statement Domain//EN" "hazardstatementDomain.mod"&gt;%hazard-d-def;
+&lt;!ENTITY % sw-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Software Domain//EN" "softwareDomain.mod"&gt;%sw-d-def;
+&lt;!ENTITY % pr-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 Programming Domain//EN" "programmingDomain.mod"&gt;%pr-d-def;
+&lt;!ENTITY % ui-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 User Interface Domain//EN" "uiDomain.mod"&gt;%ui-d-def;
+&lt;!ENTITY % xml-d-def PUBLIC "-//OASIS//ELEMENTS DITA 1.3 XML Domain//EN" "xmlDomain.mod"&gt;%xml-d-def;
+
+&lt;!-- Specialization of element ancestors --&gt;
+&lt;!ENTITY included-domains "&amp;hi-d-att; &amp;ut-d-att; &amp;indexing-d-att; &amp;hazard-d-att; &amp;sw-d-att; &amp;pr-d-att; &amp;ui-d-att; &amp;xml-d-att; &amp;bootstrap-d-att; &amp;bootstrapCustom-d-att; &amp;deliveryTargetAtt-d-att;"&gt;</codeblock>
+          </fig>
+        </li>
+        <li>
+          <p>Implement the component-specific XSLT transformation in <filepath>callout.xsl</filepath>. 
+          Use a <b>high priority</b> to override default behavior as necessary:</p>
+          <fig>
+            <title>Sample <filepath>callout.xsl</filepath> file</title>
+            <codeblock outputclass="language-xml">&lt;!-- Handle the callout element transformation --&gt;
+&lt;xsl:template match="*[contains(@class, 'bootstrapCustom-d/callout')]"&gt;
+  &lt;div&gt;
+    &lt;xsl:call-template name="commonattributes"/&gt;
+    &lt;xsl:call-template name="setidaname"/&gt;
+    &lt;!-- Add special handling as necessary --&gt;
+    &lt;xsl:apply-templates/&gt;
+  &lt;/div&gt;
+&lt;/xsl:template&gt;
+
+&lt;!-- Add custom output class handling for the new component --&gt;
+&lt;xsl:template match="*[contains(@class, 'bootstrapCustom-d/callout')]" mode="set-output-class" priority="50"&gt;
+  &lt;xsl:variable name="color" select="(if (@color) then @color else 'primary')"/&gt;
+  &lt;xsl:variable name="classes" as="xs:string*"&gt;
+     &lt;xsl:sequence select="tokenize('callout p-2 border-start border-5', '\s+')"/&gt;
+     &lt;xsl:sequence select="concat('bg-', $color, '-subtle')"/&gt;
+     &lt;xsl:sequence select="concat('border-', $color)"/&gt;
+     &lt;xsl:sequence select="concat('callout-', $color)"/&gt;
+     &lt;xsl:sequence select="tokenize(normalize-space($ancestry), '\s+')"/&gt;
+  &lt;/xsl:variable&gt;
+  &lt;xsl:attribute name="class" select="normalize-space(string-join(distinct-values($classes), ' '))"/&gt;
+&lt;/xsl:template&gt;</codeblock>
+          </fig>
+        </li>
+        <li>
+          <p>Create a central hub in <filepath>xsl/xhtml.xsl</filepath> to include your custom transformations:</p>
+          <fig>
+            <title>Sample <filepath>xhtml.xsl</filepath> hub file</title>
+            <codeblock outputclass="language-xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xsl:stylesheet
+  version="2.0"
+  xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  exclude-result-prefixes="xs dita-ot"
+&gt;
+  &lt;xsl:include href="../Customization/xsl/callout.xsl"/&gt;
+
+&lt;/xsl:stylesheet&gt;</codeblock>
+          </fig>
+        </li>
+        <li>
+          <p>Register the plugin hub in <filepath>plugin.xml</filepath> using the <option>dita.xsl.html5-bootstrap</option> extension point:</p>
+          <fig>
+            <title>Sample <filepath>plugin.xml</filepath> file</title>
+            <codeblock outputclass="language-xml">&lt;plugin id="com.example.bootstrap-component"&gt;
+  &lt;feature extension="dita.xsl.html5-bootstrap" value="xsl/xhtml.xsl" type="file" /&gt;
+  &lt;feature extension="dita.specialization.catalog.relative" file="catalog.xml"/&gt;
+&lt;/plugin&gt;</codeblock>
+          </fig>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <title>Example Usage</title>
+      <p>Once installed, authors can use the specialized element in DITA content:</p>
+      <fig>
+        <title>Specialized callout usage</title>
+        <codeblock outputclass="language-xml">&lt;callout color="success"&gt;
+  &lt;title&gt;Success!&lt;/title&gt;
+  &lt;p&gt;Further text can be added here.&lt;/p&gt;
+&lt;/callout&gt;</codeblock>
+      </fig>
+      <fig>
+        <title>Rendered Callout Component</title>
+        <image href="src/callout.png"/>
+      </fig>
+    </section>
+  </body>
+</topic>
