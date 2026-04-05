@@ -29,7 +29,7 @@
           outputclass="btn-group"</xmlelement>
       </p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <button-group>
         <button href="#">Left</button>
         <button href="#">Middle</button>
@@ -85,7 +85,7 @@
     <section>
       <title>Outlined styles</title>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <button-group>
         <button outline="yes" href="#">Left</button>
         <button outline="yes" href="#">Middle</button>
@@ -114,7 +114,7 @@
       <title>Button toolbar</title>
       <p>Combine sets of button groups into button toolbars for more complex components.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <button-toolbar>
         <button-group outputclass="me-2">
           <button href="#">1</button>
@@ -176,7 +176,7 @@
       <title>Vertical variation</title>
       <p>Make a set of buttons appear vertically stacked rather than horizontally.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <button-group vertical="yes">
         <button href="#">Top</button>
         <button href="#">Middle</button>

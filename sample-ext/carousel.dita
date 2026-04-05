@@ -39,7 +39,7 @@
         they’re not explicitly required. Add and customize as you see fit.</p>
       <p>Here is an example with slides</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <carousel>
         <carousel-item>
           <image scope="external" href="https://picsum.photos/1200/600?a"/>
@@ -87,7 +87,7 @@
       <p> Set <xmlatt>indicators="yes"</xmlatt> to add indicators to the carousel, alongside the
         previous/next controls. The indicators let users jump directly to a particular slide.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <carousel indicators="yes">
         <carousel-item>
           <image scope="external" href="https://picsum.photos/1200/600?d"/>
@@ -134,7 +134,7 @@
       <title>With captions</title>
       <p>Add captions by using <xmlelement>fig</xmlelement> elements</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <carousel>
         <carousel-item>
           <fig>
@@ -210,7 +210,7 @@
         >grid-row</xmlelement> element to add them within a carousel.
         Additional structure and spacing can be added by using the <xmlelement>grid-col</xmlelement> element.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <carousel>
         <carousel-item>
           <grid-row>
@@ -323,7 +323,7 @@ And, kept unused, the user so destroys it.</lines>
       <title>Multiple slides side-by-side</title>
       <p>Add multiple <xmlelement>image</xmlelement> elements within each <xmlelement>carousel-item</xmlelement></p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <carousel>
         <carousel-item>
           <image scope="external" href="https://picsum.photos/400/200?a"/>
@@ -391,13 +391,13 @@ And, kept unused, the user so destroys it.</lines>
         >carousel-item</xmlelement> and include a
           <xmlelement>grid-row</xmlelement> element for title texts.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <carousel>
         <carousel-item>
           <image scope="external" href="https://picsum.photos/400/200?j"/>
           <image scope="external" href="https://picsum.photos/400/200?k"/>
           <image scope="external" href="https://picsum.photos/400/200?l"/>
-          <grid-row deliveryTarget="html">
+          <grid-row>
             <grid-col colspan="4">
               <p outputclass="text-center">First Image</p>
             </grid-col>
@@ -413,7 +413,7 @@ And, kept unused, the user so destroys it.</lines>
           <image scope="external" href="https://picsum.photos/400/200?m"/>
           <image scope="external" href="https://picsum.photos/400/200?n"/>
           <image scope="external" href="https://picsum.photos/400/200?o"/>
-          <grid-row deliveryTarget="html">
+          <grid-row>
             <grid-col colspan="4">
               <p outputclass="text-center">Fourth Image</p>
             </grid-col>
@@ -429,7 +429,7 @@ And, kept unused, the user so destroys it.</lines>
           <image scope="external" href="https://picsum.photos/400/200?p"/>
           <image scope="external" href="https://picsum.photos/400/200?q"/>
           <image scope="external" href="https://picsum.photos/400/200?r"/>
-          <grid-row deliveryTarget="html">
+          <grid-row>
             <grid-col colspan="4">
               <p outputclass="text-center">Seventh Image</p>
             </grid-col>

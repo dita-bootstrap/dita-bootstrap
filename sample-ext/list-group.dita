@@ -31,7 +31,7 @@
       <p>The most basic list group is an unordered list with list items and the proper classes. Build upon it with the
         options that follow, or with your own CSS as needed.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <list-group>
         <li>An item</li>
         <li>A second item</li>
@@ -66,7 +66,7 @@
       <title>Compacted list group</title>
       <p>Add <xmlatt>compact="yes"</xmlatt> to reduce the padding of list items</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <list-group compact="yes">
         <li>Item One</li>
         <li>Item Two</li>
@@ -91,7 +91,7 @@
       <title>Expanded list group</title>
       <p>Add <xmlatt>compact="no"</xmlatt> to increase the padding of list items</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <list-group compact="no">
         <li>Item One</li>
         <li>Item Two</li>
@@ -117,7 +117,7 @@
       <p>Add a <xmlatt>flush="yes"</xmlatt> to remove some borders and
         rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <list-group flush="yes">
         <li>An item</li>
         <li>A second item</li>

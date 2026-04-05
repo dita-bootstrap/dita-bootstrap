@@ -32,7 +32,7 @@
       <title>Borders</title>
       <p>Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div padding="3">
         <ph outputclass="border p-3 border-secondary">&#xA0;border&#xA0;</ph>&#xA0;
         <ph outputclass="border-top p-3 border-secondary">&#xA0;border-top</ph>&#xA0;
@@ -53,7 +53,7 @@
         >rounded</xmlatt> attributes provide a semantic way to add borders and rounded corners.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <section border="yes" padding="2">
         <title>Bordered Section</title>
         <p>This section has a border.</p>
@@ -116,7 +116,7 @@
         The <xmlatt>bordercolor</xmlatt> attribute can be used to set the color of the border.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div margin="b3">
         <ph border="1" padding="2" margin="e2">Width 1</ph>
         <ph border="2" padding="2" margin="e2">Width 2</ph>
@@ -144,7 +144,7 @@
       </section>
     </tabbed-dialog>
 
-    <bodydiv border="yes" padding="3" margin="t3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3" margin="t3">
       <div margin="b3">
         <ph bordercolor="primary" padding="2" margin="e2">Primary</ph>
         <ph bordercolor="primary-subtle" padding="2" margin="e2">Primary subtle</ph>
@@ -169,7 +169,7 @@
       </section>
     </tabbed-dialog>
 
-    <bodydiv border="yes" padding="3" margin="t3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3" margin="t3">
       <div margin="b3">
         <ph border="yes" rounded="0" padding="2" margin="e2">Rounded 0</ph>
         <ph border="yes" rounded="1" padding="2" margin="e2">Rounded 1</ph>
@@ -200,7 +200,7 @@
       </section>
     </tabbed-dialog>
 
-    <bodydiv border="yes" padding="3" margin="t3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3" margin="t3">
       <div margin="b3" padding="t3">
         <ph border="yes" rounded="circle" padding="4" margin="e5" bordercolor="info">Circle</ph>
         <ph border="yes" rounded="pill" padding="x4 y2" margin="e2" bordercolor="dark">Pill</ph>
@@ -224,7 +224,7 @@
       <p>For DITA elements which support the <xmlatt>frame</xmlatt> attribute, such as <xmlelement>lines</xmlelement>
         and <xmlelement>codeblock</xmlelement>, additional frame borders are automatically added as shown:</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p/>
       <codeblock outputclass="language-cpp" frame="sides">// Simple C++ program to display "Hello World"
 

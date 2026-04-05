@@ -31,7 +31,7 @@
           style="tabs"</xmlelement> element containing a series of <xmlelement>section</xmlelement> elements
       </p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <tabbed-dialog style="tabs" margin="t3">
         <section>
           <title>Home</title>
@@ -97,7 +97,7 @@
       </tabbed-dialog>
     <p>The tabs plugin also works with pills using <xmlatt>style="pills"</xmlatt>
     </p>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <tabbed-dialog style="pills" margin="t3">
         <section>
           <title>Home</title>
@@ -163,7 +163,7 @@
       </tabbed-dialog>
     <p>And with vertical pills using <xmlatt>style="vertical-pills"</xmlatt>
     </p>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <tabbed-dialog style="vertical-pills" margin="t3">
         <section>
           <title>Home</title>

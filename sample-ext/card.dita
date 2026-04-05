@@ -47,7 +47,7 @@
         >sizing options.</xref>
       </p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <card>
         <title>Card Title</title>
         <image scope="external" href="https://picsum.photos/400/200?a"/>
@@ -81,7 +81,7 @@
           <codeph>card-link</codeph> to an <xmlelement>xref</xmlelement> tag.</p>
       <p>Subtitles are used by adding a <xmlelement>div</xmlelement> element.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <card>
         <title>Card Title</title>
         <div outputclass="h6">Card Subtitle</div>
@@ -118,7 +118,7 @@
         >card</xmlelement> places an image to the top of the card
       </p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <grid-row>
         <grid-col>
           <card>
@@ -150,7 +150,7 @@
         >card-header</xmlelement> and <xmlelement>card-footer</xmlelement> elements.
       </p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <card>
         <title>Special title treatment</title>
         <card-header>Featured</card-header>
@@ -185,7 +185,7 @@
       <p>A card can be colorized by adding a <xmlatt>color</xmlatt> attribute. This
         applies a contextual background color.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <card color="success">
         <title>Card Title</title>
         <image scope="external" href="https://picsum.photos/400/200?a"/>

@@ -40,7 +40,7 @@
       <title>Example</title>
       <p>Click the accordions below to expand/collapse the accordion content.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <accordion>
         <accordion-item id="accordion1" open="yes">
           <title>Accordion Item #1</title>
@@ -146,7 +146,7 @@
         background-color, some borders, and some rounded corners to render accordions edge-to-edge with their parent
         container.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <accordion flush="yes">
         <accordion-item id="accordion4">
           <title>Accordion Item #1</title>
@@ -187,7 +187,7 @@
       <title>Always open</title>
       <p>Set <xmlatt>open="yes"</xmlatt> to make accordion items stay open when another item is opened.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <accordion open="yes">
         <accordion-item id="accordion7" open="yes">
           <title>Accordion Item #1</title>

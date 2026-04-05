@@ -34,7 +34,7 @@
       <p>Using the most basic table markup, here’s how the default DITA Bootstrap <codeph>.table</codeph>-based tables
         look in Bootstrap.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table>
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
@@ -110,7 +110,7 @@
       <title>Variants</title>
       <p>Use contextual classes to color tables, table rows or individual cells.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table color="primary" padding="1" width="100">
         <tgroup cols="2">
           <thead>
@@ -210,8 +210,8 @@
       <p>Use <xmlatt>striped="yes"</xmlatt> to add zebra-striping to any table row
         within the <xmlelement>tbody</xmlelement>.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
-      <table outputclass="table-striped">
+    <bodydiv border="yes" padding="3">
+      <table striped="yes">
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
           <colspec colname="COLSPEC1"/>
@@ -261,8 +261,8 @@
       <p>Use <xmlatt>striped-columns="yes"</xmlatt> to add zebra-striping to any table column
         within the <xmlelement>tbody</xmlelement>.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
-      <table outputclass="table-striped-columns">
+    <bodydiv border="yes" padding="3">
+      <table striped-columns="yes">
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
           <colspec colname="COLSPEC1"/>
@@ -312,7 +312,7 @@
       <p>Add <xmlatt>rowsep="1"</xmlatt> and <xmlatt
         >colsep="1"</xmlatt> for borders on all sides of the table and cells.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table rowsep="1" colsep="1">
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
@@ -362,7 +362,7 @@
       <title>Tables without borders</title>
       <p>Add <xmlatt>rowsep="0"</xmlatt> and <xmlatt>colsep="0"</xmlatt> for a table without borders.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table rowsep="0" colsep="0">
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
@@ -413,8 +413,8 @@
       <p>Add <xmlatt>compact="yes"</xmlatt> to make any table more compact by cutting all cell <codeph
         >padding</codeph> in half.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
-      <table outputclass="table-sm">
+    <bodydiv border="yes" padding="3">
+      <table compact="yes">
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
           <colspec colname="COLSPEC1"/>
@@ -464,8 +464,8 @@
       <p>Add a thicker border, darker between table groups—<xmlelement>thead</xmlelement> and <xmlelement
         >tbody</xmlelement>, with <xmlatt>divider="yes"</xmlatt> on the table.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
-      <table>
+    <bodydiv border="yes" padding="3">
+      <table divider="yes">
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
           <colspec colname="COLSPEC1"/>
@@ -475,7 +475,7 @@
               <entry colname="COLSPEC1" valign="top">Gestation</entry>
             </row>
           </thead>
-          <tbody outputclass="table-group-divider">
+          <tbody>
             <row>
               <entry>Elephant (African and Asian)</entry>
               <entry>19-22 months</entry>
@@ -521,7 +521,7 @@
         >table</xmlelement> and are aligned to the top by default. Use the <xmlatt
         >valign</xmlatt> attribute to re-align where needed.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table outputclass="align-middle">
         <tgroup cols="4">
           <colspec colname="COLSPEC0"/>
@@ -631,7 +631,7 @@
           <xmlatt>color="dark"</xmlatt> to make <xmlelement>thead</xmlelement> elements appear light or dark
         gray.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table>
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>
@@ -685,7 +685,7 @@
 &lt;/table&gt;</codeblock>
       </section>
     </tabbed-dialog>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <table>
         <tgroup cols="2">
           <colspec colname="COLSPEC0"/>

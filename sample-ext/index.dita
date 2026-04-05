@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
 <!--
   Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
   directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA
@@ -30,7 +30,7 @@
       <title>Installing</title>
       <p>Use the <cmdname>dita</cmdname> command to add this plug-in to your DITA Open Toolkit installation:</p>
     </section>
-    <bodydiv outputclass="nav-tabs">
+    <tabbed-dialog style="tabs">
       <section>
         <title>DITA-OT 3.5 and newer:</title>
           <codeblock outputclass="language-bash"><cmdname>dita</cmdname> <parmname
@@ -50,7 +50,7 @@
 <cmdname>dita</cmdname> <parmname
           >--install</parmname> https://github.com/infotexture/dita-bootstrap/archive/master.zip</codeblock>
       </section>
-    </bodydiv>
+    </tabbed-dialog>
     <section>
       <title>Using</title>
       <p>Specify the <option>html5-bootstrap</option> format when building output with the <cmdname>dita</cmdname>
@@ -72,12 +72,12 @@
      <parmname>--args.hdr</parmname>=<filepath>path/to/your-header.xml</filepath> \
      <parmname>--bootstrap.theme</parmname>=<option>&lt;theme-name&gt;</option></codeblock>
 
-      <ol outputclass="carousel pt-2" deliveryTarget="html" otherprops="indicators(true)">
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/brite/thumbnail.png"/>
+      <carousel indicators="yes" margin="t2">
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/brite/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -86,12 +86,11 @@
                     scope="external"
                   ><option>brite</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
                 <image
-                  outputclass="card-img-top"
                   scope="external"
                   href="https://bootswatch.com/cerulean/thumbnail.png"
                 />
@@ -103,11 +102,11 @@
                     scope="external"
                   ><option>cerulean</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/cosmo/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/cosmo/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -116,15 +115,15 @@
                     scope="external"
                   ><option>cosmo</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/cyborg/thumbnail.png"/>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/cyborg/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -133,11 +132,11 @@
                     scope="external"
                   ><option>cyborg</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/darkly/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/darkly/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -146,11 +145,11 @@
                     scope="external"
                   ><option>darkly</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/flatly/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/flatly/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -159,15 +158,15 @@
                     scope="external"
                   ><option>flatly</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/journal/thumbnail.png"/>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/journal/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -176,11 +175,11 @@
                     scope="external"
                   ><option>journal</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/litera/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/litera/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -189,11 +188,11 @@
                     scope="external"
                   ><option>litera</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/lumen/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/lumen/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -202,15 +201,15 @@
                     scope="external"
                   ><option>lumen</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/lux/thumbnail.png"/>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/lux/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -219,11 +218,11 @@
                     scope="external"
                   ><option>lux</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/materia/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/materia/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -232,11 +231,11 @@
                     scope="external"
                   ><option>materia</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/minty/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/minty/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -245,15 +244,15 @@
                     scope="external"
                   ><option>minty</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/morph/thumbnail.png"/>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/morph/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -262,11 +261,11 @@
                     scope="external"
                   ><option>morph</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/pulse/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/pulse/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -275,11 +274,11 @@
                     scope="external"
                   ><option>pulse</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/quartz/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/quartz/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -288,16 +287,15 @@
                     scope="external"
                   ><option>quartz</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
                 <image
-                  outputclass="card-img-top"
                   scope="external"
                   href="https://bootswatch.com/sandstone/thumbnail.png"
                 />
@@ -309,11 +307,11 @@
                     scope="external"
                   ><option>sandstone</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/simplex/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/simplex/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -322,11 +320,11 @@
                     scope="external"
                   ><option>simplex</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/sketchy/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/sketchy/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -335,15 +333,15 @@
                     scope="external"
                   ><option>sketchy</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/slate/thumbnail.png"/>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/slate/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -352,11 +350,11 @@
                     scope="external"
                   ><option>slate</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/solar/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/solar/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -365,12 +363,11 @@
                     scope="external"
                   ><option>solar</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
                 <image
-                  outputclass="card-img-top"
                   scope="external"
                   href="https://bootswatch.com/spacelab/thumbnail.png"
                 />
@@ -382,16 +379,15 @@
                     scope="external"
                   ><option>spacelab</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
                 <image
-                  outputclass="card-img-top"
                   scope="external"
                   href="https://bootswatch.com/superhero/thumbnail.png"
                 />
@@ -403,11 +399,11 @@
                     scope="external"
                   ><option>superhero</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/united/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/united/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -416,11 +412,11 @@
                     scope="external"
                   ><option>united</option></xref>
                 </p>
-              </div>
-            </div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/vapor/thumbnail.png"/>
+              </card>
+            </grid-col>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/vapor/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -429,15 +425,15 @@
                     scope="external"
                   ><option>vapor</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div outputclass="col-4">
-              <div outputclass="card w-100">
-                <image outputclass="card-img-top" scope="external" href="https://bootswatch.com/yeti/thumbnail.png"/>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+        <carousel-item>
+          <grid-row>
+            <grid-col colspan="4">
+              <card width="100">
+                <image scope="external" href="https://bootswatch.com/yeti/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -446,11 +442,11 @@
                     scope="external"
                   ><option>yeti</option></xref>
                 </p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
+              </card>
+            </grid-col>
+          </grid-row>
+        </carousel-item>
+      </carousel>
       <note type="note">You can switch between the available themes via the CSS dropdown in the menu bar at
         <xref
           href="https://infotexture.github.io/dita-bootstrap/"
@@ -496,7 +492,7 @@
         (blue) background color for the
         <xref href="https://getbootstrap.com/docs/5.3/examples/navbars/" format="html" scope="external">navbar
           component</xref>, and provides a theme menu to toggle <xref
-          href="./dark-mode.dita"
+        href="./dark-mode.dita"
         >dark mode</xref>.  Bootstrap itself offers additional <xref
           href="https://getbootstrap.com/docs/5.3/examples/headers/"
           format="html"
@@ -600,9 +596,9 @@
       <indexterm><parmname>--bootstrap.css.topic.title</parmname></indexterm>
       <indexterm><parmname>--bootstrap.css.section.title</parmname></indexterm>
       <indexterm><parmname>--bootstrap.css.card</parmname></indexterm>
-      <indexterm><parmname>--bootstrap.css.carousel</parmname></indexterm>
-      <indexterm><parmname>--bootstrap.css.carousel.caption</parmname></indexterm>
-      <indexterm><parmname>--bootstrap.css.carousel.indicators</parmname></indexterm>
+      <indexterm deliveryTarget="html"><parmname>--bootstrap.css.carousel</parmname></indexterm>
+      <indexterm deliveryTarget="html"><parmname>--bootstrap.css.carousel.caption</parmname></indexterm>
+      <indexterm deliveryTarget="html"><parmname>--bootstrap.css.carousel.indicators</parmname></indexterm>
       <indexterm><parmname>--bootstrap.css.footer</parmname></indexterm>
       <indexterm><parmname>--bootstrap.css.table</parmname></indexterm>
       <indexterm><parmname>--bootstrap.css.tabs</parmname></indexterm>
@@ -681,31 +677,31 @@
             <xref href="./card.dita" format="dita">card components</xref>
           </pd>
         </plentry>
-        <plentry>
+        <plentry deliveryTarget="html">
           <pt>
             <parmname>--bootstrap.css&#8203;.carousel</parmname>
           </pt>
           <pd>
             Common utility classes for Bootstrap
-            <xref href="./carousel.dita" format="dita">carousel components</xref>
+            <xref href="./carousel.dita" format="dita" deliveryTarget="html">carousel components</xref>
           </pd>
         </plentry>
-        <plentry>
+        <plentry deliveryTarget="html">
           <pt>
             <parmname>--bootstrap.css&#8203;.carousel&#8203;.caption</parmname>
           </pt>
           <pd>
             Common utility classes for Bootstrap
-            <xref href="./carousel.dita" format="dita">carousel captions</xref>
+            <xref href="./carousel.dita" format="dita" deliveryTarget="html">carousel captions</xref>
           </pd>
         </plentry>
-        <plentry>
+        <plentry deliveryTarget="html">
           <pt>
             <parmname>--bootstrap.css&#8203;.carousel&#8203;.indicators</parmname>
           </pt>
           <pd>
             Common utility classes for Bootstrap
-            <xref href="./carousel.dita" format="dita">carousel indicators</xref>
+            <xref href="./carousel.dita" format="dita" deliveryTarget="html">carousel indicators</xref>
           </pd>
         </plentry>
         <plentry>
@@ -997,6 +993,7 @@
         <xref href="./tooltips.dita" format="dita">tooltips</xref> and the <xref
           href="./dark-mode.dita"
           format="dita"
+         
         >dark mode toggler</xref> are enabled by default, but for performance reasons they can be disabled by setting
         the following command line parameters to <option>no</option>:</p>
       <parml otherprops="cols(4)">

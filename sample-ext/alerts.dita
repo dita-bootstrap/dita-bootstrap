@@ -32,7 +32,7 @@
         of the eight required contextual classes (e.g., set <xmlatt>outputclass</xmlatt> to
           <codeph>alert-success</codeph>).</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <alert color="primary">A simple primary alert—check it out!</alert>
       <alert color="secondary">A simple secondary alert—check it out!</alert>
       <alert color="success">A simple success alert—check it out!</alert>
@@ -103,7 +103,7 @@
       <title>Additional content</title>
       <p>Alerts can also contain additional HTML elements like headings, paragraphs, icons and links.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <alert color="success">
         <title><icon outputclass="bi-emoji-smile" padding="e2"/>Well done!</title>
         <p>Aww yeah, you successfully read this important alert message. This example text with a
@@ -149,7 +149,7 @@
         attribute. With the exception <xmlatt>type="othertype"</xmlatt>, an icon is added if <xmlatt
         >type</xmlatt> is present.</p>
     </section>
-    <div outputclass="bd-example" deliveryTarget="html">
+    <div outputclass="bd-example">
       <note type="note">This is just a note.</note>
       <note type="notice">Notice this piece of information.</note>
       <note type="fastpath">This note will speed you on your way.</note>
@@ -197,7 +197,7 @@
 &lt;/note&gt;</codeblock>
     <p>The default colors can be overridden by using a <xmlatt>color</xmlatt> attribute or an <xmlatt
       >outputclass</xmlatt>.</p>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <note color="primary">This is a primary note.</note>
       <note color="secondary">This is a secondary note.</note>
       <note color="light">This is light note.</note>
@@ -235,7 +235,7 @@
     </tabbed-dialog>
 
     <p>Use an additional <xmlatt>icon</xmlatt> attribute or <xmlatt>otherprops</xmlatt> to alter the default icon.</p>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <note icon="bi-search" type="other" othertype="Search">This note has a search icon.</note>
       <note
         icon="bi bi-emoji-smile"

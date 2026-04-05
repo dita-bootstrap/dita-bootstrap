@@ -36,7 +36,7 @@
       <title>Example</title>
       <p>By default <xmlelement>figure</xmlelement> elements are styled as shown: </p>
     </section>
-    <bodydiv outputclass="bd-example" deliveryTarget="html">
+    <bodydiv outputclass="bd-example">
       <fig>
         <title>A caption for the image.</title>
         <image scope="external" href="https://picsum.photos/1200/600?a"/>
@@ -51,7 +51,7 @@
       <p>The figure’s caption can be aligned using the Bootstrap
         <xref href="./color.dita" format="dita">text utilities</xref>.</p>
     </section>
-    <bodydiv outputclass="bd-example" deliveryTarget="html">
+    <bodydiv outputclass="bd-example">
       <fig>
         <title outputclass="text-end">A caption for the image.</title>
         <image scope="external" href="https://picsum.photos/1200/600?b"/>
@@ -67,7 +67,7 @@
       <p>Use the DITA <xmlatt>frame</xmlatt> attribute to add
         <xref href="./borders.dita" format="dita">borders</xref> to a <xmlelement>fig</xmlelement>.</p>
     </section>
-    <bodydiv outputclass="bd-example" deliveryTarget="html">
+    <bodydiv outputclass="bd-example">
       <fig frame="all">
         <title>All Borders</title>
         <codeblock>frame="all"</codeblock>

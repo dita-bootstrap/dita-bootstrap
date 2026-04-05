@@ -27,7 +27,7 @@
         >auto</codeph>.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div color="primary" margin="0" padding="2">Margin 0</div>
       <div color="secondary" margin="1" padding="2">Margin 1</div>
       <div color="success" margin="2" padding="2">Margin 2</div>
@@ -66,21 +66,21 @@
         >padding</xmlatt> attribute controls the internal spacing of an element, supporting values from 0 to 5.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div color="primary" padding="0">Padding 0</div>
       <div color="secondary" padding="1" margin="1"><div
-          outputclass="w-100 bg-secondary-subtle text-dark"
+          width="100" outputclass="bg-secondary-subtle text-dark"
         >Padding 1</div></div>
       <div color="success" padding="2" margin="1"><div
-          outputclass="w-100 bg-success-subtle text-dark"
+          width="100" outputclass="bg-success-subtle text-dark"
         >Padding 2</div></div>
       <div color="danger" padding="3" margin="1"><div
-          outputclass="w-100 bg-danger-subtle text-dark"
+          width="100" outputclass="bg-danger-subtle text-dark"
         >Padding 3</div></div>
       <div color="warning" padding="4" margin="1"><div
-          outputclass="w-100 bg-warning-subtle text-dark"
+          width="100" outputclass="bg-warning-subtle text-dark"
         >Padding 4</div></div>
-      <div color="info" padding="5" margin="1"><div outputclass="w-100 bg-info-subtle text-dark">Padding 5</div></div>
+      <div color="info" padding="5" margin="1"><div width="100" outputclass="bg-info-subtle text-dark">Padding 5</div></div>
     </bodydiv>
 
     <tabbed-dialog style="pills" margin="t3">
@@ -119,14 +119,14 @@
       <p>Multiple values can be specified as a space-separated list.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div color="primary" margin="t5 b0">Margin Top 5, Bottom 0</div>
       <div color="secondary" margin="x3">Margin Horizontal 3</div>
       <div color="success" padding="y5"><div
-          outputclass="w-100 bg-success-subtle text-dark"
+          width="100" outputclass="bg-success-subtle text-dark"
         >Padding Vertical 5</div></div>
       <div color="danger" padding="s3 e1"><div
-          outputclass="w-100 bg-danger-subtle text-dark"
+          width="100" outputclass="bg-danger-subtle text-dark"
         >Padding Start 3, End 1</div></div>
     </bodydiv>
 

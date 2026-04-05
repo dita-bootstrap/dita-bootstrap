@@ -31,7 +31,7 @@
           <codeph>max-width: 100%;</codeph> and <codeph>height: auto;</codeph> to the image so that it scales with the
         parent element.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <image scalefit="yes" scope="external" href="https://picsum.photos/1200/600?a"/>
     </bodydiv>
         <codeblock>&lt;image scalefit="yes" href="..." /&gt;</codeblock>
@@ -42,7 +42,7 @@
           utilities</xref>, you can use the specialized <xmlelement>thumbnail</xmlelement> element to give an image
         a rounded 1px border appearance.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <thumbnail scope="external" href="https://picsum.photos/200/200?a"/>
     </bodydiv>
     <tabbed-dialog style="pills" margin="t3">
@@ -61,7 +61,7 @@
         and <xmlatt>outputclass="d-dark"</xmlatt> attributes on <xmlelement>image</xmlelement> elements
         to display different images when in <xref href="./dark-mode.dita">dark mode</xref>.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <fig>
         <thumbnail outputclass="d-auto" scope="external" href="https://picsum.photos/id/730/300/200"/>
         <thumbnail
@@ -119,9 +119,9 @@
       different media. The <xmlatt>media</xmlatt> attribute defines the media query and/or
       <xmlatt>type</xmlatt> the image MIME type. The final <xmlelement>image</xmlelement> is the default.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p>Change the width of the browser to view different images:</p>
-      <picture deliveryTarget="html">
+      <picture>
         <image media="min-width: 700px" scope="external" href="https://picsum.photos/id/1/800/400"/>
         <image media="min-width: 450px" scope="external" href="https://picsum.photos/id/4/400/200"/>
         <image type="image/jpeg" scope="external" href="https://picsum.photos/id/5/200/200.jpg"/>
@@ -132,7 +132,7 @@
     <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
-        <codeblock>&lt;picture deliveryTarget="html"&gt;
+        <codeblock>&lt;picture&gt;
   &lt;image media="min-width: 700px" href="..."/&gt;
   &lt;image media="min-width: 450px" href="..."/&gt;
   &lt;image type="image/jpeg" href="..."/&gt;
@@ -142,7 +142,7 @@
       </section>
       <section>
         <title><xmlatt>outputclass</xmlatt></title>
-        <codeblock>&lt;div outputclass="d-picture" deliveryTarget="html"&gt;
+        <codeblock>&lt;div outputclass="d-picture"&gt;
   &lt;image otherprops="media(min-width: 700px)" href="..."/&gt;
   &lt;image otherprops="media(min-width: 450px)" href="..."/&gt;
   &lt;image otherprops="type(image/jpeg)" href="..."/&gt;

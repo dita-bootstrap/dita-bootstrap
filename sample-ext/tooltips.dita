@@ -43,12 +43,12 @@
       </ul>
     </section>
 
-    <section deliveryTarget="html">
+    <section>
       <title>Examples</title>
       <p>Hover over the links below to see tooltips:</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p>Placeholder text to demonstrate some
         <tooltip> inline links <desc>Default tooltip</desc></tooltip> with tooltips. This is
         now just filler, no killer. Content placed here just to mimic the presence of
@@ -65,7 +65,7 @@
       >output-class</xmlatt> or taken from the attribute.</p>
     <p>Hover over the buttons below to see the four tooltips directions: <codeph>top</codeph>, <codeph>right</codeph>,
         <codeph>bottom</codeph>, and <codeph>left</codeph>. Directions are mirrored when using Bootstrap in RTL.</p>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <tooltip outputclass="btn-secondary" position="top">
         <desc>Tooltip on top</desc> Tooltip on top </tooltip>
       <tooltip outputclass="btn-secondary" position="right">
@@ -145,7 +145,7 @@
     <codeblock outputclass="language-css">.custom-tooltip {
   --bs-tooltip-bg: var(--bs-primary);
 }</codeblock>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <tooltip outputclass="btn-secondary">
         <data name="class">custom-tooltip</data>
         <desc>This top tooltip is themed via CSS variables.</desc>

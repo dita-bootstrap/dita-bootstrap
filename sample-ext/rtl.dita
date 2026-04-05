@@ -43,7 +43,7 @@
       <p>Additionally, within any <xmlelement>topic</xmlelement>, setting the <xmlatt>dir</xmlatt> attribute on any DITA
         element thereafter will cause the layout to be recalculated for the enclosed block only.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <grid-row dir="rtl">
         <grid-col>
           <card xml:lang="ar">

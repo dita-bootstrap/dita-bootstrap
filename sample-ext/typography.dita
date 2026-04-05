@@ -29,7 +29,7 @@
           <xmlatt>outputclass="h1"</xmlatt> through <xmlatt>outputclass="h6"</xmlatt> are also available, for when you
         want to match the font styling of a heading but cannot use the associated HTML element.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p outputclass="h1">h1. Bootstrap heading</p>
       <p outputclass="h2">h2. Bootstrap heading</p>
       <p outputclass="h3">h3. Bootstrap heading</p>
@@ -60,7 +60,7 @@
       <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a
         heading to stand out, consider using a display heading — a larger, slightly more opinionated heading style.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p outputclass="display-1">Display 1</p>
       <p outputclass="display-2">Display 2</p>
       <p outputclass="display-3">Display 3</p>
@@ -140,7 +140,7 @@
       <p>For quoting blocks of content from another source within your document, use the DITA
           <xmlelement>lq</xmlelement> element, it is styled automatically.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <lq>
         <p>A well-known quote, contained in a blockquote element.</p>
       </lq>
@@ -156,7 +156,7 @@
           <xmlelement>fig</xmlelement>. Be sure to wrap the name of the source work in the <xmlelement>cite</xmlelement>
         as well.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <fig>
         <title>Someone famous in <cite>Source Title</cite></title>
         <lq>
@@ -175,7 +175,7 @@
       <p>Use text utilities such as <xmlatt>outputclass="text-center"</xmlatt> as needed to change the alignment of your
         blockquote.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <fig outputclass="text-center">
         <title>Someone famous in <cite>Source Title</cite></title>
         <lq>
@@ -189,7 +189,7 @@
     &lt;p&gt;A well-known quote, contained in a blockquote element.&lt;/p&gt;
   &lt;/lq&gt;
 &lt;/fig&gt;</codeblock>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <fig outputclass="text-end">
         <title>Someone famous in <cite>Source Title</cite></title>
         <lq>
@@ -204,14 +204,16 @@
   &lt;/lq&gt;
 &lt;/fig&gt;</codeblock>
 
-    <div outputclass="h2">Lists</div>
+    <section>
+      <title outputclass="h2">Lists</title>
+    </section>
     <section>
       <title outputclass="h3">Unstyled</title>
       <p>Remove the default list-style and left margin on list items (immediate children only). This only applies to
         immediate children list items, meaning you will need to add the <xmlatt>outputclass="list-unstyled"</xmlatt> for
         any nested lists as well.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <ul outputclass="list-unstyled">
         <li>This is a list.</li>
         <li>It appears completely unstyled.</li>
@@ -247,7 +249,7 @@
         <xmlatt>outputclass="list-inline"</xmlatt> attribute.
       </p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <ul outputclass="list-inline">
         <li>This is a list item.</li>
         <li>And another one.</li>
@@ -264,7 +266,7 @@
       <p>Terms and descriptions align horizontally using Bootstrap’s grid system of predefined classes. For longer
         terms, text is truncated with an ellipsis.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <dl>
         <dlentry>
           <dt>Description lists</dt>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<!DOCTYPE topic PUBLIC "-//Infotexture//DTD DITA Bootstrap Topic//EN" "bootstrap-topic.dtd">
 <!--
   Within the sample documentation, where necessary, the texts describing the usage of each component have been copied
   directly from the official Bootstrap 5.3 documentation (found at https://getbootstrap.com/docs/5.3), however DITA

@@ -36,7 +36,7 @@
       <p>Use a <xmlatt>style</xmlatt> attribute and alter the CSS font-size and color to change the icon
         appearance.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p>
         <icon outputclass="bi-alarm"/>
         <icon outputclass="bi-alarm" style="font-size: 2rem; color: cornflowerblue;"/>
@@ -55,7 +55,7 @@
         </section>
       </tabbed-dialog>
   <p>Icons placed within an <xmlelement>xref</xmlelement> element are colorized appropriately:</p>
-  <bodydiv border="yes" padding="3" deliveryTarget="html">
+  <bodydiv border="yes" padding="3">
     <p>
       <xref href="#" outputclass="link-primary">
         <icon outputclass="bi-link"/> Primary link
@@ -165,7 +165,7 @@
         </section>
       </tabbed-dialog>
     <p>Icons can also be placed within buttons as shown:</p>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <button outputclass="btn-floating m-1" href="#"><icon outputclass="bi-arrow-down-square-fill"/></button>
       <button outputclass="btn-floating m-1" href="#"><icon outputclass="bi-chat-left-quote-fill"/></button>
       <button outputclass="btn-floating m-1" href="#"><icon outputclass="bi-speedometer"/></button>

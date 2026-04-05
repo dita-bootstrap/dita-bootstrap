@@ -23,7 +23,7 @@
         >color</xmlatt> attribute provides a semantic way to apply standard Bootstrap color themes.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div color="primary">.text-bg-primary</div>
       <div color="secondary">.text-bg-secondary</div>
       <div color="success">.text-bg-success</div>
@@ -65,7 +65,7 @@
       >Decoration attributes can be applied to many base DITA elements to add background color and contrasting text.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <section color="primary" margin="t2">
         <title>Section Decoration</title>
         <p>This section has a primary color background.</p>
@@ -224,7 +224,7 @@
       <p>Many specialized components also support the <xmlatt>color</xmlatt> attribute for consistent theming.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <card color="success" width="50" margin="t2">
         <title>Card Title</title>
         <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
@@ -308,11 +308,42 @@
     </tabbed-dialog>
 
     <section>
+      <title>Alerts</title>
+      <p>Alerts provide contextual feedback messages for typical user actions. In PDF output, they use a subtle background with high-contrast theme-colored text and borders.</p>
+    </section>
+
+    <bodydiv border="yes" padding="3">
+      <alert color="primary">A simple primary alert—check it out!</alert>
+      <alert color="secondary">A simple secondary alert—check it out!</alert>
+      <alert color="success">A simple success alert—check it out!</alert>
+      <alert color="danger">A simple danger alert—check it out!</alert>
+      <alert color="warning">A simple warning alert—check it out!</alert>
+      <alert color="info">A simple info alert—check it out!</alert>
+    </bodydiv>
+
+    <tabbed-dialog style="pills" margin="t3">
+      <section>
+        <title>Specialization</title>
+        <codeblock>&lt;alert color="primary"&gt;A simple primary alert—check it out!&lt;/alert&gt;
+&lt;alert color="secondary"&gt;A simple secondary alert—check it out!&lt;/alert&gt;
+&lt;alert color="success"&gt;A simple success alert—check it out!&lt;/alert&gt;
+&lt;alert color="danger"&gt;A simple danger alert—check it out!&lt;/alert&gt;</codeblock>
+      </section>
+      <section>
+        <title><xmlatt>outputclass</xmlatt></title>
+        <codeblock>&lt;div outputclass="alert alert-primary"&gt;A simple primary alert—check it out!&lt;/div&gt;
+&lt;div outputclass="alert alert-secondary"&gt;A simple secondary alert—check it out!&lt;/div&gt;
+&lt;div outputclass="alert alert-success"&gt;A simple success alert—check it out!&lt;/div&gt;
+&lt;div outputclass="alert alert-danger"&gt;A simple danger alert—check it out!&lt;/div&gt;</codeblock>
+      </section>
+    </tabbed-dialog>
+
+    <section>
       <title>Text Color</title>
       <p>For text-only colorization, the <xmlatt>outputclass</xmlatt> attribute remains the primary method.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <p outputclass="text-primary">.text-primary</p>
       <p outputclass="text-secondary">.text-secondary</p>
       <p outputclass="text-success">.text-success</p>

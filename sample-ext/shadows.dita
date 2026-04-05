@@ -26,7 +26,7 @@
         automatically added to prevent the shadow from being clipped by the parent container.</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <div shadow="none" margin="3" padding="3" color="light">No shadow</div>
       <div shadow="sm" margin="3" padding="3" color="light">Small shadow</div>
       <div shadow="yes" margin="3" padding="3" color="light">Regular shadow</div>
@@ -55,7 +55,7 @@
       <p>Shadows can be applied to complex elements as follow:</p>
     </section>
 
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <card shadow="lg" margin="3" color="light">
         <title>Shadowed Card</title>
         <p>This card has a large shadow.</p>

@@ -32,7 +32,7 @@
         comes together. The <xmlelement>grid-col</xmlelement> element supports <xmlatt>breakpoint</xmlatt> and
           <xmlatt>colspan</xmlatt> attributes to define the column width at different screen sizes.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <grid-row>
         <grid-col breakpoint="sm" colspan="3">
           <p>One of three columns</p>
@@ -81,7 +81,7 @@
           <codeph>xxl</codeph>. Add any number of unit-less classes for each breakpoint you need and every column will
         be the same width.</p>
     </section>
-    <bodydiv border="yes" padding="3" deliveryTarget="html">
+    <bodydiv border="yes" padding="3">
       <grid-row>
         <grid-col>
           <p>One of two columns</p>
