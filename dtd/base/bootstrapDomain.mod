@@ -126,7 +126,7 @@
 <!ATTLIST collapse %collapse.attributes;>
 
 <!ENTITY % icon.content "(%ph.cnt;)*">
-<!ENTITY % icon.attributes "outputclass CDATA 'icon' otherprops CDATA #IMPLIED style CDATA #IMPLIED %univ-atts;">
+<!ENTITY % icon.attributes "outputclass CDATA 'icon' margin CDATA #IMPLIED padding CDATA #IMPLIED otherprops CDATA #IMPLIED style CDATA #IMPLIED %univ-atts;">
 <!ELEMENT icon %icon.content;>
 <!ATTLIST icon %icon.attributes;>
 

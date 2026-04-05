@@ -105,7 +105,7 @@
     </section>
     <bodydiv border="yes" padding="3" deliveryTarget="html">
       <alert color="success">
-        <title><i outputclass="bi bi-emoji-smile pe-2"/>Well done!</title>
+        <title><icon outputclass="bi-emoji-smile" padding="e2"/>Well done!</title>
         <p>Aww yeah, you successfully read this important alert message. This example text with a
           <xref href="#">link</xref> is going to run a bit longer so that you can see how spacing within an alert works
           with this kind of content.</p>
@@ -116,7 +116,7 @@
       <section>
         <title>Specialization</title>
         <codeblock>&lt;alert color="success"&gt;
-  &lt;title&gt;&lt;i outputclass="bi bi-emoji-smile pe-2"/&gt;Well done!&lt;/title&gt;
+  &lt;title&gt;&lt;icon outputclass="bi-emoji-smile" padding="e2"/&gt;Well done!&lt;/title&gt;
   &lt;p&gt;
     Aww yeah, you successfully read this important alert message. This example text with a
     &lt;xref href="#"&gt;link&lt;/xref&gt; is going to run a bit longer so that you can see
