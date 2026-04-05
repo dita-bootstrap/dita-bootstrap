@@ -77,7 +77,7 @@
      <parmname>--nav-toc</parmname>=<option>&lt;sidebar-style&gt;</option></codeblock>
     </section>
     <bodydiv border="yes" padding="3">
-      <carousel>
+      <carousel cols="1">
         <carousel-item id="full">
           <fig>
             <title><option>full</option> – DITA-OT default unstyled full ToC</title>

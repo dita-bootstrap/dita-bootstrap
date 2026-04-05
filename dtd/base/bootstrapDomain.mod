@@ -102,7 +102,7 @@
 <!ATTLIST card-footer %card-footer.attributes;>
 
 <!ENTITY % carousel.content "(%li; | %carousel-item;)*">
-<!ENTITY % carousel.attributes "outputclass CDATA #IMPLIED indicators (yes | no) #IMPLIED interval CDATA #IMPLIED touch (yes | no) #IMPLIED autoplay (yes | no) #IMPLIED fade (yes | no) #IMPLIED %univ-atts;">
+<!ENTITY % carousel.attributes "outputclass CDATA #IMPLIED indicators (yes | no) #IMPLIED interval CDATA #IMPLIED touch (yes | no) #IMPLIED autoplay (yes | no) #IMPLIED fade (yes | no) #IMPLIED cols (1 | 2 | 3 | 4) #IMPLIED %univ-atts;">
 <!ELEMENT carousel %carousel.content;>
 <!ATTLIST carousel %carousel.attributes;
   color (primary | secondary | success | danger | warning | info | light | dark) #IMPLIED
