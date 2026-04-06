@@ -43,7 +43,7 @@
         a rounded 1px border appearance.</p>
     </section>
     <bodydiv border="yes" padding="3">
-      <thumbnail scope="external" href="https://picsum.photos/200/200?a"/>
+      <thumbnail scope="external" href="https://picsum.photos/100/100?a"/>
     </bodydiv>
     <tabbed-dialog style="pills" margin="t3">
       <section>

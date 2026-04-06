@@ -226,7 +226,7 @@
 
     <bodydiv border="yes" padding="3">
 
-      <thumbnail scope="external" href="https://picsum.photos/200/200?a" color="warning"/>
+      <thumbnail scope="external" href="https://picsum.photos/100/100?a" color="warning"/>
       <card color="success" width="50" margin="t2">
         <title>Card Title</title>
         <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
