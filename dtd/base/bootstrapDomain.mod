@@ -224,7 +224,9 @@
                                 outputclass CDATA 'img-thumbnail'
                                 %univ-atts;">
 <!ELEMENT thumbnail %thumbnail.content;>
-<!ATTLIST thumbnail %thumbnail.attributes;>
+<!ATTLIST thumbnail %thumbnail.attributes;
+                                color (primary | secondary | success | danger | warning | info | light | dark) #IMPLIED
+>
 
 <!-- ============================================================= -->
 <!--                    SPECIALIZATION ATTRIBUTE DECLARATIONS      -->

@@ -225,6 +225,8 @@
     </section>
 
     <bodydiv border="yes" padding="3">
+
+      <thumbnail scope="external" href="https://picsum.photos/200/200?a" color="warning"/>
       <card color="success" width="50" margin="t2">
         <title>Card Title</title>
         <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
@@ -258,13 +260,15 @@
     <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
-        <codeblock>&lt;card color="success" width="50"&gt;
+        <codeblock>&lt;thumbnail href="..." color="warning"/&gt;
+
+&lt;card color="success" width="50"&gt;
   &lt;title&gt;Card Title&lt;/title&gt;
   &lt;p&gt;Some quick example text to build on the card title and make up the bulk of the card’s content.&lt;/p&gt;
 &lt;/card&gt;
 
 &lt;accordion color="info"&gt;
-  &lt;accordion-item id="accordion_color_1" open="yes"&gt;
+  &lt;accordion-item open="yes"&gt;
     &lt;title&gt;Accordion Item #1&lt;/title&gt;
     &lt;p&gt;This is the first item's accordion body.&lt;/p&gt;
   &lt;/accordion-item&gt;
@@ -289,7 +293,9 @@
       </section>
       <section>
         <title><xmlatt>outputclass</xmlatt></title>
-        <codeblock>&lt;section outputclass="card text-bg-success w-50"&gt;
+        <codeblock>&lt;img src="..." class="img-thumbnail bg-warning"/&gt;
+
+&lt;section outputclass="card text-bg-success w-50"&gt;
   ...
 &lt;/section&gt;
 
@@ -309,7 +315,7 @@
 
     <section>
       <title>Alerts</title>
-      <p>Alerts provide contextual feedback messages for typical user actions. In PDF output, they use a subtle background with high-contrast theme-colored text and borders.</p>
+      <p>Alerts provide contextual feedback messages for typical user actions.</p>
     </section>
 
     <bodydiv border="yes" padding="3">

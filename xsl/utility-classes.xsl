@@ -355,6 +355,9 @@
   <!-- Add Bootstrap CSS class img-thumbnail to specialized thumbnails -->
   <xsl:template match="*[contains(@class, ' bootstrap-d/thumbnail ')]" mode="bootstrap-class" priority="10">
     <xsl:text>img-thumbnail </xsl:text>
+    <xsl:if test="@color">
+       <xsl:value-of select="concat('border-', @color, ' bg-', @color, '-subtle ')"/>
+    </xsl:if>
     <xsl:next-match/>
   </xsl:template>
 
