@@ -90,10 +90,7 @@
             </grid-col>
             <grid-col colspan="4">
               <card width="100">
-                <image
-                  scope="external"
-                  href="https://bootswatch.com/cerulean/thumbnail.png"
-                />
+                <image scope="external" href="https://bootswatch.com/cerulean/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -295,10 +292,7 @@
           <grid-row>
             <grid-col colspan="4">
               <card width="100">
-                <image
-                  scope="external"
-                  href="https://bootswatch.com/sandstone/thumbnail.png"
-                />
+                <image scope="external" href="https://bootswatch.com/sandstone/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -367,10 +361,7 @@
             </grid-col>
             <grid-col colspan="4">
               <card width="100">
-                <image
-                  scope="external"
-                  href="https://bootswatch.com/spacelab/thumbnail.png"
-                />
+                <image scope="external" href="https://bootswatch.com/spacelab/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -387,10 +378,7 @@
           <grid-row>
             <grid-col colspan="4">
               <card width="100">
-                <image
-                  scope="external"
-                  href="https://bootswatch.com/superhero/thumbnail.png"
-                />
+                <image scope="external" href="https://bootswatch.com/superhero/thumbnail.png"/>
                 <p outputclass="text-center">
                   <xref
                     outputclass="link stretched-link link-underline link-underline-opacity-0"
@@ -492,7 +480,7 @@
         (blue) background color for the
         <xref href="https://getbootstrap.com/docs/5.3/examples/navbars/" format="html" scope="external">navbar
           component</xref>, and provides a theme menu to toggle <xref
-        href="./dark-mode.dita"
+          href="./dark-mode.dita"
         >dark mode</xref>.  Bootstrap itself offers additional <xref
           href="https://getbootstrap.com/docs/5.3/examples/headers/"
           format="html"
@@ -993,7 +981,6 @@
         <xref href="./tooltips.dita" format="dita">tooltips</xref> and the <xref
           href="./dark-mode.dita"
           format="dita"
-         
         >dark mode toggler</xref> are enabled by default, but for performance reasons they can be disabled by setting
         the following command line parameters to <option>no</option>:</p>
       <parml otherprops="cols(4)">
