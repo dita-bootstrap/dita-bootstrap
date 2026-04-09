@@ -727,9 +727,18 @@
                                contains(@class, ' bootstrap-d/carousel ') or
                                contains(@class, ' bootstrap-d/button '))"
         >
-             <xsl:text>text-bg-</xsl:text>
-             <xsl:value-of select="@color"/>
-             <xsl:text> </xsl:text>
+             <xsl:choose>
+                <xsl:when test="contains(@class, ' topic/xref ')">
+                   <xsl:text>link-</xsl:text>
+                   <xsl:value-of select="@color"/>
+                   <xsl:text> </xsl:text>
+                </xsl:when>
+                <xsl:otherwise>
+                   <xsl:text>text-bg-</xsl:text>
+                   <xsl:value-of select="@color"/>
+                   <xsl:text> </xsl:text>
+                </xsl:otherwise>
+             </xsl:choose>
           </xsl:when>
        </xsl:choose>
     </xsl:if>

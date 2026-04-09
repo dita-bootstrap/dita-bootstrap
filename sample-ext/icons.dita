@@ -57,80 +57,72 @@
   <p>Icons placed within an <xmlelement>xref</xmlelement> element are colorized appropriately:</p>
   <bodydiv border="yes" padding="3">
     <p>
-      <xref href="#" outputclass="link-primary">
+      <xref href="#" color="primary">
         <icon outputclass="bi-link"/> Primary link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-secondary">
+      <xref href="#" color="secondary">
         <icon outputclass="bi-link"/> Secondary link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-success">
+      <xref href="#" color="success">
         <icon outputclass="bi-link"/> Success link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-danger">
+      <xref href="#" color="danger">
         <icon outputclass="bi-link"/> Danger link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-warning">
+      <xref href="#" color="warning">
         <icon outputclass="bi-link"/> Warning link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-info">
+      <xref href="#" color="info">
         <icon outputclass="bi-link"/> Info link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-light">
+      <xref href="#" color="light">
         <icon outputclass="bi-link"/> Light link
       </xref>
     </p>
     <p>
-      <xref href="#" outputclass="link-dark">
+      <xref href="#" color="dark">
         <icon outputclass="bi-link"/> Dark link
-      </xref>
-    </p>
-    <p>
-      <xref href="#" outputclass="link-body-emphasis">
-        <icon outputclass="bi-link"/> Emphasis link
       </xref>
     </p>
   </bodydiv>
     <tabbed-dialog style="pills" margin="t3">
       <section>
         <title>Specialization</title>
-          <codeblock>&lt;xref outputclass="link-primary" href="#"&gt;
+          <codeblock>&lt;xref color="primary" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Primary link
 &lt;/xref&gt;
-&lt;xref outputclass="link-secondary" href="#"&gt;
+&lt;xref color="secondary" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Secondary link
 &lt;/xref&gt;
-&lt;xref outputclass="link-success" href="#"&gt;
+&lt;xref color="success" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Success link
 &lt;/xref&gt;
-&lt;xref outputclass="link-danger" href="#"&gt;
+&lt;xref color="danger" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Danger link
 &lt;/xref&gt;
-&lt;xref outputclass="link-warning" href="#"&gt;
+&lt;xref color="warning" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Warning link
 &lt;/xref&gt;
-&lt;xref outputclass="link-info" href="#"&gt;
+&lt;xref color="info" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Info link
 &lt;/xref&gt;
-&lt;xref outputclass="link-light" href="#"&gt;
+&lt;xref color="light" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Light link
 &lt;/xref&gt;
-&lt;xref outputclass="link-dark" href="#"&gt;
+&lt;xref color="dark" href="#"&gt;
   &lt;icon outputclass="bi-link"/&gt; Dark link
-&lt;/xref&gt;
-&lt;xref outputclass="link-body-emphasis" href="#"&gt;
-  &lt;icon outputclass="bi-link"/&gt; Emphasis link
 &lt;/xref&gt;</codeblock>
         </section>
          <section>
