@@ -849,7 +849,7 @@
     </xsl:if>
     <xsl:if test="@shadow">
        <xsl:choose>
-          <xsl:when test="@shadow='yes'">
+          <xsl:when test="@shadow='yes' or @shadow='md'">
              <xsl:text>shadow </xsl:text>
           </xsl:when>
           <xsl:when test="@shadow='no' or @shadow='none'">

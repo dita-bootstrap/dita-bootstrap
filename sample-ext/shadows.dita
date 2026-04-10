@@ -60,6 +60,7 @@
         <title>Shadowed Card</title>
         <p>This card has a large shadow.</p>
       </card>
+      <alert shadow="sm" color="light">Alert with small shadow</alert>
     </bodydiv>
 
     <tabbed-dialog style="pills" margin="t3">
@@ -68,7 +69,9 @@
         <codeblock>&lt;card shadow="lg" margin="3" color="light"&gt;
   &lt;title&gt;Shadowed Card&lt;/title&gt;
   &lt;p&gt;This card has a large shadow.&lt;/p&gt;
-&lt;/card&gt;</codeblock>
+&lt;/card&gt;
+
+&lt;alert shadow="sm" color="light"&gt;Alert with small shadow&lt;/alert&gt;</codeblock>
       </section>
       <section>
         <title><xmlatt>outputclass</xmlatt></title>
@@ -77,7 +80,9 @@
     &lt;div outputclass="card-title h5"&gt;Shadowed Card&lt;/div&gt;
     &lt;p outputclass="card-text"&gt;This card has a large shadow.&lt;/p&gt;
   &lt;/div&gt;
-&lt;/section&gt;</codeblock>
+&lt;/section&gt;
+
+&lt;div outputclass="alert alert-light shadow-sm"&gt;Alert with small shadow&lt;/div&gt;</codeblock>
       </section>
     </tabbed-dialog>
   </body>

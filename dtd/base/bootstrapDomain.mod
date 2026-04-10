@@ -16,7 +16,15 @@
    color (primary | secondary | success | danger | warning | info | light | dark) #REQUIRED
    %univ-atts;">
 <!ELEMENT alert %alert.content;>
-<!ATTLIST alert %alert.attributes;>
+<!ATTLIST alert %alert.attributes;
+  border (yes | no | 1 | 2 | 3 | 4 | 5) #IMPLIED
+  bordercolor (primary | secondary | success | danger | warning | info | light | dark | white | black | primary-subtle | secondary-subtle | success-subtle | danger-subtle | warning-subtle | info-subtle | light-subtle | dark-subtle) #IMPLIED
+  rounded (yes | no | 0 | 1 | 2 | 3 | 4 | 5 | circle | pill) #IMPLIED
+  margin CDATA #IMPLIED
+  padding CDATA #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
+  width (25 | 50 | 75 | 100 | auto) #IMPLIED
+>
 
 <!ENTITY % accordion.content "((%accordion-item;)+)">
 <!ENTITY % accordion.attributes "outputclass CDATA 'accordion' flush (yes | no) 'no' open (yes | no) 'no' %univ-atts;">
@@ -28,7 +36,7 @@
   bordercolor (primary | secondary | success | danger | warning | info | light | dark | white | black | primary-subtle | secondary-subtle | success-subtle | danger-subtle | warning-subtle | info-subtle | light-subtle | dark-subtle) #IMPLIED
   margin CDATA #IMPLIED
   padding CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
 >
 
@@ -64,7 +72,7 @@
 <!ELEMENT button-group %button-group.content;>
 <!ATTLIST button-group %button-group.attributes;
   margin CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
 >
 
 <!ENTITY % button-toolbar.content "(%bodydiv.cnt; | %bodydiv;)*">
@@ -74,7 +82,7 @@
 <!ELEMENT button-toolbar %button-toolbar.content;>
 <!ATTLIST button-toolbar %button-toolbar.attributes;
   margin CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
 >
 
 <!ENTITY % card.content "(%section.cnt;)*">
@@ -87,7 +95,7 @@
   rounded (yes | no | 0 | 1 | 2 | 3 | 4 | 5 | circle | pill) #IMPLIED
   bordercolor (primary | secondary | success | danger | warning | info | light | dark | white | black | primary-subtle | secondary-subtle | success-subtle | danger-subtle | warning-subtle | info-subtle | light-subtle | dark-subtle) #IMPLIED
   margin CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
 >
 
@@ -111,7 +119,7 @@
   bordercolor (primary | secondary | success | danger | warning | info | light | dark | white | black | primary-subtle | secondary-subtle | success-subtle | danger-subtle | warning-subtle | info-subtle | light-subtle | dark-subtle) #IMPLIED
   margin CDATA #IMPLIED
   padding CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
 >
 
@@ -148,7 +156,7 @@
 <!ATTLIST list-group %list-group.attributes;
   color (primary | secondary | success | danger | warning | info | light | dark) #IMPLIED
   margin CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
 >
 
@@ -158,7 +166,7 @@
 <!ATTLIST offcanvas %offcanvas.attributes;
   color (primary | secondary | success | danger | warning | info | light | dark) #IMPLIED
   margin CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
 >
 
@@ -167,7 +175,7 @@
 <!ELEMENT pagination %pagination.content;>
 <!ATTLIST pagination %pagination.attributes;
   margin CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
 >
 
 <!ENTITY % popover.content "(%ph.cnt; | %desc;)*">
@@ -189,7 +197,7 @@
   bordercolor (primary | secondary | success | danger | warning | info | light | dark | white | black | primary-subtle | secondary-subtle | success-subtle | danger-subtle | warning-subtle | info-subtle | light-subtle | dark-subtle) #IMPLIED
   margin CDATA #IMPLIED
   padding CDATA #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
 >
 

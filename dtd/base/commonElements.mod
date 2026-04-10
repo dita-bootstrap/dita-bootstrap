@@ -16,7 +16,7 @@
    rounded (yes | no | 0 | 1 | 2 | 3 | 4 | 5 | circle | pill) #IMPLIED
    margin CDATA #IMPLIED
    padding CDATA #IMPLIED
-   shadow (yes | no | sm | lg | none) #IMPLIED
+   shadow (yes | no | sm | md | lg | none) #IMPLIED
    width (25 | 50 | 75 | 100 | auto) #IMPLIED"
 >
 
@@ -70,7 +70,7 @@
   margin CDATA #IMPLIED
   padding CDATA #IMPLIED
   width (25 | 50 | 75 | 100 | auto) #IMPLIED
-  shadow (yes | no | sm | lg | none) #IMPLIED
+  shadow (yes | no | sm | md | lg | none) #IMPLIED
   icon CDATA #IMPLIED
   style CDATA #IMPLIED
 >
