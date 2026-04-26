@@ -44,7 +44,7 @@
     "bootswatch": "^5.3.8",
     "lefthook": "^2.1.6",
     "prettier": "3.8.3",
-    "stylelint": "^16.25.0",
+    "stylelint": "^17.9.0",
     "stylelint-config-twbs-bootstrap": "^16.1.0"
   }
 }
