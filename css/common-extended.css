@@ -381,19 +381,16 @@ article [tabindex='0'] {
 :root {
   --prism-maintext: var(--bs-secondary-text-emphasis, #000);
   --prism-background: var(--bs-secondary-bg-subtle, #f5f2f0);
-  --prism-text: var(--bs-secondary-text, #999);
+  --prism-text: var(--bs-gray-500, #999);
   --prism-keywords: var(--bs-teal, #07a);
   --prism-punctuation: var(--bs-gray, #999);
   --prism-functions: var(--bs-orange, #f08d49);
-  --prism-strings:  var(--bs-green, #690);
-  --prism-namespace:  var(--bs-pink, #e2777a);
+  --prism-strings: var(--bs-green, #690);
+  --prism-namespace: var(--bs-pink, #e2777a);
   --prism-names: var(--bs-blue, #6196cc);
-  --prism-symbol: var(--bs-pink, #DD4A68);
+  --prism-symbol: var(--bs-red, #DD4A68);
   --prism-url: var(--bs-cyan, #67cdcc);
 }
-
-
-
 /**
  * Use css variables in themes with a fallback to the prism.js default theme 
  * Based on https://github.com/PrismJS/prism/issues/2603
@@ -404,7 +401,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: var(--prism-maintext, #ccc);
 	background: none;
-	font-family: var( --bs-font-monospace, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
+	font-family: var(--bs-font-monospace, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace);
 	font-size: 1em;
 	text-align: left;
 	white-space: pre;
@@ -434,7 +431,7 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
 	padding: .1em;
 	border-radius: .3em;
 	white-space: normal;
@@ -447,7 +444,7 @@ pre[class*="language-"].show-line-numbers {
 }
 
 
-pre[class*="language-"].show-line-numbers > code {
+pre[class*="language-"].show-line-numbers>code {
 	position: relative;
 	white-space: inherit;
 }
@@ -457,7 +454,8 @@ pre[class*="language-"].show-line-numbers > code {
 	pointer-events: none;
 	font-size: 100%;
 	left: -3em;
-	width: 2em; /* works for line-numbers below 1000 lines */
+	width: 2em;
+	/* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
 	border-right: 1px solid;
 	border-right-color: var(--prism-text, #999);
@@ -468,7 +466,7 @@ pre[class*="language-"].show-line-numbers > code {
 
 }
 
-span.line-numbers-rows{
+span.line-numbers-rows {
 	display: inline;
 	counter-increment: linenumber;
 }
@@ -493,15 +491,11 @@ span.line-numbers-rows:before {
 	color: var(--prism-punctuation, #ccc);
 }
 
-.token.tag,
+
 .token.attr-name,
 .token.namespace,
 .token.deleted {
 	color: var(--prism-names, #e2777a);
-}
-
-.token.function-name {
-	color: var(--prism-punctuation, #6196cc);
 }
 
 .token.boolean,
@@ -510,6 +504,7 @@ span.line-numbers-rows:before {
 	color: var(--prism-functions, #f08d49);
 }
 
+.token.tag,
 .token.property,
 .token.class-name,
 .token.constant,
@@ -517,6 +512,7 @@ span.line-numbers-rows:before {
 	color: var(--prism-symbol, #f8c555);
 }
 
+.token.function-name,
 .token.selector,
 .token.important,
 .token.atrule,
@@ -543,6 +539,7 @@ span.line-numbers-rows:before {
 .token.bold {
 	font-weight: bold;
 }
+
 .token.italic {
 	font-style: italic;
 }
