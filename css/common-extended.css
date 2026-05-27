@@ -10,6 +10,11 @@
   --dita-violet: var(--bs-purple);
 }
 
+/*!
+ *  This file is part of the DITA Bootstrap plug-in for DITA Open Toolkit.
+ *  See the accompanying LICENSE file for applicable licenses.
+ */
+
 .list-group-item.active,
 .nav-link.active,
 [data-bs-theme='dark'] {
