@@ -1,0 +1,481 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><meta name="description" content="Use border utilities to quickly style the border and border-radius of an element."><meta name="keywords" content="frame"><meta property="og:type" content="website"><meta property="og:url" content="https://dita-bootstrap.github.io/borders.html"><meta property="og:title" content="Borders"><meta property="og:description" content="Use border utilities to quickly style the border and border-radius of an element."><meta property="og:image" content="https://dita-bootstrap.github.io/open-graph.svg"><meta name="twitter:title" content="Borders"><meta name="twitter:description" content="Use border utilities to quickly style the border and border-radius of an element."><meta property="twitter:url" content="https://dita-bootstrap.github.io/borders.html"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://dita-bootstrap.github.io/open-graph.svg"><title>Borders</title><script src="./js/lunr-client.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script language="javascript" src="./js/css-theme-switcher.js"></script><link rel="shortcut icon" href="./favicon/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/commonltr.css">
+<link rel="stylesheet" type="text/css" href="./css/common-extended.css"><link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous"></head><body id="borders" class="d-flex flex-column min-vh-100 language-markup"><div class="visually-hidden-focusable overflow-hidden p-2 bg-body-tertiary"><div class="container-xl"><a class="d-inline-flex m-1 btn btn-outline-primary btn-sm" href="#ariaid-title1">Skip to main content</a><a href="#bs-sidebar-nav" class="d-none d-md-inline-flex m-1 btn btn-outline-primary btn-sm">Skip to docs navigation</a></div></div><header role="banner" class="sticky-top"><nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <!-- Modify -xxl to change container size -->
+  <div class="container-xxl">
+    <!-- This shows the menu on mobile -->
+    <div class="bd-navbar-toggle">
+      <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+    <a class="navbar-brand" href="https://dita-bootstrap.github.io/dita-bootstrap.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+      <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/>
+      <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/>
+    </svg>
+      DITA Bootstrap
+    </a>
+    <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-three-dots"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.dita-ot.org/plugins#!org.dita-bootstrap.html">Plugin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/dita-bootstrap/dita-bootstrap.html/releases">Releases</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/dita-bootstrap/dita-bootstrap.html">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/5.3">Bootstrap Docs</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <!--
+          This is a lunr.js search box
+          It requires JavaScript to function.
+        -->
+        <li class="nav-item d-flex align-items-center">
+          <span class="nav-link pe-2">
+            <i class="bi bi-search"></i>
+          </span>
+          <form class="position-relative me-auto search-box rounded">
+            <input type="search" class="form-control" placeholder="Search…" aria-label="Search for…" dir="auto">
+          </form>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-0 me-1">
+        <!--
+          This is a dark/light color theme toggler.
+          It requires JavaScript to function.
+        -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-color-mode" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <span class="d-light">
+              <i class="bi bi-brightness-high-fill"></i>
+            </span>
+            <span class="d-dark">
+              <i class="bi bi-moon-stars-fill"></i>
+            </span>
+            <span class="d-auto">
+              <i class="bi bi-circle-half"></i>
+            </span>
+            <span class="d-lg-none ms-2">Toggle color mode</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-color-mode" style="--bs-dropdown-min-width: 6rem;" data-bs-popper="static">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                <i class="bi bi-brightness-high-fill"></i>
+                <span class="ms-2">Light</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                <i class="bi bi-moon-stars-fill"></i>
+                <span class="ms-2">Dark</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                <i class="bi bi-circle-half"></i>
+                <span class="ms-2">Auto</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-0 me-1">
+        <!--
+          This is a css bootstrap theme toggler.
+          It requires JavaScript to function.
+        -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-css-theme" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <i class="bi bi-filetype-css"></i>
+            <span class="d-lg-none ms-2">Toggle theme</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end css-themes-list overflow-y-auto" aria-labelledby="bd-css-theme" style="--bs-dropdown-min-width: 6rem;" data-bs-popper="static">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+                Default
+              </button>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/brite/bootstrap.min.css">
+                Brite
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cerulean/bootstrap.min.css">
+                Cerulean
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cosmo/bootstrap.min.css">
+                Cosmo
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cyborg/bootstrap.min.css">
+                Cyborg
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/darkly/bootstrap.min.css">
+                Darkly
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/flatly/bootstrap.min.css">
+                Flatly
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/journal/bootstrap.min.css">
+                Journal
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/litera/bootstrap.min.css">
+                Litera
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/lumen/bootstrap.min.css">
+                Lumen
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/lux/bootstrap.min.css">
+                Lux
+              </button>
+            </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/materia/bootstrap.min.css">
+                Materia
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/minty/bootstrap.min.css">
+                Minty
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/morph/bootstrap.min.css">
+                Morph
+              </button>
+            </li>
+
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css">
+                Pulse
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/quartz/bootstrap.min.css">
+                Quartz
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/sandstone/bootstrap.min.css">
+                Sandstone
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/simplex/bootstrap.min.css">
+                Simplex
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/sketchy/bootstrap.min.css">
+                Sketchy
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/slate/bootstrap.min.css">
+                Slate
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/solar/bootstrap.min.css">
+                Solar
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/spacelab/bootstrap.min.css">
+                SpaceLab
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/superhero/bootstrap.min.css">
+                Superhero
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/united/bootstrap.min.css">
+                United
+              </button>
+            </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/vapor/bootstrap.min.css">
+                Vapor
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/yeti/bootstrap.min.css">
+                Yeti
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/zephyr/bootstrap.min.css">
+                Zephyr
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="bs-container container-xxl bd-gutter mt-3 my-md-4" id="content"><div class="overflow-y-auto bs-sidebar"><div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel" aria-modal="true" role="dialog"><div class="offcanvas-header border-bottom"><h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">DITA Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button></div><div class="offcanvas-body flex-column h-100"><nav class="d-flex flex-align-start flex-column h-100 overflow-y-auto" role="navigation" id="bs-sidebar-nav"><div class="overflow-y-auto"><div class="flex-column bd-links"><ul class="list-unstyled mb-0 py-3 pt-md-1"><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d101378e11"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d101378e11"><i class="me-2 bi-book-half" style="color: var(--bs-indigo)"></i>Getting Started</span></div><div id="menu-collapse-d101378e11" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="index.html">Introduction</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d101378e31"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d101378e31"><i class="me-2 bi-grid-fill" style="color: var(--bs-teal)"></i>Layout</span></div><div id="menu-collapse-d101378e31" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="nav.html">Navigation Menus</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="containers.html">Containers</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="grid.html">Grid System</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="rtl.html">Right-to-Left Languages</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d101378e81"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d101378e81"><i class="me-2 bi-file-earmark-richtext" style="color: var(--bs-gray)"></i>Content</span></div><div id="menu-collapse-d101378e81" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="typography.html">Typography</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="images.html">Images</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="tables.html">Tables</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="figures.html">Figures</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d101378e127"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d101378e127"><i class="me-2 bi-menu-button-wide-fill" style="color: var(--bs-cyan)"></i>Components</span></div><div id="menu-collapse-d101378e127" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="accordion.html">Accordion</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="alerts.html">Alerts</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="badge.html">Badges</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="breadcrumb.html">Breadcrumb</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="buttons.html">Buttons</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="button-group.html">Button group</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="card.html">Cards</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="carousel.html">Carousel</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="collapse.html">Collapse</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="list-group.html">List Group</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="offcanvas.html">Offcanvas</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="pagination.html">Pagination</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="popovers.html">Popovers</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="scrollspy.html">Scrollspy</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="tabs.html">Tabbed Dialogs</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="tooltips.html">Tooltips</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0 active" data-bs-target="#menu-collapse-d101378e297" aria-expanded="true" aria-current="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2 active" data-bs-target="#menu-collapse-d101378e297" aria-expanded="true" aria-current="true"><i class="me-2 bi-braces-asterisk" style="color: var(--bs-pink)"></i>Utilities</span></div><div id="menu-collapse-d101378e297" class="ps-2 collapse show"><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1  active" href="borders.html">Borders</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="color.html">Color</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="shadows.html">Shadows</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="spacing.html">Spacing</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d101378e358"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d101378e358"><i class="me-2 bi-tools" style="color: var(--bs-blue)"></i>Extend</span></div><div id="menu-collapse-d101378e358" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="icons.html"><i class="me-2 bi-images" style=""></i>Icons</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="dark-mode.html"><i class="me-2 bi-moon-stars" style=""></i>Dark Mode</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="extension-points.html"><i class="me-2 bi-wrench-adjustable" style=""></i>Extension Points</a></div></li><li><hr class="m-1"><span class="ps-3 bd-divider d-inline-flex">Additional Plug‑ins</span></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="search-box.html"><i class="me-2 bi-search" style=""></i>Search Box</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="offline.html"><i class="me-2 bi-wifi-off" style=""></i>Offline Mode</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="sass.html"><i class="me-2 bi-filetype-sass" style=""></i>Bootstrap Sass</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="bootstrap-table.html"><i class="me-2 bi-table" style=""></i>Dynamic Tables</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="bootstrap-extension.html"><i class="me-2 bi-bootstrap" style=""></i>Bootstrap Extension</a></div></li></ul></div></li></ul></div></div></nav></div></div></div><main role="main" class="bs-main me-3"><article role="article" class="bs-content" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">Borders</h1>
+  
+  
+  <div class="body language-markup"><p class="shortdesc text-body-secondary lead">Use border utilities to quickly style the border and border-radius of an element.</p>
+
+    <section class="section" id="borders__borders"><h2 class="title h4">Borders</h2>
+      
+      <p class="p">Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.</p>
+    </section>
+    <div class="bodydiv p-3 border">
+      <div class="div p-3">
+        <span class="ph border p-3 border-secondary">&nbsp;border&nbsp;</span>&nbsp;
+        <span class="ph border-top p-3 border-secondary">&nbsp;border-top</span>&nbsp;
+        <span class="ph border-end p-3 border-secondary">&nbsp;border-end</span>&nbsp;
+        <span class="ph border-bottom p-3 border-secondary">&nbsp;border-bottom</span>&nbsp;
+        <span class="ph border-start p-3 border-secondary">&nbsp;border-start</span>
+      </div>
+    </div>
+    <pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border-top<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border-end<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border-bottom<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border-start<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+
+    <section class="section"><h2 class="title h4">Border Specialization</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlatt">@border</code> and <code class="keyword markupname xmlatt">@rounded</code> attributes provide a semantic way to add borders and rounded corners.</p>
+    </section>
+
+    <div class="bodydiv p-3 border">
+      <section class="section p-2 border"><h2 class="title h4">Bordered Section</h2>
+        
+        <p class="p">This section has a border.</p>
+      </section>
+
+      <div class="div m-2 p-2 border rounded">
+        <p class="p">This div has a border and rounded corners.</p>
+      </div>
+
+      <div data-bs-ride="carousel" id="carousel_borders__ol__1" class="ol slide carousel m-2 border rounded w-50"><div class="carousel-inner pb-1">
+        <div class="li carousel-item active"><div class="container mx-0"><div class="row"><div class="col-12"><img class="image d-block w-100" src="https://picsum.photos/600/400?1"></div></div></div></div>
+        <div class="li carousel-item"><div class="container mx-0"><div class="row"><div class="col-12"><img class="image d-block w-100" src="https://picsum.photos/600/400?2"></div></div></div></div>
+      </div><a class="carousel-control-prev" role="button" data-bs-slide="prev" data-bs-target="#carousel_borders__ol__1"><span class="btn btn-primary btn-sm p-0"><span aria-hidden="true" class="carousel-control-prev-icon align-middle"></span></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" role="button" data-bs-slide="next" data-bs-target="#carousel_borders__ol__1"><span class="btn btn-primary btn-sm p-0"><span aria-hidden="true" class="carousel-control-next-icon align-middle"></span></span><span class="visually-hidden">Next</span></a></div>
+    </div>
+
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__4" data-bs-target="#tab_borders__section__4" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__5" data-bs-target="#tab_borders__section__5" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_borders__section__4" aria-labelledby="heading_borders__section__4"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border p-2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>section</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded p-2 m-2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ul</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>carousel border rounded m-2 w-50<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ul</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_borders__section__5" aria-labelledby="heading_borders__section__5"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">padding</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>section</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">padding</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">margin</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">margin</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">width</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>50<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>image</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>image</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+    <section class="section"><h2 class="title h4">Border Styling</h2>
+      
+      <p class="p">The <code class="keyword markupname xmlatt">@border</code> attribute also accepts numeric values 1-5 for width. The <code class="keyword markupname xmlatt">@rounded</code> attribute 
+        supports values 0-5, <code class="ph codeph language-markup">circle</code> and <code class="ph codeph language-markup">pill</code>.
+        The <code class="keyword markupname xmlatt">@bordercolor</code> attribute can be used to set the color of the border.</p>
+    </section>
+
+    <div class="bodydiv p-3 border">
+      <div class="div mb-3">
+        <span class="ph me-2 p-2 border border-1">Width 1</span>
+        <span class="ph me-2 p-2 border border-2">Width 2</span>
+        <span class="ph me-2 p-2 border border-3">Width 3</span>
+        <span class="ph me-2 p-2 border border-4">Width 4</span>
+        <span class="ph me-2 p-2 border border-5">Width 5</span>
+      </div>
+    </div>
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__7" data-bs-target="#tab_borders__section__7" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__8" data-bs-target="#tab_borders__section__8" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_borders__section__7" aria-labelledby="heading_borders__section__7"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 1<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 2<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-3<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 3<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-4<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 4<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 5<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_borders__section__8" aria-labelledby="heading_borders__section__8"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 1<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 2<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>3<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 3<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>4<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 4<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Width 5<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <div class="bodydiv mt-3 p-3 border">
+      <div class="div mb-3">
+        <span class="ph me-2 p-2 border-primary">Primary</span>
+        <span class="ph me-2 p-2 border-primary-subtle">Primary subtle</span>
+        <span class="ph me-2 p-2 border-success">Success</span>
+        <span class="ph me-2 p-2 border-danger">Danger</span>
+      </div>
+    </div>
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__9" data-bs-target="#tab_borders__section__9" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__10" data-bs-target="#tab_borders__section__10" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_borders__section__9" aria-labelledby="heading_borders__section__9"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Primary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-primary-subtle<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Primary subtle<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Success<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border border-danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Danger<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_borders__section__10" aria-labelledby="heading_borders__section__10"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">bordercolor</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Primary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">bordercolor</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary-subtle<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Primary subtle<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">bordercolor</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Success<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">bordercolor</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Danger<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <div class="bodydiv mt-3 p-3 border">
+      <div class="div mb-3">
+        <span class="ph me-2 p-2 border rounded-0">Rounded 0</span>
+        <span class="ph me-2 p-2 border rounded-1">Rounded 1</span>
+        <span class="ph me-2 p-2 border rounded-2">Rounded 2</span>
+        <span class="ph me-2 p-2 border rounded-3">Rounded 3</span>
+        <span class="ph me-2 p-2 border rounded-4">Rounded 4</span>
+        <span class="ph me-2 p-2 border rounded-5">Rounded 5</span>
+      </div>
+    </div>
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__11" data-bs-target="#tab_borders__section__11" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__12" data-bs-target="#tab_borders__section__12" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_borders__section__11" aria-labelledby="heading_borders__section__11"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-0<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 0<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 1<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 2<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-3<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 3<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-4<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 4<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 5<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_borders__section__12" aria-labelledby="heading_borders__section__12"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>0<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 0<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 1<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 2<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>3<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 3<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>4<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 4<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Rounded 5<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <div class="bodydiv mt-3 p-3 border">
+      <div class="div mb-3 pt-3">
+        <span class="ph me-5 p-4 border border-info rounded-circle">Circle</span>
+        <span class="ph me-2 px-4 py-2 border border-dark rounded-pill">Pill</span>
+      </div>
+    </div>
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__13" data-bs-target="#tab_borders__section__13" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_borders__section__14" data-bs-target="#tab_borders__section__14" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_borders__section__13" aria-labelledby="heading_borders__section__13"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-circle border-info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Circle<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>border rounded-pill border-dark<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Pill<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_borders__section__14" aria-labelledby="heading_borders__section__14"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>circle<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">bordercolor</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Circle<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ph</span> <span class="ph token attr-name">border</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">rounded</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>pill<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">bordercolor</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>dark<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>Pill<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ph</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <section class="section" id="borders__frames"><h2 class="title h4">Frame attribute support</h2>
+      
+      <p class="p">For DITA elements which support the <code class="keyword markupname xmlatt">@frame</code> attribute, such as <code class="keyword markupname xmlelement">&lt;lines&gt;</code>
+        and <code class="keyword markupname xmlelement">&lt;codeblock&gt;</code>, additional frame borders are automatically added as shown:</p>
+    </section>
+    <div class="bodydiv p-3 border">
+      <p class="p"></p>
+      <figure class="border-start border-end figure  w-100 mw-100 p-3 "><pre class="pre codeblock alert alert-secondary language-cpp"><span class="ph token comment">// Simple C++ program to display "Hello World"</span>
+
+<span class="ph token comment">// Header file for input output functions</span>
+<span class="ph token macro property">#<span class="ph token directive keyword">include</span><span class="ph token string">&lt;iostream&gt;</span></span>
+
+<span class="ph token keyword">using</span> <span class="ph token keyword">namespace</span> std<span class="ph token punctuation">;</span>
+
+<span class="ph token comment">// main function -</span>
+<span class="ph token comment">// where the execution of program begins</span>
+<span class="ph token keyword">int</span> <span class="ph token function">main</span><span class="ph token punctuation">(</span><span class="ph token punctuation">)</span>
+<span class="ph token punctuation">{</span>
+    <span class="ph token comment">// prints hello world</span>
+    cout<span class="ph token operator">&lt;&lt;</span><span class="ph token string">"Hello World"</span><span class="ph token punctuation">;</span>
+    <span class="ph token keyword">return</span> <span class="ph token number">0</span><span class="ph token punctuation">;</span>
+<span class="ph token punctuation">}</span> </pre></figure>
+      <p class="p"></p>
+      <figure class="border-top border-bottom figure  w-100 mw-100 p-3 "><p role="alert" class="lines alert alert-secondary">Shall I compare thee to a summer’s day?<br>Thou art more lovely and more temperate:<br>Rough winds do shake the darling buds of May,<br>and summer’s lease hath all too short a date:<br>...</p></figure>
+      <p class="p"></p>
+      <div class="border pt-3 px-3"><table class="table table-"><colgroup><col><col></colgroup><thead class="thead table-dark">
+            <tr class="table-">
+              <th class="entry table- align-top" id="borders__entry__1">Animal</th>
+              <th class="entry table- align-top" id="borders__entry__2">Gestation</th>
+            </tr>
+          </thead><tbody class="tbody table-">
+            <tr class="table-">
+              <td class="entry table-" headers="borders__entry__1">Elephant (African and Asian)</td>
+              <td class="entry table-" headers="borders__entry__2">19-22 months</td>
+            </tr>
+            <tr class="table-">
+              <td class="entry table-" headers="borders__entry__1">Giraffe</td>
+              <td class="entry table-" headers="borders__entry__2">15 months</td>
+            </tr>
+            <tr class="table-">
+              <td class="entry table-" headers="borders__entry__1">Rhinoceros</td>
+              <td class="entry table-" headers="borders__entry__2">14-16 months</td>
+            </tr>
+            <tr class="table-">
+              <td class="entry table-" headers="borders__entry__1">Hippopotamus</td>
+              <td class="entry table-" headers="borders__entry__2">7 1/2 months</td>
+            </tr>
+          </tbody></table></div>
+      <p class="p"></p>
+    </div>
+    <pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>codeblock</span> <span class="ph token attr-name">frame</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>sides<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>codeblock</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>lines</span> <span class="ph token attr-name">frame</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>topbot<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>bg-secondary-subtle p-3 border rounded<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>lines</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>table</span> <span class="ph token attr-name">frame</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>all<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>table</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+  </div>
+</article></main></div><script language="javascript" src="./js/popovers.js"></script><script language="javascript" src="./js/dark-mode-toggler.js"></script><footer role="contentinfo" class="mt-auto border-top bg-primary-subtle"><!-- Footer --><div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <!-- Social media -->
+      <p class="pt-3">
+        <!-- GitHub -->
+        <a class="btn m-1" href="https://github.com/dita-bootstrap/dita-bootstrap.html" role="button" style="background-color: #333333;">
+          <i class="bi bi-github text-white"></i>
+        </a>
+        <!-- LinkedIn -->
+        <a class="btn m-1" href="https://www.linkedin.com/in/infotexture/" role="button" style="background-color: #0082ca;">
+          <i class="bi bi-linkedin text-white"></i>
+        </a>
+        <!-- Mastodon -->
+        <a class="btn m-1" href="https://indieweb.social/@infotexture" role="button" style="background-color: #563acc;">
+          <i class="bi bi-mastodon text-white"></i>
+        </a>
+        <!-- Bluesky -->
+        <a class="btn m-1" href="https://bsky.app/profile/infotexture.net" role="button" style="background-color: #0085ff;">
+          <i class="bi bi-bluesky text-white"></i>
+        </a>
+      </p>
+      <p>
+        <small>
+          © 2017–2025
+          <a href="https://infotexture.net/">infotexture</a>
+        </small>
+      </p>
+    </div>
+  </div>
+</div><!-- Footer --></footer></body></html>

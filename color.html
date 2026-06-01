@@ -1,0 +1,561 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2026"><meta name="generator" content="DITA-OT"><meta name="description" content="Convey meaning through color with a handful of color utility classes. Includes support for styling text and background colors via the semantic color attribute."><meta property="og:type" content="website"><meta property="og:url" content="https://dita-bootstrap.github.io/color.html"><meta property="og:title" content="Color"><meta property="og:description" content="Convey meaning through color with a handful of color utility classes. Includes support for styling text and background colors via the semantic color attribute."><meta property="og:image" content="https://dita-bootstrap.github.io/open-graph.svg"><meta name="twitter:title" content="Color"><meta name="twitter:description" content="Convey meaning through color with a handful of color utility classes. Includes support for styling text and background colors via the semantic color attribute."><meta property="twitter:url" content="https://dita-bootstrap.github.io/color.html"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://dita-bootstrap.github.io/open-graph.svg"><title>Color</title><script src="./js/lunr-client.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script language="javascript" src="./js/css-theme-switcher.js"></script><link rel="shortcut icon" href="./favicon/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/commonltr.css">
+<link rel="stylesheet" type="text/css" href="./css/common-extended.css"><link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous"></head><body id="color" class="d-flex flex-column min-vh-100 language-markup"><div class="visually-hidden-focusable overflow-hidden p-2 bg-body-tertiary"><div class="container-xl"><a class="d-inline-flex m-1 btn btn-outline-primary btn-sm" href="#ariaid-title1">Skip to main content</a><a href="#bs-sidebar-nav" class="d-none d-md-inline-flex m-1 btn btn-outline-primary btn-sm">Skip to docs navigation</a></div></div><header role="banner" class="sticky-top"><nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <!-- Modify -xxl to change container size -->
+  <div class="container-xxl">
+    <!-- This shows the menu on mobile -->
+    <div class="bd-navbar-toggle">
+      <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+    <a class="navbar-brand" href="https://dita-bootstrap.github.io/dita-bootstrap.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+      <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/>
+      <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/>
+    </svg>
+      DITA Bootstrap
+    </a>
+    <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-three-dots"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.dita-ot.org/plugins#!org.dita-bootstrap.html">Plugin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/dita-bootstrap/dita-bootstrap.html/releases">Releases</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/dita-bootstrap/dita-bootstrap.html">Source</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/5.3">Bootstrap Docs</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <!--
+          This is a lunr.js search box
+          It requires JavaScript to function.
+        -->
+        <li class="nav-item d-flex align-items-center">
+          <span class="nav-link pe-2">
+            <i class="bi bi-search"></i>
+          </span>
+          <form class="position-relative me-auto search-box rounded">
+            <input type="search" class="form-control" placeholder="Search…" aria-label="Search for…" dir="auto">
+          </form>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-0 me-1">
+        <!--
+          This is a dark/light color theme toggler.
+          It requires JavaScript to function.
+        -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-color-mode" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <span class="d-light">
+              <i class="bi bi-brightness-high-fill"></i>
+            </span>
+            <span class="d-dark">
+              <i class="bi bi-moon-stars-fill"></i>
+            </span>
+            <span class="d-auto">
+              <i class="bi bi-circle-half"></i>
+            </span>
+            <span class="d-lg-none ms-2">Toggle color mode</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-color-mode" style="--bs-dropdown-min-width: 6rem;" data-bs-popper="static">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+                <i class="bi bi-brightness-high-fill"></i>
+                <span class="ms-2">Light</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+                <i class="bi bi-moon-stars-fill"></i>
+                <span class="ms-2">Dark</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
+                <i class="bi bi-circle-half"></i>
+                <span class="ms-2">Auto</span>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-0 me-1">
+        <!--
+          This is a css bootstrap theme toggler.
+          It requires JavaScript to function.
+        -->
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-css-theme" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            <i class="bi bi-filetype-css"></i>
+            <span class="d-lg-none ms-2">Toggle theme</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end css-themes-list overflow-y-auto" aria-labelledby="bd-css-theme" style="--bs-dropdown-min-width: 6rem;" data-bs-popper="static">
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+                Default
+              </button>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/brite/bootstrap.min.css">
+                Brite
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cerulean/bootstrap.min.css">
+                Cerulean
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cosmo/bootstrap.min.css">
+                Cosmo
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/cyborg/bootstrap.min.css">
+                Cyborg
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/darkly/bootstrap.min.css">
+                Darkly
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/flatly/bootstrap.min.css">
+                Flatly
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/journal/bootstrap.min.css">
+                Journal
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/litera/bootstrap.min.css">
+                Litera
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/lumen/bootstrap.min.css">
+                Lumen
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/lux/bootstrap.min.css">
+                Lux
+              </button>
+            </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/materia/bootstrap.min.css">
+                Materia
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/minty/bootstrap.min.css">
+                Minty
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/morph/bootstrap.min.css">
+                Morph
+              </button>
+            </li>
+
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css">
+                Pulse
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/quartz/bootstrap.min.css">
+                Quartz
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/sandstone/bootstrap.min.css">
+                Sandstone
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/simplex/bootstrap.min.css">
+                Simplex
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/sketchy/bootstrap.min.css">
+                Sketchy
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/slate/bootstrap.min.css">
+                Slate
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/solar/bootstrap.min.css">
+                Solar
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/spacelab/bootstrap.min.css">
+                SpaceLab
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/superhero/bootstrap.min.css">
+                Superhero
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/united/bootstrap.min.css">
+                United
+              </button>
+            </li>
+          <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/vapor/bootstrap.min.css">
+                Vapor
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/yeti/bootstrap.min.css">
+                Yeti
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex align-items-center" data-bs-css-href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/zephyr/bootstrap.min.css">
+                Zephyr
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav></header><div class="bs-container container-xxl bd-gutter mt-3 my-md-4" id="content"><div class="overflow-y-auto bs-sidebar"><div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel" aria-modal="true" role="dialog"><div class="offcanvas-header border-bottom"><h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">DITA Bootstrap</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdSidebar"></button></div><div class="offcanvas-body flex-column h-100"><nav class="d-flex flex-align-start flex-column h-100 overflow-y-auto" role="navigation" id="bs-sidebar-nav"><div class="overflow-y-auto"><div class="flex-column bd-links"><ul class="list-unstyled mb-0 py-3 pt-md-1"><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d146659e11"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d146659e11"><i class="me-2 bi-book-half" style="color: var(--bs-indigo)"></i>Getting Started</span></div><div id="menu-collapse-d146659e11" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="index.html">Introduction</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d146659e31"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d146659e31"><i class="me-2 bi-grid-fill" style="color: var(--bs-teal)"></i>Layout</span></div><div id="menu-collapse-d146659e31" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="nav.html">Navigation Menus</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="containers.html">Containers</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="grid.html">Grid System</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="rtl.html">Right-to-Left Languages</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d146659e81"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d146659e81"><i class="me-2 bi-file-earmark-richtext" style="color: var(--bs-gray)"></i>Content</span></div><div id="menu-collapse-d146659e81" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="typography.html">Typography</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="images.html">Images</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="tables.html">Tables</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="figures.html">Figures</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d146659e127"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d146659e127"><i class="me-2 bi-menu-button-wide-fill" style="color: var(--bs-cyan)"></i>Components</span></div><div id="menu-collapse-d146659e127" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="accordion.html">Accordion</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="alerts.html">Alerts</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="badge.html">Badges</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="breadcrumb.html">Breadcrumb</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="buttons.html">Buttons</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="button-group.html">Button group</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="card.html">Cards</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="carousel.html">Carousel</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="collapse.html">Collapse</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="list-group.html">List Group</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="offcanvas.html">Offcanvas</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="pagination.html">Pagination</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="popovers.html">Popovers</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="scrollspy.html">Scrollspy</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="tabs.html">Tabbed Dialogs</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="tooltips.html">Tooltips</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0 active" data-bs-target="#menu-collapse-d146659e297" aria-expanded="true" aria-current="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2 active" data-bs-target="#menu-collapse-d146659e297" aria-expanded="true" aria-current="true"><i class="me-2 bi-braces-asterisk" style="color: var(--bs-pink)"></i>Utilities</span></div><div id="menu-collapse-d146659e297" class="ps-2 collapse show"><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="borders.html">Borders</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1  active" href="color.html">Color</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="shadows.html">Shadows</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="spacing.html">Spacing</a></div></li></ul></div></li><li><div class="d-flex flex-row ps-0"><button data-bs-toggle="collapse" class="btn d-inline-flex align-items-center p-0 border-0" data-bs-target="#menu-collapse-d146659e358"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 14l6-6-6-6"/></svg></button><span data-bs-toggle="collapse" class="d-inline-flex align-items-center flex-shrink-1 ps-2" data-bs-target="#menu-collapse-d146659e358"><i class="me-2 bi-tools" style="color: var(--bs-blue)"></i>Extend</span></div><div id="menu-collapse-d146659e358" class="ps-2 collapse "><ul class="list-unstyled fw-normal ps-4"><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="icons.html"><i class="me-2 bi-images" style=""></i>Icons</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="dark-mode.html"><i class="me-2 bi-moon-stars" style=""></i>Dark Mode</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="extension-points.html"><i class="me-2 bi-wrench-adjustable" style=""></i>Extension Points</a></div></li><li><hr class="m-1"><span class="ps-3 bd-divider d-inline-flex">Additional Plug‑ins</span></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="search-box.html"><i class="me-2 bi-search" style=""></i>Search Box</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="offline.html"><i class="me-2 bi-wifi-off" style=""></i>Offline Mode</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="sass.html"><i class="me-2 bi-filetype-sass" style=""></i>Bootstrap Sass</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="bootstrap-table.html"><i class="me-2 bi-table" style=""></i>Dynamic Tables</a></div></li><li><div class="d-flex flex-row ps-0"><a class="d-inline-flex align-items-center flex-shrink-1 " href="bootstrap-extension.html"><i class="me-2 bi-bootstrap" style=""></i>Bootstrap Extension</a></div></li></ul></div></li></ul></div></div></nav></div></div></div><main role="main" class="bs-main me-3"><article role="article" class="bs-content" aria-labelledby="ariaid-title1">
+  <h1 class="title" id="ariaid-title1">Color</h1>
+  
+  
+  <div class="body language-markup"><p class="shortdesc text-body-secondary lead">Convey meaning through <code class="ph codeph">color</code> with a handful of color utility classes. Includes support for
+    styling text and background colors via the semantic <code class="keyword markupname xmlatt">@color</code> attribute.</p>
+    <section class="section"><h2 class="title h4">Colors</h2>
+      
+      <p class="p">Colorize text and backgrounds with color utilities. The <code class="keyword markupname xmlatt">@color</code> attribute provides a semantic way to apply standard Bootstrap color themes.</p>
+    </section>
+
+    <div class="bodydiv p-3 border">
+      <div class="div text-bg-primary">.text-bg-primary</div>
+      <div class="div text-bg-secondary">.text-bg-secondary</div>
+      <div class="div text-bg-success">.text-bg-success</div>
+      <div class="div text-bg-danger">.text-bg-danger</div>
+      <div class="div text-bg-warning">.text-bg-warning</div>
+      <div class="div text-bg-info">.text-bg-info</div>
+      <div class="div text-bg-light">.text-bg-light</div>
+      <div class="div text-bg-dark">.text-bg-dark</div>
+    </div>
+
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_color__section__2" data-bs-target="#tab_color__section__2" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_color__section__3" data-bs-target="#tab_color__section__3" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_color__section__2" aria-labelledby="heading_color__section__2"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-primary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-secondary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-secondary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-success<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-danger<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-warning<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-warning<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-info<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-light<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-light<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-dark<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-dark<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_color__section__3" aria-labelledby="heading_color__section__3"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-primary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>secondary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-secondary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-success<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-danger<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>warning<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-warning<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-info<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>light<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-light<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>dark<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-bg-dark<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <section class="section"><h2 class="title h4">Base DITA Elements</h2>
+      
+      <p class="p">Decoration attributes can be applied to many base DITA elements to add background color and contrasting text.</p>
+    </section>
+
+    <div class="bodydiv p-3 border">
+      <section class="section mt-2 text-bg-primary"><h2 class="title h4">Section Decoration</h2>
+        
+        <p class="p">This section has a primary color background.</p>
+      </section>
+
+      <div class="div mt-2 p-3 text-bg-success">
+        <p class="p">This div has a success color background.</p>
+      </div>
+
+      <pre class="pre alert alert-secondary mt-2 text-bg-warning">
+        This pre has a warning color background.
+      </pre>
+
+      <blockquote class="lq blockquote mt-2 p-1 text-bg-danger">
+        This is a long quote with a danger color background.
+      </blockquote>
+
+      <div><table class="table table-primary mt-2 p-1 w-100"><colgroup><col><col></colgroup><thead class="thead table-">
+            <tr class="table-">
+              <th class="entry table-" id="color__entry__1">Animal</th>
+              <th class="entry table-" id="color__entry__2">Gestation</th>
+            </tr>
+          </thead><tbody class="tbody table-">
+            <tr class="table-info">
+              <td class="entry table-" headers="color__entry__1">Elephant (African and Asian)</td>
+              <td class="entry table-" headers="color__entry__2">19-22 months</td>
+            </tr>
+            <tr class="table-success">
+              <td class="entry table-" headers="color__entry__1">Giraffe</td>
+              <td class="entry table-" headers="color__entry__2">15 months</td>
+            </tr>
+            <tr class="table-">
+              <td class="entry table-" headers="color__entry__1">Rhinoceros</td>
+              <td class="entry table-danger" headers="color__entry__2">14-16 months</td>
+            </tr>
+            <tr class="table-">
+              <td class="entry table-" headers="color__entry__1">Hippopotamus</td>
+              <td class="entry table-" headers="color__entry__2">7 1/2 months</td>
+            </tr>
+          </tbody></table></div>
+
+      <div role="alert" class="note alert alert-primary mt-2 text-bg-primary"><span class="note__title"><i class="pe-2 bi bi-pencil mt-2 text-bg-primary"></i>Note:</span> 
+        This is a note with a primary color theme.
+      </div>
+    </div>
+
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_color__section__6" data-bs-target="#tab_color__section__6" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_color__section__7" data-bs-target="#tab_color__section__7" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_color__section__6" aria-labelledby="heading_color__section__6"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Section Decoration<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>This section has a primary color background.<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>section</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-success p-3<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>This div has a success color background.<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>pre</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-warning<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  This pre has a warning color background.
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>pre</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>lq</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-bg-danger p-1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>lq</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>table</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>table-primary p-1 w-100<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>tgroup</span> <span class="ph token attr-name">cols</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>thead</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>Animal<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>Gestation<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>thead</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>tbody</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>table-info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+       ...
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>table-success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+       ...
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>table-danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>tbody</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>tgroup</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>table</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>note</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>note</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_color__section__7" aria-labelledby="heading_color__section__7"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Section Decoration<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>This section has a primary color background.<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>section</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>div</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>success<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">padding</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>3<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>This div has a success color background.<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>div</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>pre</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>warning<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  This pre has a warning color background.
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>pre</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>lq</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>danger<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">padding</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  This is a long quote with a danger color background.
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>lq</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>table</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">padding</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>1<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">width</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>100<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>tgroup</span> <span class="ph token attr-name">cols</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>thead</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>Animal<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>Gestation<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>thead</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>tbody</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+        ...
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+        ...
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>entry</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>...<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>entry</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>row</span><span class="ph token punctuation">&gt;</span></span>
+        ...
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>row</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>tbody</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>tgroup</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>table</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>note</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  This is a note with a primary color theme.
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>note</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <section class="section"><h2 class="title h4">Specialized Elements</h2>
+      
+      <p class="p">Many specialized components also support the <code class="keyword markupname xmlatt">@color</code> attribute for consistent theming.</p>
+    </section>
+
+    <div class="bodydiv p-3 border">
+
+      <img class="image img-thumbnail bg-warning" src="https://picsum.photos/100/100?a">
+      <div class="section card text-bg-success mt-2 w-50"><div class="card-body"><h2 class="title h5 card-title">Card Title</h2><p class="p">Some quick example text to build on the card title and make up the bulk of the card’s content.</p></div></div>
+
+      <div id="color__bodydiv__6" class="bodydiv accordion mt-2 text-bg-info">
+        <div class="accordion-item"><h2 type="accordion-header" id="heading_color__accordion_color_1"><button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#collapse_color__accordion_color_1" aria-controls="collapse_color__accordion_color_1">Accordion Item #1</button></h2><div class="accordion-collapse collapse show" id="collapse_color__accordion_color_1" aria-labelledby="heading_color__accordion_color_1" data-bs-parent="#color__bodydiv__6"><div class="accordion-body" id="color__accordion_color_1">
+          
+          <p class="p">This is the first item's accordion body.</p>
+        </div></div></div>
+      </div>
+
+      <ul class="ul list-group list-group-item-danger mt-2 w-50">
+        <li class="li list-group-item">An item</li>
+        <li class="li list-group-item">A second item</li>
+      </ul>
+
+      <div data-bs-ride="carousel" id="carousel_color__ol__1" class="ol slide carousel mt-2 w-50 text-bg-dark"><div class="carousel-indicators"><button type="button" class="btn btn-primary bg-primary btn-sm active" aria-current="true" data-bs-target="#carousel_color__ol__1" data-bs-slide-to="0"></button><button type="button" class="btn btn-primary bg-primary btn-sm" data-bs-target="#carousel_color__ol__1" data-bs-slide-to="1"></button><button type="button" class="btn btn-primary bg-primary btn-sm" data-bs-target="#carousel_color__ol__1" data-bs-slide-to="2"></button></div><div class="carousel-inner pb-1">
+        <div class="li carousel-item active"><div class="container mx-0"><div class="row"><div class="col-12"><img class="image d-block w-100" src="https://picsum.photos/1200/600?a"></div></div><div class="row py-3"></div></div></div>
+        <div class="li carousel-item"><div class="container mx-0"><div class="row"><div class="col-12"><img class="image d-block w-100" src="https://picsum.photos/1200/600?b"></div></div><div class="row py-3"></div></div></div>
+        <div class="li carousel-item"><div class="container mx-0"><div class="row"><div class="col-12"><img class="image d-block w-100" src="https://picsum.photos/1200/600?c"></div></div><div class="row py-3"></div></div></div>
+      </div><a class="carousel-control-prev" role="button" data-bs-slide="prev" data-bs-target="#carousel_color__ol__1"><span class="btn btn-primary btn-sm p-0"><span aria-hidden="true" class="carousel-control-prev-icon align-middle"></span></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" role="button" data-bs-slide="next" data-bs-target="#carousel_color__ol__1"><span class="btn btn-primary btn-sm p-0"><span aria-hidden="true" class="carousel-control-next-icon align-middle"></span></span><span class="visually-hidden">Next</span></a></div>
+    </div>
+
+    <ul role="tablist" class="bodydiv nav nav-pills mt-3"><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_color__section__11" data-bs-target="#tab_color__section__11" class="nav-link active" aria-selected="true" aria-controls="outputclass"><code class="keyword markupname xmlatt">@outputclass</code></button></li><li class="nav-item" role="presentation"><button data-bs-toggle="tab" type="button" role="tab" id="heading_color__section__12" data-bs-target="#tab_color__section__12" class="nav-link" aria-selected="false" aria-controls="Specialization">Specialization</button></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane fade show active" id="tab_color__section__11" aria-labelledby="heading_color__section__11"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>img</span> <span class="ph token attr-name">src</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">class</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>img-thumbnail bg-warning<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>section</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>card text-bg-success w-50<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>section</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>bodydiv</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>accordion accordion-info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>bodydiv</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ul</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>list-group list-group-item-danger w-50<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ul</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ul</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>carousel carousel-dark w-50<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  ...
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>ul</span><span class="ph token punctuation">&gt;</span></span></code></pre></div><div role="tabpanel" class="tab-pane fade" id="tab_color__section__12" aria-labelledby="heading_color__section__12"><pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>thumbnail</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>warning<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>card</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>success<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">width</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>50<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Card Title<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>Some quick example text to build on the card title and make up the bulk of the card’s content.<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>card</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>accordion</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>info<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>accordion-item</span> <span class="ph token attr-name">open</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>title</span><span class="ph token punctuation">&gt;</span></span>Accordion Item #1<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>title</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span><span class="ph token punctuation">&gt;</span></span>This is the first item's accordion body.<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>accordion-item</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>accordion</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>list-group</span> <span class="ph token attr-name">width</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>50<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>li</span><span class="ph token punctuation">&gt;</span></span>An item<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>li</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>li</span><span class="ph token punctuation">&gt;</span></span>A second item<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>li</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>list-group</span><span class="ph token punctuation">&gt;</span></span>
+
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel</span> <span class="ph token attr-name">color</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>dark<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">width</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>50<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">indicators</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>image</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>image</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>image</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>...<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel-item</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>carousel</span><span class="ph token punctuation">&gt;</span></span></code></pre></div></div>
+
+    <section class="section"><h2 class="title h4">Text Color</h2>
+      
+      <p class="p">For text-only colorization, the <code class="keyword markupname xmlatt">@outputclass</code> attribute remains the primary method.</p>
+    </section>
+
+    <div class="bodydiv p-3 border">
+      <p class="p text-primary">.text-primary</p>
+      <p class="p text-secondary">.text-secondary</p>
+      <p class="p text-success">.text-success</p>
+      <p class="p text-danger">.text-danger</p>
+      <p class="p text-warning bg-dark">.text-warning</p>
+      <p class="p text-info bg-dark">.text-info</p>
+    </div>
+
+    <pre class="pre codeblock alert alert-secondary language-markup"><code><span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-primary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-primary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-secondary<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-secondary<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-success<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-success<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-danger<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-danger<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-warning bg-dark<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-warning<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>p</span> <span class="ph token attr-name">outputclass</span><span class="ph token attr-value"><span class="ph token punctuation attr-equals">=</span><span class="ph token punctuation">"</span>text-info bg-dark<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>.text-info<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>p</span><span class="ph token punctuation">&gt;</span></span></code></pre>
+  </div>
+</article></main></div><script language="javascript" src="./js/popovers.js"></script><script language="javascript" src="./js/dark-mode-toggler.js"></script><footer role="contentinfo" class="mt-auto border-top bg-primary-subtle"><!-- Footer --><div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <!-- Social media -->
+      <p class="pt-3">
+        <!-- GitHub -->
+        <a class="btn m-1" href="https://github.com/dita-bootstrap/dita-bootstrap.html" role="button" style="background-color: #333333;">
+          <i class="bi bi-github text-white"></i>
+        </a>
+        <!-- LinkedIn -->
+        <a class="btn m-1" href="https://www.linkedin.com/in/infotexture/" role="button" style="background-color: #0082ca;">
+          <i class="bi bi-linkedin text-white"></i>
+        </a>
+        <!-- Mastodon -->
+        <a class="btn m-1" href="https://indieweb.social/@infotexture" role="button" style="background-color: #563acc;">
+          <i class="bi bi-mastodon text-white"></i>
+        </a>
+        <!-- Bluesky -->
+        <a class="btn m-1" href="https://bsky.app/profile/infotexture.net" role="button" style="background-color: #0085ff;">
+          <i class="bi bi-bluesky text-white"></i>
+        </a>
+      </p>
+      <p>
+        <small>
+          © 2017–2025
+          <a href="https://infotexture.net/">infotexture</a>
+        </small>
+      </p>
+    </div>
+  </div>
+</div><!-- Footer --></footer></body></html>
