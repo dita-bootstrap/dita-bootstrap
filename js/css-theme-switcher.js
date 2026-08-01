@@ -9,13 +9,30 @@
   const setStoredCss = css => localStorage.setItem('css-theme', css);
 
   const setCss = css => {
-      if(css){
+      if (css) {
         const link = linkRegex(/.*\.min\.css/)[0];
-        const bodyStyle = document.querySelector('body').style;
-        bodyStyle.visibility = "hidden"; 
-        link.removeAttribute("integrity");
-        link.setAttribute("href", css);
-        setTimeout(()=>{bodyStyle.visibility = "visible";}, 300)
+        if (link) {
+          if (link.getAttribute("href") === css) {
+            return;
+          }
+          const body = document.querySelector('body');
+          if (body) {
+            body.style.visibility = "hidden";
+          }
+          link.removeAttribute("integrity");
+
+          const handleLoad = () => {
+            if (body) {
+              body.style.visibility = "visible";
+            }
+          };
+          link.addEventListener('load', handleLoad, { once: true });
+          link.addEventListener('error', handleLoad, { once: true });
+          // Fallback timeout in case load event is missed
+          setTimeout(handleLoad, 1000);
+
+          link.setAttribute("href", css);
+        }
       }
   };
 
