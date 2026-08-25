@@ -116,11 +116,14 @@
     <xsl:variable
       name="theme"
       select="
-      (@color,
+      (@theme,
        substring-after(tokenize(@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'))[1]"
     />
-    <xsl:if test="exists($theme)">
-      <xsl:value-of select="concat('table-', $theme, ' ')"/>
+    <xsl:if test="exists($theme) and $theme != ''">
+      <xsl:call-template name="theme-classes">
+        <xsl:with-param name="value" select="$theme"/>
+      </xsl:call-template>
+      <xsl:text> </xsl:text>
     </xsl:if>
     <xsl:if test="@striped = 'yes'">
       <xsl:text> table-striped</xsl:text>
@@ -157,13 +160,16 @@
     <xsl:variable
       name="theme"
       select="
-      (@color,
+      (@theme,
        substring-after(tokenize(@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'),
-       $table/@color,
+       $table/@theme,
        substring-after(tokenize($table/@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'))[1]"
     />
-    <xsl:if test="exists($theme)">
-      <xsl:value-of select="concat('table-', $theme, ' ')"/>
+    <xsl:if test="exists($theme) and $theme != ''">
+      <xsl:call-template name="theme-classes">
+        <xsl:with-param name="value" select="$theme"/>
+      </xsl:call-template>
+      <xsl:text> </xsl:text>
     </xsl:if>
     <xsl:next-match/>
   </xsl:template>
@@ -174,15 +180,18 @@
     <xsl:variable
       name="theme"
       select="
-      (@color,
+      (@theme,
        substring-after(tokenize(@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'),
-       $group/@color,
+       $group/@theme,
        substring-after(tokenize($group/@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'),
-       $table/@color,
+       $table/@theme,
        substring-after(tokenize($table/@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'))[1]"
     />
-    <xsl:if test="exists($theme)">
-      <xsl:value-of select="concat('table-', $theme, ' ')"/>
+    <xsl:if test="exists($theme) and $theme != ''">
+      <xsl:call-template name="theme-classes">
+        <xsl:with-param name="value" select="$theme"/>
+      </xsl:call-template>
+      <xsl:text> </xsl:text>
     </xsl:if>
     <xsl:next-match/>
   </xsl:template>
@@ -194,17 +203,20 @@
     <xsl:variable
       name="theme"
       select="
-      (@color,
+      (@theme,
        substring-after(tokenize(@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'),
-       $row/@color,
+       $row/@theme,
        substring-after(tokenize($row/@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'),
-       $group/@color,
+       $group/@theme,
        substring-after(tokenize($group/@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'),
-       $table/@color,
+       $table/@theme,
        substring-after(tokenize($table/@outputclass, ' ')[starts-with(., 'table-')][1], 'table-'))[1]"
     />
-    <xsl:if test="exists($theme)">
-      <xsl:value-of select="concat('table-', $theme, ' ')"/>
+    <xsl:if test="exists($theme) and $theme != ''">
+      <xsl:call-template name="theme-classes">
+        <xsl:with-param name="value" select="$theme"/>
+      </xsl:call-template>
+      <xsl:text> </xsl:text>
     </xsl:if>
     <xsl:next-match/>
   </xsl:template>
